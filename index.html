@@ -277,6 +277,7 @@ body{overflow-y:auto;}
   <a href="#" class="btn-main" id="btn-start" role="button">Asumir el Cargo</a>
   <div class="i-foot">MDB-2024-00000001 &mdash; Sujeto a modificaciones sin previo aviso</div>
   <div class="i-credit">Creado y dise&ntilde;ado por <strong>Tom&aacute;s Copped&eacute;</strong></div>
+  <div id="dbg" style="margin-top:12px;font-family:Consolas,monospace;font-size:11px;color:#eb5757;min-height:16px;"></div>
 </div>
 
 <!-- GAME -->
@@ -1136,7 +1137,18 @@ setTimeout(function(){el.parentNode&&el.parentNode.removeChild(el);},3500);
 }
 
 // ── INIT ──────────────────────────────────────────────────────────────────────
-document.getElementById(‘btn-start’).onclick = function(e){ e.preventDefault(); startGame(); return false; };
+document.getElementById(‘btn-start’).onclick = function(e){
+e.preventDefault();
+var dbg = document.getElementById(‘dbg’);
+if(dbg) dbg.textContent = ‘JS OK - arrancando…’;
+try {
+startGame();
+if(dbg) dbg.textContent = ‘startGame() ejecutado’;
+} catch(err) {
+if(dbg) dbg.textContent = ‘ERROR: ’ + err.message;
+}
+return false;
+};
 document.getElementById(‘btn-new’).addEventListener(‘click’,startGame);
 document.getElementById(‘btn-mnu’).addEventListener(‘click’,function(){showScreen(‘screen-intro’);});
 document.getElementById(‘btn-aj’).addEventListener(‘click’,function(){pedirReforma(‘ajuste’);});
