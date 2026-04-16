@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -21,29 +20,29 @@ body{overflow:hidden;-webkit-tap-highlight-color:rgba(0,0,0,0);}
 #screen-end.active{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;padding:32px 20px;text-align:center;background:linear-gradient(155deg,#060e06 0%,#0D2B5E 100%);overflow-y:auto;}
 
 /* ── INTRO ── */
-.i-seal{width:90px;height:90px;border-radius:50%;border:2px solid var(–gold);display:flex;align-items:center;justify-content:center;font-size:40px;margin-bottom:18px;background:rgba(26,75,140,0.4);box-shadow:0 0 0 8px rgba(200,160,64,0.08);}
+.i-seal{width:90px;height:90px;border-radius:50%;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;font-size:40px;margin-bottom:18px;background:rgba(26,75,140,0.4);box-shadow:0 0 0 8px rgba(200,160,64,0.08);}
 .i-eye{font-family:Consolas,monospace;font-size:9px;letter-spacing:5px;color:rgba(200,160,64,0.6);text-transform:uppercase;margin-bottom:10px;}
-.i-title{font-family:Georgia,serif;font-size:clamp(48px,11vw,100px);font-weight:bold;letter-spacing:8px;color:var(–perg);line-height:0.9;margin-bottom:5px;}
-.i-sub{font-family:Consolas,monospace;font-size:11px;letter-spacing:6px;color:var(–gold);text-transform:uppercase;margin-bottom:4px;}
+.i-title{font-family:Georgia,serif;font-size:clamp(48px,11vw,100px);font-weight:bold;letter-spacing:8px;color:var(--perg);line-height:0.9;margin-bottom:5px;}
+.i-sub{font-family:Consolas,monospace;font-size:11px;letter-spacing:6px;color:var(--gold);text-transform:uppercase;margin-bottom:4px;}
 .i-tag{font-family:Georgia,serif;font-style:italic;font-size:14px;color:rgba(232,212,154,0.5);margin-bottom:24px;}
-.i-rule{width:48px;height:1px;background:var(–gold);margin:0 auto 20px;}
+.i-rule{width:48px;height:1px;background:var(--gold);margin:0 auto 20px;}
 .i-copy{max-width:420px;font-size:13px;line-height:1.8;color:rgba(232,212,154,0.7);margin-bottom:28px;}
-.i-copy strong{color:var(–perg);}
-.btn-main{font-family:Georgia,serif;font-size:16px;letter-spacing:4px;text-transform:uppercase;font-weight:bold;padding:20px 52px;background:var(–gold);color:var(–inst);border:none;cursor:pointer;transition:background .2s;-webkit-appearance:none;touch-action:manipulation;min-height:56px;display:block;width:85%;max-width:340px;position:relative;z-index:20;pointer-events:auto;text-decoration:none;text-align:center;-webkit-user-select:none;user-select:none;}
-.btn-main:hover{background:var(–perg);}
+.i-copy strong{color:var(--perg);}
+.btn-main{font-family:Georgia,serif;font-size:16px;letter-spacing:4px;text-transform:uppercase;font-weight:bold;padding:20px 52px;background:var(--gold);color:var(--inst);border:none;cursor:pointer;transition:background .2s;-webkit-appearance:none;touch-action:manipulation;min-height:56px;display:block;width:85%;max-width:340px;position:relative;z-index:20;pointer-events:auto;text-decoration:none;text-align:center;-webkit-user-select:none;user-select:none;}
+.btn-main:hover{background:var(--perg);}
 .i-foot{margin-top:14px;font-family:Consolas,monospace;font-size:9px;color:rgba(232,212,154,0.22);letter-spacing:1px;position:relative;z-index:5;}
 .i-credit{margin-top:8px;font-family:Georgia,serif;font-size:15px;color:rgba(232,212,154,0.55);letter-spacing:1px;}
-.i-credit strong{color:var(–gold);font-size:17px;}
+.i-credit strong{color:var(--gold);font-size:17px;}
 
 /* ── GAME HEADER ── */
-.g-hdr{background:var(–inst);border-bottom:2px solid var(–gold);padding:6px 14px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;gap:8px;}
+.g-hdr{background:var(--inst);border-bottom:2px solid var(--gold);padding:6px 14px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;gap:8px;}
 .g-logo{font-family:Georgia,serif;font-weight:bold;font-size:14px;letter-spacing:3px;white-space:nowrap;}
-.g-logo span{color:var(–gold);}
-.g-date{font-family:Consolas,monospace;font-size:11px;color:var(–gold);letter-spacing:2px;}
+.g-logo span{color:var(--gold);}
+.g-date{font-family:Consolas,monospace;font-size:11px;color:var(--gold);letter-spacing:2px;}
 .g-turn{font-family:Consolas,monospace;font-size:9px;color:rgba(232,212,154,0.4);letter-spacing:1px;text-align:right;}
 
 /* ── TICKER ── */
-.ticker{height:22px;background:var(–bcra);border-bottom:1px solid var(–bdr);overflow:hidden;display:flex;align-items:center;flex-shrink:0;}
+.ticker{height:22px;background:var(--bcra);border-bottom:1px solid var(--bdr);overflow:hidden;display:flex;align-items:center;flex-shrink:0;}
 .ticker-inner{display:flex;gap:36px;white-space:nowrap;animation:tick 35s linear infinite;padding-left:100%;}
 @keyframes tick{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 .ti{font-family:Consolas,monospace;font-size:9px;display:flex;gap:5px;}
@@ -53,17 +52,17 @@ body{overflow:hidden;-webkit-tap-highlight-color:rgba(0,0,0,0);}
 
 /* ── MAIN GRID (desktop: 4 cols, mobile: 1 col scrollable) ── */
 .g-main{display:grid;grid-template-columns:200px 1fr 1fr 220px;overflow:hidden;min-height:0;}
-.gcol{overflow-y:auto;border-right:1px solid var(–bdr);display:flex;flex-direction:column;}
+.gcol{overflow-y:auto;border-right:1px solid var(--bdr);display:flex;flex-direction:column;}
 .gcol:last-child{border-right:none;}
 
 /* ── PANEL ── */
-.pnl{border-bottom:1px solid var(–bdr);padding:8px 10px;flex-shrink:0;}
+.pnl{border-bottom:1px solid var(--bdr);padding:8px 10px;flex-shrink:0;}
 .pnl-ttl{font-family:Consolas,monospace;font-size:7px;letter-spacing:3px;text-transform:uppercase;color:rgba(200,160,64,0.4);margin-bottom:6px;padding-bottom:4px;border-bottom:1px solid rgba(200,160,64,0.08);}
 
 /* ── KPIs ── */
 .kpi-list{display:flex;flex-direction:column;gap:3px;}
 .kpi{background:rgba(26,75,140,0.3);border-left:2px solid #6B7280;padding:4px 7px;}
-.kpi.ok{border-left-color:var(–sup);}.kpi.wn{border-left-color:var(–warn);}.kpi.bd{border-left-color:var(–red);}
+.kpi.ok{border-left-color:var(--sup);}.kpi.wn{border-left-color:var(--warn);}.kpi.bd{border-left-color:var(--red);}
 .kpi-nm{font-family:Consolas,monospace;font-size:7px;letter-spacing:1px;text-transform:uppercase;color:rgba(232,212,154,0.4);}
 .kpi-v{font-family:Consolas,monospace;font-size:13px;font-weight:bold;}
 .kpi-v.ok{color:#6fcf97;}.kpi-v.wn{color:#f2994a;}.kpi-v.bd{color:#eb5757;}
@@ -73,127 +72,127 @@ body{overflow:hidden;-webkit-tap-highlight-color:rgba(0,0,0,0);}
 .ten-hdr{display:flex;justify-content:space-between;margin-bottom:4px;}
 .ten-lbl{font-family:Consolas,monospace;font-size:7px;letter-spacing:2px;text-transform:uppercase;color:rgba(200,160,64,0.4);}
 .ten-pct{font-family:Consolas,monospace;font-size:11px;font-weight:bold;}
-.ten-bar{height:5px;background:rgba(255,255,255,0.07);border:1px solid var(–bdr);}
+.ten-bar{height:5px;background:rgba(255,255,255,0.07);border:1px solid var(--bdr);}
 .ten-fill{height:100%;transition:width .7s ease,background .4s;}
 .ten-marks{display:flex;justify-content:space-between;margin-top:2px;}
 .ten-marks span{font-family:Consolas,monospace;font-size:6px;color:rgba(232,212,154,0.2);}
 
 /* ── CHARTS ── */
 .ch-lbl{font-family:Consolas,monospace;font-size:7px;color:rgba(200,160,64,0.35);margin-bottom:2px;letter-spacing:1px;}
-.ch-wrap{background:rgba(8,20,42,0.8);border:1px solid var(–bdr);padding:3px;margin-bottom:6px;}
+.ch-wrap{background:rgba(8,20,42,0.8);border:1px solid var(--bdr);padding:3px;margin-bottom:6px;}
 canvas{width:100%!important;height:44px!important;display:block;}
 
 /* ── NEWSPAPER ── */
 #col-news{background:#f4f0e8;color:#1a1a1a;}
-.np-mast{background:var(–inst);padding:7px 12px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;}
-.np-name{font-family:Georgia,serif;font-size:15px;font-weight:bold;color:var(–perg);letter-spacing:3px;}
+.np-mast{background:var(--inst);padding:7px 12px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;}
+.np-name{font-family:Georgia,serif;font-size:15px;font-weight:bold;color:var(--perg);letter-spacing:3px;}
 .np-meta{font-family:Consolas,monospace;font-size:7px;color:rgba(232,212,154,0.5);letter-spacing:2px;text-align:right;}
-.np-rule{height:2px;background:var(–gold);flex-shrink:0;}
+.np-rule{height:2px;background:var(--gold);flex-shrink:0;}
 .np-body{padding:10px 12px;flex-shrink:0;}
-.np-tag{font-family:Consolas,monospace;font-size:7px;letter-spacing:3px;text-transform:uppercase;color:var(–bcra);margin-bottom:4px;}
+.np-tag{font-family:Consolas,monospace;font-size:7px;letter-spacing:3px;text-transform:uppercase;color:var(--bcra);margin-bottom:4px;}
 .np-hl{font-family:Georgia,serif;font-size:15px;font-weight:bold;line-height:1.2;color:#0D2B5E;margin-bottom:6px;}
-.np-lede{font-size:11px;line-height:1.6;color:#333;margin-bottom:6px;border-left:2px solid var(–gold);padding-left:7px;}
+.np-lede{font-size:11px;line-height:1.6;color:#333;margin-bottom:6px;border-left:2px solid var(--gold);padding-left:7px;}
 .np-edu{font-size:10px;line-height:1.5;color:#555;background:#ede8db;padding:6px 8px;}
-.np-edu b{color:var(–bcra);font-size:7px;letter-spacing:2px;text-transform:uppercase;display:block;margin-bottom:2px;font-family:Consolas,monospace;}
+.np-edu b{color:var(--bcra);font-size:7px;letter-spacing:2px;text-transform:uppercase;display:block;margin-bottom:2px;font-family:Consolas,monospace;}
 
 /* ── FISCAL ── */
-.fiscal{background:var(–inst);border-top:2px solid var(–gold);padding:8px 12px;flex-shrink:0;}
-.fiscal-ttl{font-family:Georgia,serif;font-size:11px;font-weight:bold;color:var(–perg);margin-bottom:3px;}
+.fiscal{background:var(--inst);border-top:2px solid var(--gold);padding:8px 12px;flex-shrink:0;}
+.fiscal-ttl{font-family:Georgia,serif;font-size:11px;font-weight:bold;color:var(--perg);margin-bottom:3px;}
 .fiscal-desc{font-size:9px;color:rgba(232,212,154,0.5);line-height:1.4;margin-bottom:6px;}
 .fiscal-btns{display:grid;grid-template-columns:1fr 1fr;gap:4px;}
 .btn-f{font-family:Consolas,monospace;font-size:8px;letter-spacing:1px;text-transform:uppercase;padding:6px 7px;border:1px solid;cursor:pointer;background:transparent;line-height:1.3;text-align:center;}
-.btn-f.aj{color:var(–sup);border-color:rgba(30,120,64,0.4);}
+.btn-f.aj{color:var(--sup);border-color:rgba(30,120,64,0.4);}
 .btn-f.aj:hover{background:rgba(30,120,64,0.2);}
-.btn-f.ex{color:var(–warn);border-color:rgba(212,132,26,0.4);}
+.btn-f.ex{color:var(--warn);border-color:rgba(212,132,26,0.4);}
 .btn-f.ex:hover{background:rgba(212,132,26,0.15);}
 .btn-f:disabled{opacity:0.3;cursor:not-allowed;}
 .fiscal-cd{font-family:Consolas,monospace;font-size:7px;color:rgba(232,212,154,0.3);margin-top:4px;letter-spacing:1px;}
 
 /* ── DECISIONS ── */
 #col-dec{background:#090f1a;}
-.dec-hdr{background:var(–bcra);padding:7px 12px;display:flex;justify-content:space-between;align-items:center;flex-shrink:0;}
-.dec-ttl{font-family:Georgia,serif;font-size:11px;font-weight:bold;color:var(–perg);letter-spacing:1px;}
-.dec-bdg{font-family:Consolas,monospace;font-size:8px;color:var(–gold);letter-spacing:2px;}
+.dec-hdr{background:var(--bcra);padding:7px 12px;display:flex;justify-content:space-between;align-items:center;flex-shrink:0;}
+.dec-ttl{font-family:Georgia,serif;font-size:11px;font-weight:bold;color:var(--perg);letter-spacing:1px;}
+.dec-bdg{font-family:Consolas,monospace;font-size:8px;color:var(--gold);letter-spacing:2px;}
 .dec-body{padding:10px 12px;flex:1;display:flex;flex-direction:column;}
 .sliders{display:flex;flex-direction:column;gap:8px;flex:1;}
 .sl{display:flex;flex-direction:column;gap:2px;}
 .sl-top{display:flex;justify-content:space-between;align-items:center;gap:4px;}
-.sl-nm{font-family:Cambria,serif;font-size:10px;color:var(–perg);flex:1;}
-.sl-vl{font-family:Consolas,monospace;font-size:11px;font-weight:bold;color:var(–gold);white-space:nowrap;}
+.sl-nm{font-family:Cambria,serif;font-size:10px;color:var(--perg);flex:1;}
+.sl-vl{font-family:Consolas,monospace;font-size:11px;font-weight:bold;color:var(--gold);white-space:nowrap;}
 .sl-ht{font-size:8px;color:rgba(232,212,154,0.3);font-style:italic;}
 .tt{position:relative;display:inline-flex;margin-left:4px;}
 .tt-i{width:12px;height:12px;border-radius:50%;border:1px solid rgba(200,160,64,0.35);display:flex;align-items:center;justify-content:center;font-size:7px;cursor:help;color:rgba(232,212,154,0.4);font-family:Consolas,monospace;flex-shrink:0;}
-.tt-b{display:none;position:absolute;bottom:calc(100% + 4px);left:50%;transform:translateX(-50%);width:180px;background:var(–inst);color:var(–perg);border:1px solid var(–gold);padding:7px 9px;font-size:9px;line-height:1.5;z-index:300;font-family:Cambria,serif;pointer-events:none;}
-.tt-b::after{content:’’;position:absolute;top:100%;left:50%;transform:translateX(-50%);border:4px solid transparent;border-top-color:var(–gold);}
+.tt-b{display:none;position:absolute;bottom:calc(100% + 4px);left:50%;transform:translateX(-50%);width:180px;background:var(--inst);color:var(--perg);border:1px solid var(--gold);padding:7px 9px;font-size:9px;line-height:1.5;z-index:300;font-family:Cambria,serif;pointer-events:none;}
+.tt-b::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:4px solid transparent;border-top-color:var(--gold);}
 .tt:hover .tt-b{display:block;}
 input[type=range]{-webkit-appearance:none;width:100%;height:2px;background:rgba(255,255,255,0.1);outline:none;cursor:pointer;}
-input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:11px;height:11px;background:var(–gold);cursor:pointer;border:1px solid var(–inst);}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:11px;height:11px;background:var(--gold);cursor:pointer;border:1px solid var(--inst);}
 
 /* ── ESTERILIZACION ── */
-.ester-row{display:flex;align-items:center;gap:8px;margin-top:6px;padding:6px 8px;background:rgba(26,75,140,0.3);border:1px solid var(–bdr);}
-.ester-lbl{font-family:Cambria,serif;font-size:10px;color:var(–perg);flex:1;}
+.ester-row{display:flex;align-items:center;gap:8px;margin-top:6px;padding:6px 8px;background:rgba(26,75,140,0.3);border:1px solid var(--bdr);}
+.ester-lbl{font-family:Cambria,serif;font-size:10px;color:var(--perg);flex:1;}
 .ester-btns{display:flex;gap:4px;}
 .btn-ester{font-family:Consolas,monospace;font-size:8px;letter-spacing:1px;text-transform:uppercase;padding:4px 8px;border:1px solid rgba(200,160,64,0.3);cursor:pointer;background:transparent;color:rgba(232,212,154,0.5);transition:all .15s;}
-.btn-ester.active-letras{background:rgba(26,75,140,0.6);color:var(–perg);border-color:var(–bcra);}
-.btn-ester.active-bonos{background:rgba(30,120,64,0.3);color:#6fcf97;border-color:var(–sup);}
-.btn-ester.active-no{background:rgba(192,57,43,0.2);color:#eb5757;border-color:var(–red);}
+.btn-ester.active-letras{background:rgba(26,75,140,0.6);color:var(--perg);border-color:var(--bcra);}
+.btn-ester.active-bonos{background:rgba(30,120,64,0.3);color:#6fcf97;border-color:var(--sup);}
+.btn-ester.active-no{background:rgba(192,57,43,0.2);color:#eb5757;border-color:var(--red);}
 .ester-hint{font-size:8px;color:rgba(232,212,154,0.35);font-style:italic;margin-top:2px;}
 
 /* ── MESA DE CAMBIOS ── */
-.mesa{background:rgba(13,43,94,0.5);border:1px solid var(–bdr);border-top:2px solid var(–gold);padding:8px 10px;flex-shrink:0;margin-top:8px;}
+.mesa{background:rgba(13,43,94,0.5);border:1px solid var(--bdr);border-top:2px solid var(--gold);padding:8px 10px;flex-shrink:0;margin-top:8px;}
 .mesa-ttl{font-family:Consolas,monospace;font-size:7px;letter-spacing:3px;text-transform:uppercase;color:rgba(200,160,64,0.6);margin-bottom:7px;}
 .mesa-kpis{display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;margin-bottom:8px;}
-.mesa-k{background:rgba(26,75,140,0.3);border:1px solid var(–bdr);padding:4px 6px;}
+.mesa-k{background:rgba(26,75,140,0.3);border:1px solid var(--bdr);padding:4px 6px;}
 .mesa-klbl{font-family:Consolas,monospace;font-size:7px;letter-spacing:1px;text-transform:uppercase;color:rgba(232,212,154,0.35);}
-.mesa-kv{font-family:Consolas,monospace;font-size:12px;font-weight:bold;color:var(–perg);margin-top:2px;}
+.mesa-kv{font-family:Consolas,monospace;font-size:12px;font-weight:bold;color:var(--perg);margin-top:2px;}
 .mesa-labels{display:flex;justify-content:space-between;font-family:Consolas,monospace;font-size:7px;color:rgba(232,212,154,0.3);margin-bottom:2px;}
 .mesa-val-row{display:flex;justify-content:space-between;align-items:center;margin-top:3px;}
 .mesa-hint{font-size:9px;color:rgba(232,212,154,0.4);font-style:italic;flex:1;}
-.mesa-val{font-family:Consolas,monospace;font-size:12px;font-weight:bold;color:var(–gold);}
+.mesa-val{font-family:Consolas,monospace;font-size:12px;font-weight:bold;color:var(--gold);}
 .mesa-efectos{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:6px;}
 .mesa-ef{font-family:Consolas,monospace;font-size:9px;padding:2px 5px;border:1px solid transparent;min-height:18px;}
 .mesa-ef.pos{color:#6fcf97;border-color:rgba(111,207,151,0.2);background:rgba(30,120,64,0.1);}
 .mesa-ef.neg{color:#eb5757;border-color:rgba(235,87,87,0.2);background:rgba(192,57,43,0.1);}
 .mesa-ef.neu{color:rgba(232,212,154,0.3);}
 
-.btn-confirm{font-family:Georgia,serif;font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:bold;padding:12px;background:var(–gold);color:var(–inst);border:none;cursor:pointer;margin-top:10px;flex-shrink:0;width:100%;transition:background .2s;}
-.btn-confirm:hover{background:var(–perg);}
+.btn-confirm{font-family:Georgia,serif;font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:bold;padding:12px;background:var(--gold);color:var(--inst);border:none;cursor:pointer;margin-top:10px;flex-shrink:0;width:100%;transition:background .2s;}
+.btn-confirm:hover{background:var(--perg);}
 .btn-confirm:disabled{opacity:0.35;cursor:not-allowed;}
 
 /* ── COMUNICADO MODAL ── */
 .com-overlay{position:fixed;inset:0;background:rgba(0,0,0,.75);display:none;align-items:center;justify-content:center;z-index:500;}
 .com-overlay.open{display:flex;}
-.com-box{background:var(–inst);border:2px solid var(–gold);padding:24px;max-width:420px;width:90%;}
-.com-ttl{font-family:Georgia,serif;font-size:16px;font-weight:bold;color:var(–perg);margin-bottom:4px;letter-spacing:1px;}
+.com-box{background:var(--inst);border:2px solid var(--gold);padding:24px;max-width:420px;width:90%;}
+.com-ttl{font-family:Georgia,serif;font-size:16px;font-weight:bold;color:var(--perg);margin-bottom:4px;letter-spacing:1px;}
 .com-sub{font-family:Consolas,monospace;font-size:9px;color:rgba(200,160,64,0.5);letter-spacing:3px;text-transform:uppercase;margin-bottom:14px;}
-.com-warn{font-size:11px;color:rgba(232,212,154,0.6);line-height:1.6;margin-bottom:14px;font-style:italic;border-left:2px solid var(–warn);padding-left:8px;}
+.com-warn{font-size:11px;color:rgba(232,212,154,0.6);line-height:1.6;margin-bottom:14px;font-style:italic;border-left:2px solid var(--warn);padding-left:8px;}
 .com-opts{display:flex;flex-direction:column;gap:6px;margin-bottom:14px;}
-.btn-com{font-family:Cambria,serif;font-size:11px;padding:9px 12px;border:1px solid var(–bdr);cursor:pointer;background:rgba(26,75,140,0.3);color:var(–perg);text-align:left;transition:all .15s;line-height:1.4;}
-.btn-com:hover{background:rgba(26,75,140,0.6);border-color:var(–gold);}
-.btn-com.selected{background:rgba(200,160,64,0.2);border-color:var(–gold);color:var(–perg);}
+.btn-com{font-family:Cambria,serif;font-size:11px;padding:9px 12px;border:1px solid var(--bdr);cursor:pointer;background:rgba(26,75,140,0.3);color:var(--perg);text-align:left;transition:all .15s;line-height:1.4;}
+.btn-com:hover{background:rgba(26,75,140,0.6);border-color:var(--gold);}
+.btn-com.selected{background:rgba(200,160,64,0.2);border-color:var(--gold);color:var(--perg);}
 .btn-com small{display:block;font-family:Consolas,monospace;font-size:8px;color:rgba(232,212,154,0.45);margin-top:2px;letter-spacing:1px;}
 .com-btns{display:flex;gap:8px;}
-.btn-emit{font-family:Georgia,serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:bold;padding:10px 20px;background:var(–gold);color:var(–inst);border:none;cursor:pointer;flex:1;}
-.btn-emit:hover{background:var(–perg);}
-.btn-skip{font-family:Georgia,serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:10px 16px;background:transparent;color:var(–perg);border:1px solid var(–bdr);cursor:pointer;}
+.btn-emit{font-family:Georgia,serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:bold;padding:10px 20px;background:var(--gold);color:var(--inst);border:none;cursor:pointer;flex:1;}
+.btn-emit:hover{background:var(--perg);}
+.btn-skip{font-family:Georgia,serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:10px 16px;background:transparent;color:var(--perg);border:1px solid var(--bdr);cursor:pointer;}
 .btn-skip:hover{background:rgba(255,255,255,.05);}
 
 /* ── SOCIAL ── */
 #col-social{background:#06101a;}
-.soc-hdr{background:var(–inst);border-bottom:1px solid var(–bdr);padding:7px 11px;display:flex;align-items:center;gap:7px;flex-shrink:0;}
+.soc-hdr{background:var(--inst);border-bottom:1px solid var(--bdr);padding:7px 11px;display:flex;align-items:center;gap:7px;flex-shrink:0;}
 .soc-icon{font-size:12px;}
-.soc-ttl{font-family:Consolas,monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(–gold);}
+.soc-ttl{font-family:Consolas,monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);}
 .soc-turn{font-family:Consolas,monospace;font-size:7px;color:rgba(232,212,154,0.3);margin-left:auto;}
 .tweets{flex:1;overflow-y:auto;padding:7px;display:flex;flex-direction:column;gap:5px;min-height:0;}
 .tw{background:rgba(26,75,140,0.2);border:1px solid rgba(200,160,64,0.1);padding:7px;flex-shrink:0;}
 .tw-hdr{display:flex;gap:6px;margin-bottom:3px;}
-.tw-av{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0;border:1px solid var(–bdr);}
-.tw-nm{font-family:Cambria,serif;font-size:10px;font-weight:bold;color:var(–perg);}
+.tw-av{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0;border:1px solid var(--bdr);}
+.tw-nm{font-family:Cambria,serif;font-size:10px;font-weight:bold;color:var(--perg);}
 .tw-hd{font-family:Consolas,monospace;font-size:7px;color:rgba(232,212,154,0.35);}
 .tw-bd{font-size:9px;line-height:1.45;color:rgba(232,212,154,0.75);}
 .tw-lk{font-family:Consolas,monospace;font-size:7px;color:rgba(232,212,154,0.25);margin-top:3px;}
 .tw.comunicado{border-color:rgba(200,160,64,0.4);background:rgba(200,160,64,0.08);}
-.log-wrap{border-top:1px solid var(–bdr);padding:7px 9px;flex-shrink:0;}
+.log-wrap{border-top:1px solid var(--bdr);padding:7px 9px;flex-shrink:0;}
 .log-ttl{font-family:Consolas,monospace;font-size:7px;letter-spacing:2px;text-transform:uppercase;color:rgba(200,160,64,0.35);margin-bottom:5px;}
 .le{padding:3px 0;border-bottom:1px solid rgba(200,160,64,0.06);}
 .le-q{font-family:Consolas,monospace;font-size:7px;color:rgba(232,212,154,0.25);}
@@ -208,60 +207,58 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:11px;heigh
 .e-icon{font-size:68px;line-height:1;margin-bottom:14px;}
 .e-type{font-family:Consolas,monospace;font-size:9px;letter-spacing:4px;text-transform:uppercase;color:rgba(232,212,154,0.4);margin-bottom:6px;}
 .e-title{font-family:Georgia,serif;font-size:clamp(32px,7vw,72px);font-weight:bold;letter-spacing:2px;line-height:.95;margin-bottom:16px;}
-.e-rule{width:48px;height:2px;background:var(–gold);margin:0 auto 16px;}
+.e-rule{width:48px;height:2px;background:var(--gold);margin:0 auto 16px;}
 .e-nar{max-width:480px;font-size:13px;line-height:1.8;color:rgba(232,212,154,0.65);margin-bottom:24px;font-style:italic;}
-.e-nar strong{color:var(–perg);font-style:normal;}
-.e-stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(–bdr);max-width:480px;width:100%;margin-bottom:24px;}
-.e-stat{padding:12px 8px;border-right:1px solid var(–bdr);}
+.e-nar strong{color:var(--perg);font-style:normal;}
+.e-stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--bdr);max-width:480px;width:100%;margin-bottom:24px;}
+.e-stat{padding:12px 8px;border-right:1px solid var(--bdr);}
 .e-stat:last-child{border-right:none;}
 .e-slbl{font-family:Consolas,monospace;font-size:7px;letter-spacing:2px;text-transform:uppercase;color:rgba(200,160,64,0.45);margin-bottom:4px;}
 .e-sval{font-family:Consolas,monospace;font-size:17px;font-weight:bold;}
-.vg{color:#6fcf97;}.vr{color:#eb5757;}.vw{color:#f2994a;}.vn{color:var(–perg);}
+.vg{color:#6fcf97;}.vr{color:#eb5757;}.vw{color:#f2994a;}.vn{color:var(--perg);}
 .e-btns{display:flex;gap:9px;flex-wrap:wrap;justify-content:center;}
-.btn-new{font-family:Georgia,serif;font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:bold;padding:12px 36px;background:var(–gold);color:var(–inst);border:none;cursor:pointer;}
-.btn-new:hover{background:var(–perg);}
-.btn-mnu{font-family:Georgia,serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:12px 26px;background:transparent;color:var(–perg);border:1px solid var(–bdr);cursor:pointer;}
+.btn-new{font-family:Georgia,serif;font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:bold;padding:12px 36px;background:var(--gold);color:var(--inst);border:none;cursor:pointer;}
+.btn-new:hover{background:var(--perg);}
+.btn-mnu{font-family:Georgia,serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:12px 26px;background:transparent;color:var(--perg);border:1px solid var(--bdr);cursor:pointer;}
 .btn-mnu:hover{background:rgba(255,255,255,.05);}
 
 /* ── MODAL GENERAL ── */
 .modal{position:fixed;inset:0;background:rgba(0,0,0,.65);display:none;align-items:center;justify-content:center;z-index:400;}
 .modal.open{display:flex;}
-.modal-box{background:var(–inst);border:2px solid var(–gold);padding:22px 26px;max-width:380px;width:90%;text-align:center;}
+.modal-box{background:var(--inst);border:2px solid var(--gold);padding:22px 26px;max-width:380px;width:90%;text-align:center;}
 .m-icon{font-size:34px;margin-bottom:9px;}
-.m-title{font-family:Georgia,serif;font-size:17px;font-weight:bold;color:var(–perg);margin-bottom:7px;}
+.m-title{font-family:Georgia,serif;font-size:17px;font-weight:bold;color:var(--perg);margin-bottom:7px;}
 .m-body{font-size:11px;line-height:1.7;color:rgba(232,212,154,0.7);margin-bottom:10px;font-style:italic;}
-.m-eff{font-family:Consolas,monospace;font-size:9px;color:var(–gold);margin-bottom:14px;letter-spacing:1px;}
-.btn-modal{font-family:Georgia,serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;font-weight:bold;padding:9px 26px;background:var(–gold);color:var(–inst);border:none;cursor:pointer;}
+.m-eff{font-family:Consolas,monospace;font-size:9px;color:var(--gold);margin-bottom:14px;letter-spacing:1px;}
+.btn-modal{font-family:Georgia,serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;font-weight:bold;padding:9px 26px;background:var(--gold);color:var(--inst);border:none;cursor:pointer;}
 
 /* ── FLASH / ALERT ── */
 .flash{position:fixed;inset:0;pointer-events:none;z-index:999;animation:flo .5s ease forwards;}
 .flash-r{background:rgba(192,57,43,.18);}.flash-g{background:rgba(30,120,64,.15);}
 @keyframes flo{0%{opacity:1}100%{opacity:0}}
-.alert{position:fixed;top:46px;left:50%;transform:translateX(-50%);padding:8px 18px;font-family:Consolas,monospace;font-size:9px;letter-spacing:2px;z-index:600;text-align:center;white-space:nowrap;animation:alo 3.5s ease forwards;color:var(–inst);font-weight:bold;}
+.alert{position:fixed;top:46px;left:50%;transform:translateX(-50%);padding:8px 18px;font-family:Consolas,monospace;font-size:9px;letter-spacing:2px;z-index:600;text-align:center;white-space:nowrap;animation:alo 3.5s ease forwards;color:var(--inst);font-weight:bold;}
 @keyframes alo{0%,75%{opacity:1;transform:translateX(-50%) translateY(0)}100%{opacity:0;transform:translateX(-50%) translateY(-8px)}}
 
 /* ── MOBILE ── */
 @media(max-width:768px){
-body{overflow-y:auto;}
-#screen-game.active{display:flex;flex-direction:column;height:auto;overflow:visible;}
-.g-main{display:flex;flex-direction:column;overflow:visible;height:auto;}
-.gcol{overflow-y:visible;height:auto;border-right:none;border-bottom:1px solid var(–bdr);}
-#col-left{order:1;}
-#col-news{order:2;}
-#col-dec{order:3;}
-#col-social{order:4;}
-.tweets{max-height:300px;overflow-y:auto;}
-.tt-b{left:0;transform:none;width:220px;}
-.mesa-efectos{grid-template-columns:1fr;}
+  body{overflow-y:auto;}
+  #screen-game.active{display:flex;flex-direction:column;height:auto;overflow:visible;}
+  .g-main{display:flex;flex-direction:column;overflow:visible;height:auto;}
+  .gcol{overflow-y:visible;height:auto;border-right:none;border-bottom:1px solid var(--bdr);}
+  #col-left{order:1;}
+  #col-news{order:2;}
+  #col-dec{order:3;}
+  #col-social{order:4;}
+  .tweets{max-height:300px;overflow-y:auto;}
+  .tt-b{left:0;transform:none;width:220px;}
+  .mesa-efectos{grid-template-columns:1fr;}
 }
 </style>
-
 </head>
 <body>
 <div id="app">
 
 <!-- INTRO -->
-
 <div id="screen-intro" class="screen active">
   <div class="i-seal">&#127983;</div>
   <div class="i-eye">Rep. Argentina &middot; Uso Interno &middot; Doc. Reservado</div>
@@ -274,14 +271,12 @@ body{overflow-y:auto;}
     Las reservas se encuentran en niveles sub&oacute;ptimos. La inflaci&oacute;n exhibe una din&aacute;mica de <em>correcci&oacute;n t&eacute;cnica</em> acelerada. El tipo de cambio goza de buena salud, relativa.<br><br>
     Administre la pol&iacute;tica monetaria con la <strong>precisi&oacute;n t&eacute;cnica que la instituci&oacute;n requiere</strong>.
   </div>
-  <a href="#" class="btn-main" id="btn-start" role="button">Asumir el Cargo</a>
+  <button type="button" class="btn-main" id="btn-start">Asumir el Cargo</button>
   <div class="i-foot">MDB-2024-00000001 &mdash; Sujeto a modificaciones sin previo aviso</div>
   <div class="i-credit">Creado y dise&ntilde;ado por <strong>Tom&aacute;s Copped&eacute;</strong></div>
-  <div id="dbg" style="margin-top:12px;font-family:Consolas,monospace;font-size:11px;color:#eb5757;min-height:16px;"></div>
 </div>
 
 <!-- GAME -->
-
 <div id="screen-game" class="screen">
   <div class="g-hdr">
     <div class="g-logo">BCRA <span>ARG</span></div>
@@ -291,122 +286,118 @@ body{overflow-y:auto;}
   <div class="ticker"><div class="ticker-inner" id="ticker-inner"></div></div>
   <div class="g-main">
 
-```
-<!-- COL 1 -->
-<div class="gcol" id="col-left" style="background:#0a1830;">
-  <div class="pnl">
-    <div class="pnl-ttl">Indicadores Econ&oacute;micos</div>
-    <div class="kpi-list" id="kpi-list"></div>
-  </div>
-  <div class="pnl">
-    <div class="pnl-ttl">Tensi&oacute;n Sist&eacute;mica</div>
-    <div class="ten-hdr"><span class="ten-lbl">Acumulada</span><span class="ten-pct" id="ten-pct">28%</span></div>
-    <div class="ten-bar"><div class="ten-fill" id="ten-fill" style="width:28%"></div></div>
-    <div class="ten-marks"><span>ESTABLE</span><span>ALERTA</span><span>COLAPSO</span></div>
-  </div>
-  <div class="pnl">
-    <div class="pnl-ttl">Evoluci&oacute;n Hist&oacute;rica</div>
-    <div class="ch-lbl">INFLACI&Oacute;N %</div>
-    <div class="ch-wrap"><canvas id="ch-inf"></canvas></div>
-    <div class="ch-lbl">RESERVAS USD B</div>
-    <div class="ch-wrap"><canvas id="ch-res"></canvas></div>
-    <div class="ch-lbl">DESEMPLEO %</div>
-    <div class="ch-wrap"><canvas id="ch-des"></canvas></div>
-  </div>
-</div>
-
-<!-- COL 2: Diario + Fiscal -->
-<div class="gcol" id="col-news">
-  <div class="np-mast">
-    <div class="np-name">EL CRONISTA</div>
-    <div class="np-meta" id="np-date">BUENOS AIRES<br>ENERO 2024</div>
-  </div>
-  <div class="np-rule"></div>
-  <div class="np-body">
-    <div class="np-tag" id="np-tag">ECONOM&Iacute;A</div>
-    <div class="np-hl" id="np-hl">El BCRA inicia nueva gesti&oacute;n bajo expectativa de los mercados</div>
-    <div class="np-lede" id="np-lede">Las reservas internacionales se encuentran en niveles t&eacute;cnicamente adecuados para las necesidades del programa vigente.</div>
-    <div class="np-edu"><b>Concepto Econ&oacute;mico</b><span id="np-edu">Seleccione un evento para ver el concepto educativo.</span></div>
-  </div>
-  <div class="fiscal">
-    <div class="fiscal-ttl">Coordinaci&oacute;n con el Ejecutivo</div>
-    <div class="fiscal-desc">Solicite al Poder Ejecutivo una modificaci&oacute;n de la pol&iacute;tica fiscal. Disponible cada 2 trimestres.</div>
-    <div class="fiscal-btns">
-      <button class="btn-f aj" id="btn-aj">Ajuste fiscal<br><small>Reducir d&eacute;ficit</small></button>
-      <button class="btn-f ex" id="btn-ex">Expansi&oacute;n<br><small>M&aacute;s gasto</small></button>
-    </div>
-    <div class="fiscal-cd" id="fiscal-cd">Solicitud disponible</div>
-  </div>
-</div>
-
-<!-- COL 3: Decisiones -->
-<div class="gcol" id="col-dec">
-  <div class="dec-hdr">
-    <span class="dec-ttl">Decisiones de Pol&iacute;tica Monetaria</span>
-    <span class="dec-bdg" id="dec-bdg">T-1</span>
-  </div>
-  <div class="dec-body">
-    <div class="sliders" id="sliders"></div>
-
-    <!-- Esterilizacion -->
-    <div class="ester-row">
-      <div style="flex:1">
-        <div class="ester-lbl">Esterilizaci&oacute;n de emisi&oacute;n por compra de reservas</div>
-        <div class="ester-hint" id="ester-hint">Sin compra activa &mdash; sin esterilizaci&oacute;n necesaria</div>
+    <!-- COL 1 -->
+    <div class="gcol" id="col-left" style="background:#0a1830;">
+      <div class="pnl">
+        <div class="pnl-ttl">Indicadores Econ&oacute;micos</div>
+        <div class="kpi-list" id="kpi-list"></div>
       </div>
-      <div class="ester-btns">
-        <button class="btn-ester" id="ester-letras">Letras</button>
-        <button class="btn-ester" id="ester-bonos">Bonos</button>
-        <button class="btn-ester active-no" id="ester-no">No</button>
+      <div class="pnl">
+        <div class="pnl-ttl">Tensi&oacute;n Sist&eacute;mica</div>
+        <div class="ten-hdr"><span class="ten-lbl">Acumulada</span><span class="ten-pct" id="ten-pct">28%</span></div>
+        <div class="ten-bar"><div class="ten-fill" id="ten-fill" style="width:28%"></div></div>
+        <div class="ten-marks"><span>ESTABLE</span><span>ALERTA</span><span>COLAPSO</span></div>
+      </div>
+      <div class="pnl">
+        <div class="pnl-ttl">Evoluci&oacute;n Hist&oacute;rica</div>
+        <div class="ch-lbl">INFLACI&Oacute;N %</div>
+        <div class="ch-wrap"><canvas id="ch-inf"></canvas></div>
+        <div class="ch-lbl">RESERVAS USD B</div>
+        <div class="ch-wrap"><canvas id="ch-res"></canvas></div>
+        <div class="ch-lbl">DESEMPLEO %</div>
+        <div class="ch-wrap"><canvas id="ch-des"></canvas></div>
       </div>
     </div>
 
-    <!-- Mesa de Cambios -->
-    <div class="mesa">
-      <div class="mesa-ttl">Mesa de Cambios &mdash; Operaci&oacute;n de Reservas</div>
-      <div class="mesa-kpis">
-        <div class="mesa-k"><div class="mesa-klbl">Reservas</div><div class="mesa-kv" id="mesa-res">USD 10.0B</div></div>
-        <div class="mesa-k"><div class="mesa-klbl">Brecha</div><div class="mesa-kv" id="mesa-brecha">45%</div></div>
-        <div class="mesa-k"><div class="mesa-klbl">Operaci&oacute;n</div><div class="mesa-kv" id="mesa-op">Neutral</div></div>
+    <!-- COL 2: Diario + Fiscal -->
+    <div class="gcol" id="col-news">
+      <div class="np-mast">
+        <div class="np-name">EL CRONISTA</div>
+        <div class="np-meta" id="np-date">BUENOS AIRES<br>ENERO 2024</div>
       </div>
-      <div class="mesa-labels"><span>Comprar USD</span><span>Neutral</span><span>Vender USD</span></div>
-      <input type="range" id="sl-interv" min="-5" max="5" step="1" value="0">
-      <div class="mesa-val-row">
-        <span class="mesa-hint" id="mesa-hint">Sin operaci&oacute;n activa</span>
-        <span class="mesa-val" id="slv-interv">0B USD</span>
+      <div class="np-rule"></div>
+      <div class="np-body">
+        <div class="np-tag" id="np-tag">ECONOM&Iacute;A</div>
+        <div class="np-hl" id="np-hl">El BCRA inicia nueva gesti&oacute;n bajo expectativa de los mercados</div>
+        <div class="np-lede" id="np-lede">Las reservas internacionales se encuentran en niveles t&eacute;cnicamente adecuados para las necesidades del programa vigente.</div>
+        <div class="np-edu"><b>Concepto Econ&oacute;mico</b><span id="np-edu">Seleccione un evento para ver el concepto educativo.</span></div>
       </div>
-      <div class="mesa-efectos">
-        <div class="mesa-ef neu" id="mef-res"></div>
-        <div class="mesa-ef neu" id="mef-brecha"></div>
-        <div class="mesa-ef neu" id="mef-inf"></div>
-        <div class="mesa-ef neu" id="mef-ester"></div>
+      <div class="fiscal">
+        <div class="fiscal-ttl">Coordinaci&oacute;n con el Ejecutivo</div>
+        <div class="fiscal-desc">Solicite al Poder Ejecutivo una modificaci&oacute;n de la pol&iacute;tica fiscal. Disponible cada 2 trimestres.</div>
+        <div class="fiscal-btns">
+          <button class="btn-f aj" id="btn-aj">Ajuste fiscal<br><small>Reducir d&eacute;ficit</small></button>
+          <button class="btn-f ex" id="btn-ex">Expansi&oacute;n<br><small>M&aacute;s gasto</small></button>
+        </div>
+        <div class="fiscal-cd" id="fiscal-cd">Solicitud disponible</div>
       </div>
     </div>
 
-    <button class="btn-confirm" id="btn-confirm">Confirmar Decisiones del Directorio</button>
-  </div>
-</div>
+    <!-- COL 3: Decisiones -->
+    <div class="gcol" id="col-dec">
+      <div class="dec-hdr">
+        <span class="dec-ttl">Decisiones de Pol&iacute;tica Monetaria</span>
+        <span class="dec-bdg" id="dec-bdg">T-1</span>
+      </div>
+      <div class="dec-body">
+        <div class="sliders" id="sliders"></div>
 
-<!-- COL 4: Twitter + Log -->
-<div class="gcol" id="col-social">
-  <div class="soc-hdr">
-    <span class="soc-icon">&#120143;</span>
-    <span class="soc-ttl">Reacciones del Mercado</span>
-    <span class="soc-turn" id="soc-turn">T-1</span>
-  </div>
-  <div class="tweets" id="tweets"></div>
-  <div class="log-wrap">
-    <div class="log-ttl">Historial de Gesti&oacute;n</div>
-    <div id="log"></div>
-  </div>
-</div>
-```
+        <!-- Esterilizacion -->
+        <div class="ester-row">
+          <div style="flex:1">
+            <div class="ester-lbl">Esterilizaci&oacute;n de emisi&oacute;n por compra de reservas</div>
+            <div class="ester-hint" id="ester-hint">Sin compra activa &mdash; sin esterilizaci&oacute;n necesaria</div>
+          </div>
+          <div class="ester-btns">
+            <button class="btn-ester" id="ester-letras">Letras</button>
+            <button class="btn-ester" id="ester-bonos">Bonos</button>
+            <button class="btn-ester active-no" id="ester-no">No</button>
+          </div>
+        </div>
 
+        <!-- Mesa de Cambios -->
+        <div class="mesa">
+          <div class="mesa-ttl">Mesa de Cambios &mdash; Operaci&oacute;n de Reservas</div>
+          <div class="mesa-kpis">
+            <div class="mesa-k"><div class="mesa-klbl">Reservas</div><div class="mesa-kv" id="mesa-res">USD 10.0B</div></div>
+            <div class="mesa-k"><div class="mesa-klbl">Brecha</div><div class="mesa-kv" id="mesa-brecha">45%</div></div>
+            <div class="mesa-k"><div class="mesa-klbl">Operaci&oacute;n</div><div class="mesa-kv" id="mesa-op">Neutral</div></div>
+          </div>
+          <div class="mesa-labels"><span>Comprar USD</span><span>Neutral</span><span>Vender USD</span></div>
+          <input type="range" id="sl-interv" min="-5" max="5" step="1" value="0">
+          <div class="mesa-val-row">
+            <span class="mesa-hint" id="mesa-hint">Sin operaci&oacute;n activa</span>
+            <span class="mesa-val" id="slv-interv">0B USD</span>
+          </div>
+          <div class="mesa-efectos">
+            <div class="mesa-ef neu" id="mef-res"></div>
+            <div class="mesa-ef neu" id="mef-brecha"></div>
+            <div class="mesa-ef neu" id="mef-inf"></div>
+            <div class="mesa-ef neu" id="mef-ester"></div>
+          </div>
+        </div>
+
+        <button class="btn-confirm" id="btn-confirm">Confirmar Decisiones del Directorio</button>
+      </div>
+    </div>
+
+    <!-- COL 4: Twitter + Log -->
+    <div class="gcol" id="col-social">
+      <div class="soc-hdr">
+        <span class="soc-icon">&#120143;</span>
+        <span class="soc-ttl">Reacciones del Mercado</span>
+        <span class="soc-turn" id="soc-turn">T-1</span>
+      </div>
+      <div class="tweets" id="tweets"></div>
+      <div class="log-wrap">
+        <div class="log-ttl">Historial de Gesti&oacute;n</div>
+        <div id="log"></div>
+      </div>
+    </div>
   </div>
 </div>
 
 <!-- END -->
-
 <div id="screen-end" class="screen">
   <div class="e-eye">Informe Final &mdash; BCRA Argentina</div>
   <div class="e-icon" id="e-icon">&#128163;</div>
@@ -422,7 +413,6 @@ body{overflow-y:auto;}
 </div>
 
 <!-- MODAL FISCAL -->
-
 <div class="modal" id="modal">
   <div class="modal-box">
     <div class="m-icon" id="m-icon">&#127963;</div>
@@ -434,7 +424,6 @@ body{overflow-y:auto;}
 </div>
 
 <!-- MODAL COMUNICADO -->
-
 <div class="com-overlay" id="com-overlay">
   <div class="com-box">
     <div class="com-ttl">Comunicaci&oacute;n de Expectativas</div>
@@ -455,721 +444,725 @@ body{overflow-y:auto;}
 
 // ── SLIDERS ──────────────────────────────────────────────────────────────────
 var SLIDERS = [
-{ id:‘tasa’,    label:‘Tasa de Pol\u00edtica Monetaria (TNA)’, min:0,   max:200, step:5, init:70, unit:’%’,
-hint:‘Tasa anual BCRA para dep\u00f3sitos a plazo’,
-tt:‘Tasa alta frena inflaci\u00f3n pero da\u00f1a cr\u00e9dito y empleo. En 0% la econom\u00eda se calienta y los pesos huyen al d\u00f3lar. Por encima de 130% el efecto recesivo es severo.’ },
-{ id:‘crawl’,   label:‘Ritmo de Devaluaci\u00f3n Mensual’,     min:0,   max:30,  step:1, init:2,  unit:’%/mes’,
-hint:‘Velocidad de ajuste del tipo de cambio oficial’,
-tt:‘Crawl lento genera atraso cambiario y sangra reservas. R\u00e1pido alimenta inflaci\u00f3n por pass-through al precio de importados.’ },
-{ id:‘emision’, label:‘Expansi\u00f3n Monetaria (sobre M2)’,   min:0,   max:20,  step:1, init:3,  unit:’%/mes’,
-hint:‘Tasa mensual de crecimiento de la base monetaria’,
-tt:‘Emisi\u00f3n financia al Tesoro o paga intereses de LELIQs. Por encima del 6% mensual el efecto inflacionario es inevitable.’ },
-{ id:‘cepo’,    label:‘Administraci\u00f3n Cambiaria’,         min:0,   max:10,  step:1, init:7,  unit:’/10’,
-hint:‘0 = mercado libre   10 = cepo total’,
-tt:‘El cepo protege reservas pero genera brecha y espanta inversi\u00f3n. Liberarlo de golpe puede provocar una corrida.’ },
+  { id:'tasa',    label:'Tasa de Pol\u00edtica Monetaria (TNA)', min:0,   max:200, step:5, init:70, unit:'%',
+    hint:'Tasa anual BCRA para dep\u00f3sitos a plazo',
+    tt:'Tasa alta frena inflaci\u00f3n pero da\u00f1a cr\u00e9dito y empleo. En 0% la econom\u00eda se calienta y los pesos huyen al d\u00f3lar. Por encima de 130% el efecto recesivo es severo.' },
+  { id:'crawl',   label:'Ritmo de Devaluaci\u00f3n Mensual',     min:0,   max:30,  step:1, init:2,  unit:'%/mes',
+    hint:'Velocidad de ajuste del tipo de cambio oficial',
+    tt:'Crawl lento genera atraso cambiario y sangra reservas. R\u00e1pido alimenta inflaci\u00f3n por pass-through al precio de importados.' },
+  { id:'emision', label:'Expansi\u00f3n Monetaria (sobre M2)',   min:0,   max:20,  step:1, init:3,  unit:'%/mes',
+    hint:'Tasa mensual de crecimiento de la base monetaria',
+    tt:'Emisi\u00f3n financia al Tesoro o paga intereses de LELIQs. Por encima del 6% mensual el efecto inflacionario es inevitable.' },
+  { id:'cepo',    label:'Administraci\u00f3n Cambiaria',         min:0,   max:10,  step:1, init:7,  unit:'/10',
+    hint:'0 = mercado libre   10 = cepo total',
+    tt:'El cepo protege reservas pero genera brecha y espanta inversi\u00f3n. Liberarlo de golpe puede provocar una corrida.' },
 ];
 
 // ── EVENTOS ───────────────────────────────────────────────────────────────────
 var EVENTS = [
-{ tag:‘CAMPO’, hl:‘Liquidaci\u00f3n r\u00e9cord del agro: USD 3.200 M en 30 d\u00edas’, lede:‘Una cosecha excepcional gener\u00f3 una liquidaci\u00f3n in\u00e9dita. Las reservas respiran por primera vez en meses.’, edu:‘La <b>liquidaci\u00f3n del agro</b> convierte divisas de exportaci\u00f3n en pesos. Es c\u00edclica y principal fuente de d\u00f3lares. El productor retiene granos cuando el tipo de cambio parece atrasado.’, efecto:{res:3.5,inf:-0.4,pop:6,desemp:-0.3}, tweets:[{av:’\uD83C\uDF31’,nm:‘Productores NOA’,hd:’@campo_argentino’,tx:‘Liquidamos porque el tipo de cambio mejor\u00f3. No porque confiemos. Pero plata es plata.’,lk:1205},{av:’\uD83D\uDCC8’,nm:‘Bloomberg’,hd:’@bloomberg_arg’,tx:‘Inflows from agricultural sector reach historic levels. Reserves recovering.’,lk:892}] },
-{ tag:‘INDEC’, hl:‘IPC registra expansi\u00f3n superior a las proyecciones del mercado’, lede:‘El \u00edndice de precios exhibi\u00f3 una din\u00e1mica que el BCRA describe como “en proceso de convergencia”.’, edu:‘El <b>IPC</b> mide el cambio en precios de una canasta representativa. En Argentina coexisten m\u00FAltiples mediciones que suelen diferir. La credibilidad del dato es un activo macroecon\u00f3mico en s\u00ed mismo.’, efecto:{inf:2.2,pop:-12,desemp:0.3}, tweets:[{av:’\uD83D\uDED2’,nm:‘Ama de Casa BA’,hd:’@mercadito_norte’,tx:‘Los precios del s\u00FAper no tienen nada que ver con lo que mide el INDEC.’,lk:8901},{av:’\uD83D\uDCCA’,nm:‘Consultora Econ\u00f3mica’,hd:’@consultora_eco’,tx:‘Inflaci\u00f3n 4pp por encima de consenso. El ancla de expectativas no funciona.’,lk:1203}] },
-{ tag:‘BRECHA’, hl:‘Administraci\u00f3n cambiaria bajo tensi\u00f3n: brecha supera el 130%’, lede:‘El tipo de cambio paralelo registra niveles que el BCRA describe como “no representativos de los fundamentos”.’, edu:‘La <b>brecha cambiaria</b> por encima del 80-100% distorsiona toda la econom\u00eda: exportadores retienen e importadores sobrecompran al oficial para arbitrar contra el paralelo.’, efecto:{brecha:35,pop:-8,tension:14}, tweets:[{av:’\uD83D\uDCB5’,nm:‘Arbolito Florida’,hd:’@florida453’,tx:‘Compro d\u00f3lares. Hoy mejor que ayer. Ma\u00f1ana mejor que hoy.’,lk:7823},{av:’\uD83D\uDE02’,nm:‘Economista Humor’,hd:’@eco_satiro’,tx:‘El BCRA dijo que la brecha es “transitoria”. Llevan diciendo eso desde 2011.’,lk:15432}] },
-{ tag:‘GREMIAL’, hl:‘CGT declara paro general de 36 horas: actividad paralizada’, lede:‘La central obrera ejecut\u00f3 la medida de fuerza en rechazo a la pol\u00edtica de ingresos.’, edu:‘Los <b>paros generales</b> tienen efecto directo sobre la popularidad y env\u00edan una se\u00f1al de debilidad pol\u00edtica a los mercados, lo que puede presionar sobre el tipo de cambio.’, efecto:{pop:-12,tension:12,inf:0.8,desemp:0.4}, tweets:[{av:’\u270A’,nm:‘CGT Prensa’,hd:’@cgt_prensa’,tx:‘El paro fue contundente. No pueden seguir con esta pol\u00edtica que destruye el salario real.’,lk:12043},{av:’\uD83C\uDFED’,nm:‘Industrial Pyme’,hd:’@pymes_argentinas’,tx:‘Un d\u00eda de paro cuesta lo que no tenemos.’,lk:3421}] },
-{ tag:‘SHOCK’, hl:‘Corrida sobre dep\u00f3sitos en el sistema financiero del interior’, lede:‘Ahorristas retiran pesos en b\u00fasqueda de d\u00f3lares. El riesgo de efecto domin\u00f3 es evaluado como “manejable” por el directorio.’, edu:‘Una <b>corrida bancaria</b> ocurre cuando los depositantes retiran fondos masivamente. El solo rumor genera la corrida que busca evitar: profe\u00eda autocumplida en teor\u00eda de juegos.’, efecto:{res:-2,pop:-10,tension:18,desemp:0.6}, tweets:[{av:’\uD83C\uDFE6’,nm:‘Ahorrista’,hd:’@ahorros_2001’,tx:‘Me lleg\u00f3 un audio que dice que el BCRA congela dep\u00f3sitos. No espero. Voy ahora.’,lk:89234},{av:’\uD83D\uDD25’,nm:‘Trending AR’,hd:’@trending_arg’,tx:‘CORRALITO trending. El BCRA dice que no. El mercado no le cree.’,lk:34521}] },
-{ tag:‘DEUDA’, hl:‘Vencimiento de USD 2.500 M activa debate sobre mecanismos de pago’, lede:‘El Tesoro requiere colaboraci\u00f3n del BCRA para honrar compromisos con acreedores externos.’, edu:‘Los <b>vencimientos en d\u00f3lares</b> generan tensi\u00f3n en reservas. Si el BCRA presta al Tesoro con Adelantos Transitorios, aumenta la emisi\u00f3n monetaria y la presi\u00f3n inflacionaria.’, efecto:{res:-2.5,tension:10}, tweets:[{av:’\u2696’,nm:‘Analista Bonos’,hd:’@holdout_watcher’,tx:‘El BCRA va a tener que elegir: quemar reservas o emitir. No hay opci\u00f3n C.’,lk:2341},{av:’\uD83D\uDE29’,nm:‘Jubilado 2001’,hd:’@jubilado_2001’,tx:‘Otra vez vencimientos. Otra vez nosotros los que pagamos.’,lk:9876}] },
-{ tag:‘FED’, hl:‘La Fed sube 75bps: capitales golondrina buscan la puerta’, lede:‘La Reserva Federal ejecut\u00f3 su mayor suba en dos d\u00e9cadas. Los flujos hacia emergentes se revierten abruptamente.’, edu:‘Las subas de tasa de la <b>Fed</b> hacen m\u00e1s atractivo el d\u00f3lar y retiran capital de mercados emergentes. Argentina lo siente de manera amplificada por su historial crediticio.’, efecto:{res:-1.2,brecha:15,tension:8}, tweets:[{av:’\uD83C\uDFE6’,nm:‘JPMorgan’,hd:’@jpmorgan_em’,tx:‘Fed hikes 75bps. Argentina already in risk-off territory. Limited additional downside.’,lk:892},{av:’\uD83C\uDDE6\uD83C\uDDF7’,nm:‘BCRA Staff’,hd:’@bcra_staff’,tx:‘El BCRA monitorea el contexto internacional y tiene herramientas para responder.’,lk:134}] },
-{ tag:‘CHINA’, hl:‘Beijing ampl\u00eda el swap de yuanes en USD 5.000 M’, lede:‘El acuerdo permite pagar importaciones chinas sin gastar d\u00f3lares propios.’, edu:‘Un <b>swap de monedas</b> engrosa las reservas brutas (aunque no las netas). Es ox\u00edgeno de corto plazo. Argentina usa el swap principalmente para pagar importaciones de China.’, efecto:{res:4.5,pop:4}, tweets:[{av:’\uD83D\uDC09’,nm:‘YPF’,hd:’@ypf_oficial’,tx:‘La asociaci\u00f3n China-Argentina alcanza nuevos hitos.’,lk:2341},{av:’\uD83D\uDE05’,nm:‘Eco Popular’,hd:’@eco_simple’,tx:‘Nos dieron m\u00e1s plata que tenemos que devolver. Pero festejemos igual.’,lk:34521}] },
-{ tag:‘LELIQ’, hl:‘Pasivos remunerados del BCRA superan $30 billones’, lede:‘El stock de LELIQs y Pases exhibe crecimiento que los analistas califican como “no sostenible en el mediano plazo”.’, edu:‘Las <b>LELIQs y Pases</b> son deuda del BCRA con bancos. Absorben pesos pero el inter\u00e9s genera un d\u00e9ficit cuasifiscal que en alg\u00FAn punto debe monetizarse, generando inflaci\u00f3n futura.’, efecto:{inf:1.2,tension:10}, tweets:[{av:’\uD83D\uDCCA’,nm:‘Research Macro’,hd:’@research_macro’,tx:‘La bola de nieve de los pasivos remunerados no para. Acumulamos combustible para la pr\u00f3xima explosi\u00f3n.’,lk:4521},{av:’\uD83D\uDE05’,nm:‘Eco Junior’,hd:’@eco_recibido’,tx:‘Expliqu\u00e9 las LELIQs a mi familia. Nadie entendi\u00f3. Creo que es la respuesta correcta.’,lk:15234}] },
-{ tag:‘SOJA’, hl:‘D\u00f3lar soja: tipo de cambio diferencial para el sector agropecuario’, lede:‘El esquema de cotizaci\u00f3n preferencial busca incentivar la liquidaci\u00f3n de granos retenidos.’, edu:‘Los <b>tipos de cambio diferenciales</b> generan divisas de emergencia pero distorsionan precios relativos. Son parches que resuelven el corto plazo a costo del mediano plazo.’, efecto:{res:3,inf:1,pop:2,desemp:-0.2}, tweets:[{av:’\uD83C\uDF3E’,nm:‘Productor Sojero’,hd:’@campo_soja’,tx:‘El d\u00f3lar soja funciona. Liquidamos. Pero la pr\u00f3xima vez queremos estabilidad.’,lk:3421},{av:’\uD83E\uDD26’,nm:‘Importador’,hd:’@importador_arg’,tx:‘El campo tiene tipo especial. Yo importo a otro. La brecha es una locura.’,lk:5632}] },
-{ tag:‘VACA MUERTA’, hl:‘R\u00e9cord en Vaca Muerta: primer embarque de GNL a Asia’, lede:‘Argentina export\u00f3 su primer cargamento de gas licuado. Las divisas energ\u00e9ticas mejoran la balanza de pagos.’, edu:’<b>Vaca Muerta</b> es la segunda reserva mundial de shale gas. Su desarrollo podr\u00eda convertir a Argentina en exportador neto de energ\u00eda, resolviendo estructuralmente el problema cambiario.’, efecto:{res:2.5,pop:7,tension:-8,desemp:-0.5}, tweets:[{av:’\u26A1’,nm:‘YPF’,hd:’@ypf_oficial’,tx:‘Primer embarque hist\u00f3rico de GNL argentino rumbo a Asia. Historia.’,lk:24032},{av:’\uD83D\uDCB0’,nm:‘Energy Latam’,hd:’@energy_latam’,tx:‘The energy story in Argentina is real. Vaca Muerta numbers are impressive.’,lk:1203}] },
-{ tag:‘PETROLEO’, hl:‘Conflicto en Medio Oriente dispara el petr\u00f3leo a USD 120’, lede:‘La escalada b\u00e9lica genera un shock de costos energ\u00e9ticos. Argentina enfrenta presi\u00f3n sobre su balanza de pagos.’, edu:‘Los <b>shocks de commodities</b> afectan a Argentina por dos v\u00edas: sube el costo de importar energ\u00eda (negativo) pero tambi\u00e9n el precio de exportar granos (positivo). El balance neto suele ser negativo.’, efecto:{res:-1.5,inf:1.2,tension:8,desemp:0.3}, tweets:[{av:’\u26A1’,nm:‘Analista’,hd:’@energia_global’,tx:‘Brent en 120. Impacto mixto para Argentina pero el costo energ\u00e9tico pesa m\u00e1s.’,lk:1203},{av:’\u26FD’,nm:‘Conductor’,hd:’@nafta_cara’,tx:‘El petr\u00f3leo subi\u00f3. En dos semanas me entero cu\u00e1nto m\u00e1s cuesta cargar nafta.’,lk:18902}] },
-{ tag:‘BLANQUEO’, hl:‘Blanqueo de capitales: ingresan USD 1.800 M en 15 d\u00edas’, lede:‘Los d\u00f3lares del colch\u00f3n se volcaron al sector inmobiliario y al sistema bancario.’, edu:‘Los <b>blanqueos</b> generan reservas a corto plazo pero crean expectativas de futuros programas, desincentivando la declaraci\u00f3n voluntaria de activos.’, efecto:{res:1.8,pop:3}, tweets:[{av:’\uD83C\uDFE0’,nm:‘Inmobiliaria BA’,hd:’@propiedades_ba’,tx:‘El mercado inmobiliario explos. Ventas en d\u00f3lares al contado.’,lk:3421},{av:’\uD83D\uDE10’,nm:‘Contribuyente’,hd:’@pago_mis_impuestos’,tx:‘Yo pago todos mis impuestos y estos blanquean sin consecuencias. Brillante sistema.’,lk:45231}] },
-{ tag:‘CONTAGIO’, hl:‘Crisis en Brasil contagia a Argentina: p\u00e1nico en mercados regionales’, lede:‘La corrida contra el real brasile\u00f1o arrastr\u00f3 al peso. Inversores institucionales liquidaron posiciones en toda la regi\u00f3n.’, edu:‘El <b>efecto contagio regional</b> golpea a Argentina desproporcionadamente. Cuando Brasil estornuda, Argentina agarra pulmon\u00eda por su historial de defaults y mayor vulnerabilidad externa.’, efecto:{res:-1.8,brecha:20,pop:-7,tension:14}, tweets:[{av:’\uD83C\uDDE7\uD83C\uDDF7’,nm:‘Bloomberg Latam’,hd:’@bloomberg_latam’,tx:‘Brazilian real hits 6-month low. Argentina peso under pressure as contagion spreads.’,lk:2341},{av:’\uD83E\uDD26’,nm:‘Macro Latam’,hd:’@macro_latam’,tx:‘Cuando Brasil estornuda, Argentina agarra pulmon\u00eda. Sin falla.’,lk:12034}] },
+  { tag:'CAMPO', hl:'Liquidaci\u00f3n r\u00e9cord del agro: USD 3.200 M en 30 d\u00edas', lede:'Una cosecha excepcional gener\u00f3 una liquidaci\u00f3n in\u00e9dita. Las reservas respiran por primera vez en meses.', edu:'La <b>liquidaci\u00f3n del agro</b> convierte divisas de exportaci\u00f3n en pesos. Es c\u00edclica y principal fuente de d\u00f3lares. El productor retiene granos cuando el tipo de cambio parece atrasado.', efecto:{res:3.5,inf:-0.4,pop:6,desemp:-0.3}, tweets:[{av:'\uD83C\uDF31',nm:'Productores NOA',hd:'@campo_argentino',tx:'Liquidamos porque el tipo de cambio mejor\u00f3. No porque confiemos. Pero plata es plata.',lk:1205},{av:'\uD83D\uDCC8',nm:'Bloomberg',hd:'@bloomberg_arg',tx:'Inflows from agricultural sector reach historic levels. Reserves recovering.',lk:892}] },
+  { tag:'INDEC', hl:'IPC registra expansi\u00f3n superior a las proyecciones del mercado', lede:'El \u00edndice de precios exhibi\u00f3 una din\u00e1mica que el BCRA describe como "en proceso de convergencia".', edu:'El <b>IPC</b> mide el cambio en precios de una canasta representativa. En Argentina coexisten m\u00FAltiples mediciones que suelen diferir. La credibilidad del dato es un activo macroecon\u00f3mico en s\u00ed mismo.', efecto:{inf:2.2,pop:-12,desemp:0.3}, tweets:[{av:'\uD83D\uDED2',nm:'Ama de Casa BA',hd:'@mercadito_norte',tx:'Los precios del s\u00FAper no tienen nada que ver con lo que mide el INDEC.',lk:8901},{av:'\uD83D\uDCCA',nm:'Consultora Econ\u00f3mica',hd:'@consultora_eco',tx:'Inflaci\u00f3n 4pp por encima de consenso. El ancla de expectativas no funciona.',lk:1203}] },
+  { tag:'BRECHA', hl:'Administraci\u00f3n cambiaria bajo tensi\u00f3n: brecha supera el 130%', lede:'El tipo de cambio paralelo registra niveles que el BCRA describe como "no representativos de los fundamentos".', edu:'La <b>brecha cambiaria</b> por encima del 80-100% distorsiona toda la econom\u00eda: exportadores retienen e importadores sobrecompran al oficial para arbitrar contra el paralelo.', efecto:{brecha:35,pop:-8,tension:14}, tweets:[{av:'\uD83D\uDCB5',nm:'Arbolito Florida',hd:'@florida453',tx:'Compro d\u00f3lares. Hoy mejor que ayer. Ma\u00f1ana mejor que hoy.',lk:7823},{av:'\uD83D\uDE02',nm:'Economista Humor',hd:'@eco_satiro',tx:'El BCRA dijo que la brecha es "transitoria". Llevan diciendo eso desde 2011.',lk:15432}] },
+  { tag:'GREMIAL', hl:'CGT declara paro general de 36 horas: actividad paralizada', lede:'La central obrera ejecut\u00f3 la medida de fuerza en rechazo a la pol\u00edtica de ingresos.', edu:'Los <b>paros generales</b> tienen efecto directo sobre la popularidad y env\u00edan una se\u00f1al de debilidad pol\u00edtica a los mercados, lo que puede presionar sobre el tipo de cambio.', efecto:{pop:-12,tension:12,inf:0.8,desemp:0.4}, tweets:[{av:'\u270A',nm:'CGT Prensa',hd:'@cgt_prensa',tx:'El paro fue contundente. No pueden seguir con esta pol\u00edtica que destruye el salario real.',lk:12043},{av:'\uD83C\uDFED',nm:'Industrial Pyme',hd:'@pymes_argentinas',tx:'Un d\u00eda de paro cuesta lo que no tenemos.',lk:3421}] },
+  { tag:'SHOCK', hl:'Corrida sobre dep\u00f3sitos en el sistema financiero del interior', lede:'Ahorristas retiran pesos en b\u00fasqueda de d\u00f3lares. El riesgo de efecto domin\u00f3 es evaluado como "manejable" por el directorio.', edu:'Una <b>corrida bancaria</b> ocurre cuando los depositantes retiran fondos masivamente. El solo rumor genera la corrida que busca evitar: profe\u00eda autocumplida en teor\u00eda de juegos.', efecto:{res:-2,pop:-10,tension:18,desemp:0.6}, tweets:[{av:'\uD83C\uDFE6',nm:'Ahorrista',hd:'@ahorros_2001',tx:'Me lleg\u00f3 un audio que dice que el BCRA congela dep\u00f3sitos. No espero. Voy ahora.',lk:89234},{av:'\uD83D\uDD25',nm:'Trending AR',hd:'@trending_arg',tx:'CORRALITO trending. El BCRA dice que no. El mercado no le cree.',lk:34521}] },
+  { tag:'DEUDA', hl:'Vencimiento de USD 2.500 M activa debate sobre mecanismos de pago', lede:'El Tesoro requiere colaboraci\u00f3n del BCRA para honrar compromisos con acreedores externos.', edu:'Los <b>vencimientos en d\u00f3lares</b> generan tensi\u00f3n en reservas. Si el BCRA presta al Tesoro con Adelantos Transitorios, aumenta la emisi\u00f3n monetaria y la presi\u00f3n inflacionaria.', efecto:{res:-2.5,tension:10}, tweets:[{av:'\u2696',nm:'Analista Bonos',hd:'@holdout_watcher',tx:'El BCRA va a tener que elegir: quemar reservas o emitir. No hay opci\u00f3n C.',lk:2341},{av:'\uD83D\uDE29',nm:'Jubilado 2001',hd:'@jubilado_2001',tx:'Otra vez vencimientos. Otra vez nosotros los que pagamos.',lk:9876}] },
+  { tag:'FED', hl:'La Fed sube 75bps: capitales golondrina buscan la puerta', lede:'La Reserva Federal ejecut\u00f3 su mayor suba en dos d\u00e9cadas. Los flujos hacia emergentes se revierten abruptamente.', edu:'Las subas de tasa de la <b>Fed</b> hacen m\u00e1s atractivo el d\u00f3lar y retiran capital de mercados emergentes. Argentina lo siente de manera amplificada por su historial crediticio.', efecto:{res:-1.2,brecha:15,tension:8}, tweets:[{av:'\uD83C\uDFE6',nm:'JPMorgan',hd:'@jpmorgan_em',tx:'Fed hikes 75bps. Argentina already in risk-off territory. Limited additional downside.',lk:892},{av:'\uD83C\uDDE6\uD83C\uDDF7',nm:'BCRA Staff',hd:'@bcra_staff',tx:'El BCRA monitorea el contexto internacional y tiene herramientas para responder.',lk:134}] },
+  { tag:'CHINA', hl:'Beijing ampl\u00eda el swap de yuanes en USD 5.000 M', lede:'El acuerdo permite pagar importaciones chinas sin gastar d\u00f3lares propios.', edu:'Un <b>swap de monedas</b> engrosa las reservas brutas (aunque no las netas). Es ox\u00edgeno de corto plazo. Argentina usa el swap principalmente para pagar importaciones de China.', efecto:{res:4.5,pop:4}, tweets:[{av:'\uD83D\uDC09',nm:'YPF',hd:'@ypf_oficial',tx:'La asociaci\u00f3n China-Argentina alcanza nuevos hitos.',lk:2341},{av:'\uD83D\uDE05',nm:'Eco Popular',hd:'@eco_simple',tx:'Nos dieron m\u00e1s plata que tenemos que devolver. Pero festejemos igual.',lk:34521}] },
+  { tag:'LELIQ', hl:'Pasivos remunerados del BCRA superan $30 billones', lede:'El stock de LELIQs y Pases exhibe crecimiento que los analistas califican como "no sostenible en el mediano plazo".', edu:'Las <b>LELIQs y Pases</b> son deuda del BCRA con bancos. Absorben pesos pero el inter\u00e9s genera un d\u00e9ficit cuasifiscal que en alg\u00FAn punto debe monetizarse, generando inflaci\u00f3n futura.', efecto:{inf:1.2,tension:10}, tweets:[{av:'\uD83D\uDCCA',nm:'Research Macro',hd:'@research_macro',tx:'La bola de nieve de los pasivos remunerados no para. Acumulamos combustible para la pr\u00f3xima explosi\u00f3n.',lk:4521},{av:'\uD83D\uDE05',nm:'Eco Junior',hd:'@eco_recibido',tx:'Expliqu\u00e9 las LELIQs a mi familia. Nadie entendi\u00f3. Creo que es la respuesta correcta.',lk:15234}] },
+  { tag:'SOJA', hl:'D\u00f3lar soja: tipo de cambio diferencial para el sector agropecuario', lede:'El esquema de cotizaci\u00f3n preferencial busca incentivar la liquidaci\u00f3n de granos retenidos.', edu:'Los <b>tipos de cambio diferenciales</b> generan divisas de emergencia pero distorsionan precios relativos. Son parches que resuelven el corto plazo a costo del mediano plazo.', efecto:{res:3,inf:1,pop:2,desemp:-0.2}, tweets:[{av:'\uD83C\uDF3E',nm:'Productor Sojero',hd:'@campo_soja',tx:'El d\u00f3lar soja funciona. Liquidamos. Pero la pr\u00f3xima vez queremos estabilidad.',lk:3421},{av:'\uD83E\uDD26',nm:'Importador',hd:'@importador_arg',tx:'El campo tiene tipo especial. Yo importo a otro. La brecha es una locura.',lk:5632}] },
+  { tag:'VACA MUERTA', hl:'R\u00e9cord en Vaca Muerta: primer embarque de GNL a Asia', lede:'Argentina export\u00f3 su primer cargamento de gas licuado. Las divisas energ\u00e9ticas mejoran la balanza de pagos.', edu:'<b>Vaca Muerta</b> es la segunda reserva mundial de shale gas. Su desarrollo podr\u00eda convertir a Argentina en exportador neto de energ\u00eda, resolviendo estructuralmente el problema cambiario.', efecto:{res:2.5,pop:7,tension:-8,desemp:-0.5}, tweets:[{av:'\u26A1',nm:'YPF',hd:'@ypf_oficial',tx:'Primer embarque hist\u00f3rico de GNL argentino rumbo a Asia. Historia.',lk:24032},{av:'\uD83D\uDCB0',nm:'Energy Latam',hd:'@energy_latam',tx:'The energy story in Argentina is real. Vaca Muerta numbers are impressive.',lk:1203}] },
+  { tag:'PETROLEO', hl:'Conflicto en Medio Oriente dispara el petr\u00f3leo a USD 120', lede:'La escalada b\u00e9lica genera un shock de costos energ\u00e9ticos. Argentina enfrenta presi\u00f3n sobre su balanza de pagos.', edu:'Los <b>shocks de commodities</b> afectan a Argentina por dos v\u00edas: sube el costo de importar energ\u00eda (negativo) pero tambi\u00e9n el precio de exportar granos (positivo). El balance neto suele ser negativo.', efecto:{res:-1.5,inf:1.2,tension:8,desemp:0.3}, tweets:[{av:'\u26A1',nm:'Analista',hd:'@energia_global',tx:'Brent en 120. Impacto mixto para Argentina pero el costo energ\u00e9tico pesa m\u00e1s.',lk:1203},{av:'\u26FD',nm:'Conductor',hd:'@nafta_cara',tx:'El petr\u00f3leo subi\u00f3. En dos semanas me entero cu\u00e1nto m\u00e1s cuesta cargar nafta.',lk:18902}] },
+  { tag:'BLANQUEO', hl:'Blanqueo de capitales: ingresan USD 1.800 M en 15 d\u00edas', lede:'Los d\u00f3lares del colch\u00f3n se volcaron al sector inmobiliario y al sistema bancario.', edu:'Los <b>blanqueos</b> generan reservas a corto plazo pero crean expectativas de futuros programas, desincentivando la declaraci\u00f3n voluntaria de activos.', efecto:{res:1.8,pop:3}, tweets:[{av:'\uD83C\uDFE0',nm:'Inmobiliaria BA',hd:'@propiedades_ba',tx:'El mercado inmobiliario explos. Ventas en d\u00f3lares al contado.',lk:3421},{av:'\uD83D\uDE10',nm:'Contribuyente',hd:'@pago_mis_impuestos',tx:'Yo pago todos mis impuestos y estos blanquean sin consecuencias. Brillante sistema.',lk:45231}] },
+  { tag:'CONTAGIO', hl:'Crisis en Brasil contagia a Argentina: p\u00e1nico en mercados regionales', lede:'La corrida contra el real brasile\u00f1o arrastr\u00f3 al peso. Inversores institucionales liquidaron posiciones en toda la regi\u00f3n.', edu:'El <b>efecto contagio regional</b> golpea a Argentina desproporcionadamente. Cuando Brasil estornuda, Argentina agarra pulmon\u00eda por su historial de defaults y mayor vulnerabilidad externa.', efecto:{res:-1.8,brecha:20,pop:-7,tension:14}, tweets:[{av:'\uD83C\uDDE7\uD83C\uDDF7',nm:'Bloomberg Latam',hd:'@bloomberg_latam',tx:'Brazilian real hits 6-month low. Argentina peso under pressure as contagion spreads.',lk:2341},{av:'\uD83E\uDD26',nm:'Macro Latam',hd:'@macro_latam',tx:'Cuando Brasil estornuda, Argentina agarra pulmon\u00eda. Sin falla.',lk:12034}] },
 ];
 
 // ── COMUNICADOS ───────────────────────────────────────────────────────────────
 var COMUNICADOS = [
-{
-id:‘baja_tasa’,
-texto:‘El BCRA estudia una reducci\u00f3n de la tasa de pol\u00edtica monetaria en los pr\u00f3ximos trimestres’,
-condicion: function(G){ return G.decisions.tasa < G.tasa_anterior - 5; },
-efecto_ok:{ inf:-0.8, pop:5, brecha:-8, tension:-5 },
-efecto_fail:{ inf:2.5, pop:-12, tension:15, brecha:20 },
-tweet_ok:’\uD83D\uDCC9 BCRA cumple: baja la tasa. Mercado aliviado. El ancla de expectativas funcion\u00f3.’,
-tweet_fail:’\uD83D\uDD25 BCRA anunci\u00f3 baja de tasa y NO la baj\u00f3. Credibilidad destrozada. Brecha explota.’
-},
-{
-id:‘sube_tasa’,
-texto:‘El BCRA contempla una suba de tasa para reforzar el ancla nominal contra la inflaci\u00f3n’,
-condicion: function(G){ return G.decisions.tasa > G.tasa_anterior + 5; },
-efecto_ok:{ inf:-1.5, pop:-4, tension:-8 },
-efecto_fail:{ inf:3, pop:-10, tension:18, brecha:15 },
-tweet_ok:’\uD83D\uDCC8 BCRA sube tasa como anunci\u00f3. Se\u00f1al contractiva. Mercado cree el compromiso.’,
-tweet_fail:’\uD83D\uDE31 BCRA anunci\u00f3 suba de tasa y NO la subi\u00f3. Credibilidad en m\u00ednimos hist\u00f3ricos.’
-},
-{
-id:‘acum_reservas’,
-texto:‘El BCRA anuncia programa de acumulaci\u00f3n de reservas por USD 2.000 M en el trimestre’,
-condicion: function(G){ return G.decisions.interv <= -2; },
-efecto_ok:{ res:1, pop:5, tension:-6, brecha:-5 },
-efecto_fail:{ tension:12, pop:-8, brecha:15 },
-tweet_ok:’\uD83D\uDCAA BCRA cumple la meta de reservas. Credibilidad reforzada. \u00bfEl inicio de un cambio?’,
-tweet_fail:’\uD83D\uDE44 BCRA prometi\u00f3 acumular reservas y no lo hizo. El mercado ya no cree nada.’
-},
-{
-id:‘cepo_gradual’,
-texto:‘El BCRA anuncia una reducci\u00f3n gradual de las restricciones cambiarias en los pr\u00f3ximos 6 meses’,
-condicion: function(G){ return G.decisions.cepo < G.cepo_anterior - 1; },
-efecto_ok:{ brecha:-15, pop:8, tension:-8, res:-0.5 },
-efecto_fail:{ brecha:25, pop:-10, tension:15 },
-tweet_ok:’\uD83D\uDD14 BCRA abre gradualmente el cepo como prometi\u00f3. Flujos se normalizan.’,
-tweet_fail:’\uD83D\uDE21 BCRA prometi\u00f3 abrir el cepo y no lo hizo. La brecha se dispara por la desconfianza.’
-},
-{
-id:‘meta_inflacion’,
-texto:‘El BCRA anuncia una meta de inflaci\u00f3n del 3% mensual para el pr\u00f3ximo trimestre’,
-condicion: function(G){ return G.inf < 4; },
-efecto_ok:{ inf:-0.5, pop:6, tension:-5 },
-efecto_fail:{ inf:1.5, pop:-8, tension:12, brecha:10 },
-tweet_ok:’\uD83C\uDFAF BCRA cumple la meta de inflaci\u00f3n. El ancla nominal funciona. Historia.’,
-tweet_fail:’\uD83D\uDCA5 BCRA prometio meta de 3% y super\u00f3 el doble. Ya nadie cree en sus proyecciones.’
-},
+  {
+    id:'baja_tasa',
+    texto:'El BCRA estudia una reducci\u00f3n de la tasa de pol\u00edtica monetaria en los pr\u00f3ximos trimestres',
+    condicion: function(G){ return G.decisions.tasa < G.tasa_anterior - 5; },
+    efecto_ok:{ inf:-0.8, pop:5, brecha:-8, tension:-5 },
+    efecto_fail:{ inf:2.5, pop:-12, tension:15, brecha:20 },
+    tweet_ok:'\uD83D\uDCC9 BCRA cumple: baja la tasa. Mercado aliviado. El ancla de expectativas funcion\u00f3.',
+    tweet_fail:'\uD83D\uDD25 BCRA anunci\u00f3 baja de tasa y NO la baj\u00f3. Credibilidad destrozada. Brecha explota.'
+  },
+  {
+    id:'sube_tasa',
+    texto:'El BCRA contempla una suba de tasa para reforzar el ancla nominal contra la inflaci\u00f3n',
+    condicion: function(G){ return G.decisions.tasa > G.tasa_anterior + 5; },
+    efecto_ok:{ inf:-1.5, pop:-4, tension:-8 },
+    efecto_fail:{ inf:3, pop:-10, tension:18, brecha:15 },
+    tweet_ok:'\uD83D\uDCC8 BCRA sube tasa como anunci\u00f3. Se\u00f1al contractiva. Mercado cree el compromiso.',
+    tweet_fail:'\uD83D\uDE31 BCRA anunci\u00f3 suba de tasa y NO la subi\u00f3. Credibilidad en m\u00ednimos hist\u00f3ricos.'
+  },
+  {
+    id:'acum_reservas',
+    texto:'El BCRA anuncia programa de acumulaci\u00f3n de reservas por USD 2.000 M en el trimestre',
+    condicion: function(G){ return G.decisions.interv <= -2; },
+    efecto_ok:{ res:1, pop:5, tension:-6, brecha:-5 },
+    efecto_fail:{ tension:12, pop:-8, brecha:15 },
+    tweet_ok:'\uD83D\uDCAA BCRA cumple la meta de reservas. Credibilidad reforzada. \u00bfEl inicio de un cambio?',
+    tweet_fail:'\uD83D\uDE44 BCRA prometi\u00f3 acumular reservas y no lo hizo. El mercado ya no cree nada.'
+  },
+  {
+    id:'cepo_gradual',
+    texto:'El BCRA anuncia una reducci\u00f3n gradual de las restricciones cambiarias en los pr\u00f3ximos 6 meses',
+    condicion: function(G){ return G.decisions.cepo < G.cepo_anterior - 1; },
+    efecto_ok:{ brecha:-15, pop:8, tension:-8, res:-0.5 },
+    efecto_fail:{ brecha:25, pop:-10, tension:15 },
+    tweet_ok:'\uD83D\uDD14 BCRA abre gradualmente el cepo como prometi\u00f3. Flujos se normalizan.',
+    tweet_fail:'\uD83D\uDE21 BCRA prometi\u00f3 abrir el cepo y no lo hizo. La brecha se dispara por la desconfianza.'
+  },
+  {
+    id:'meta_inflacion',
+    texto:'El BCRA anuncia una meta de inflaci\u00f3n del 3% mensual para el pr\u00f3ximo trimestre',
+    condicion: function(G){ return G.inf < 4; },
+    efecto_ok:{ inf:-0.5, pop:6, tension:-5 },
+    efecto_fail:{ inf:1.5, pop:-8, tension:12, brecha:10 },
+    tweet_ok:'\uD83C\uDFAF BCRA cumple la meta de inflaci\u00f3n. El ancla nominal funciona. Historia.',
+    tweet_fail:'\uD83D\uDCA5 BCRA prometio meta de 3% y super\u00f3 el doble. Ya nadie cree en sus proyecciones.'
+  },
 ];
 
 // ── ENDINGS ───────────────────────────────────────────────────────────────────
 var ENDINGS = [
-{ cond:function(G){return G.inf>=30;}, lose:true, icon:’\uD83D\uDD25’, type:‘Fin Catastr\u00f3fico’, title:‘HIPERINFLACI\u00d3N’, color:’#C0392B’, nar:‘Los precios se actualizan cada hora. Los comercios exhiben sus precios en d\u00f3lares. El peso experimenta una <strong>correcci\u00f3n t\u00e9cnica terminal</strong>. Tu nombre quedar\u00e1 en los libros de historia de la econom\u00eda argentina. En el cap\u00edtulo de advertencias. El desempleo alcanz\u00f3 el ’ },
-{ cond:function(G){return G.tension>=98;}, lose:true, icon:’\uD83D\uDCA3’, type:‘Colapso Sist\u00e9mico’, title:‘TRANSICI\u00d3N ORDENADA’, color:’#C0392B’, nar:‘La tensi\u00f3n acumulada super\u00f3 el umbral de ruptura institucional. Corrida cambiaria, restricciones bancarias y movilizaci\u00f3n social simult\u00e1neas. El organismo dispuso una <strong>transici\u00f3n ordenada</strong>. El mercado la llama de otra manera.’ },
-{ cond:function(G){return G.desemp>=20;}, lose:true, icon:’\uD83D\uDCC9’, type:‘Crisis Social’, title:‘COLAPSO DEL EMPLEO’, color:’#C0392B’, nar:‘El desempleo super\u00f3 el 20%. Las calles se llenaron de protestas. El costo social de la pol\u00edtica monetaria result\u00f3 <strong>pol\u00edticamente insostenible</strong>. El gabinete en pleno present\u00f3 la renuncia.’ },
+  { cond:function(G){return G.inf>=30;}, lose:true, icon:'\uD83D\uDD25', type:'Fin Catastr\u00f3fico', title:'HIPERINFLACI\u00d3N', color:'#C0392B', nar:'Los precios se actualizan cada hora. Los comercios exhiben sus precios en d\u00f3lares. El peso experimenta una <strong>correcci\u00f3n t\u00e9cnica terminal</strong>. Tu nombre quedar\u00e1 en los libros de historia de la econom\u00eda argentina. En el cap\u00edtulo de advertencias. El desempleo alcanz\u00f3 el ' },
+  { cond:function(G){return G.tension>=98;}, lose:true, icon:'\uD83D\uDCA3', type:'Colapso Sist\u00e9mico', title:'TRANSICI\u00d3N ORDENADA', color:'#C0392B', nar:'La tensi\u00f3n acumulada super\u00f3 el umbral de ruptura institucional. Corrida cambiaria, restricciones bancarias y movilizaci\u00f3n social simult\u00e1neas. El organismo dispuso una <strong>transici\u00f3n ordenada</strong>. El mercado la llama de otra manera.' },
+  { cond:function(G){return G.desemp>=20;}, lose:true, icon:'\uD83D\uDCC9', type:'Crisis Social', title:'COLAPSO DEL EMPLEO', color:'#C0392B', nar:'El desempleo super\u00f3 el 20%. Las calles se llenaron de protestas. El costo social de la pol\u00edtica monetaria result\u00f3 <strong>pol\u00edticamente insostenible</strong>. El gabinete en pleno present\u00f3 la renuncia.' },
 ];
 
 // ── FISCAL ────────────────────────────────────────────────────────────────────
 var FISCAL = {
-ajuste:[
-{ prob:0.6, pop_min:40, icon:’\uD83D\uDC4D’, title:‘El Ejecutivo acepta el ajuste’, body:‘El Ministerio de Econom\u00eda acord\u00f3 reducir el d\u00e9ficit primario en 0.5 puntos del PBI. El BCRA tendr\u00e1 menor presi\u00f3n de financiamiento.’, eff:‘Emisi\u00f3n -2pp \u00b7 Tensi\u00f3n -8 \u00b7 Popularidad -5 \u00b7 Desempleo +0.3%’, delta:{emision:-2,tension:-8,pop:-5,desemp:0.3} },
-{ prob:0.4, pop_min:0,  icon:’\uD83D\uDC4E’, title:‘El Ejecutivo rechaza el ajuste’, body:’“No es el momento pol\u00edtico adecuado para una reducci\u00f3n del gasto.” El BCRA deber\u00e1 continuar financiando el d\u00e9ficit.’, eff:‘Sin cambios. El mercado toma nota del rechazo.’, delta:{tension:5,pop:-3} },
-],
-expansion:[
-{ prob:0.75, pop_min:0,  icon:’\uD83C\uDF89’, title:‘El Ejecutivo acepta la expansi\u00f3n’, body:‘Se aprob\u00f3 un incremento del gasto social. La medida mejora la imagen pero requiere financiamiento adicional del BCRA.’, eff:‘Emisi\u00f3n +3pp \u00b7 Popularidad +8 \u00b7 Desempleo -0.4%’, delta:{emision:3,pop:8,desemp:-0.4} },
-{ prob:0.25, pop_min:55, icon:’\uD83D\uDC4E’, title:‘El Ejecutivo rechaza la expansi\u00f3n’, body:‘No hay espacio fiscal disponible. Se recomienda explorar otras v\u00edas de est\u00edmulo.’, eff:‘Sin cambios.’, delta:{} },
-],
+  ajuste:[
+    { prob:0.6, pop_min:40, icon:'\uD83D\uDC4D', title:'El Ejecutivo acepta el ajuste', body:'El Ministerio de Econom\u00eda acord\u00f3 reducir el d\u00e9ficit primario en 0.5 puntos del PBI. El BCRA tendr\u00e1 menor presi\u00f3n de financiamiento.', eff:'Emisi\u00f3n -2pp \u00b7 Tensi\u00f3n -8 \u00b7 Popularidad -5 \u00b7 Desempleo +0.3%', delta:{emision:-2,tension:-8,pop:-5,desemp:0.3} },
+    { prob:0.4, pop_min:0,  icon:'\uD83D\uDC4E', title:'El Ejecutivo rechaza el ajuste', body:'"No es el momento pol\u00edtico adecuado para una reducci\u00f3n del gasto." El BCRA deber\u00e1 continuar financiando el d\u00e9ficit.', eff:'Sin cambios. El mercado toma nota del rechazo.', delta:{tension:5,pop:-3} },
+  ],
+  expansion:[
+    { prob:0.75, pop_min:0,  icon:'\uD83C\uDF89', title:'El Ejecutivo acepta la expansi\u00f3n', body:'Se aprob\u00f3 un incremento del gasto social. La medida mejora la imagen pero requiere financiamiento adicional del BCRA.', eff:'Emisi\u00f3n +3pp \u00b7 Popularidad +8 \u00b7 Desempleo -0.4%', delta:{emision:3,pop:8,desemp:-0.4} },
+    { prob:0.25, pop_min:55, icon:'\uD83D\uDC4E', title:'El Ejecutivo rechaza la expansi\u00f3n', body:'No hay espacio fiscal disponible. Se recomienda explorar otras v\u00edas de est\u00edmulo.', eff:'Sin cambios.', delta:{} },
+  ],
 };
 
 var CTXT_TWEETS = {
-inf_alta:[
-{av:’\uD83D\uDE24’,nm:‘Trabajador’,hd:’@sueldo_en_pesos’,tx:‘El sueldo me subi\u00f3 10% y la inflaci\u00f3n va 25% mensual. Matem\u00e1ticamente me est\u00e1n robando.’,lk:34521},
-{av:’\uD83D\uDCCA’,nm:‘Economist LATAM’,hd:’@latam_macro’,tx:‘Monthly inflation in Argentina accelerating. Anchoring expectations will require significant policy credibility.’,lk:2341},
-],
-res_bajas:[
-{av:’\uD83D\uDCB8’,nm:‘Trader’,hd:’@fx_trader_arg’,tx:‘Reservas netas en rojo. El BCRA est\u00e1 vendiendo lo que no tiene.’,lk:8901},
-{av:’\uD83C\uDFDB’,nm:‘BCRA’,hd:’@bcra_oficial’,tx:‘Las reservas se encuentran en niveles adecuados para respaldar el programa econ\u00f3mico.’,lk:145},
-],
-pop_baja:[
-{av:’\uD83D\uDCE3’,nm:‘Oposici\u00f3n’,hd:’@oposicion_ar’,tx:‘El BCRA ha demostrado su incapacidad. Pedimos la renuncia inmediata del presidente del organismo.’,lk:18902},
-{av:’\uD83D\uDE24’,nm:‘Ciudadano’,hd:’@ciudadano_harto’,tx:‘No importa qui\u00e9n est\u00e9 en el BCRA. El resultado siempre es el mismo. La plata no vale nada.’,lk:45231},
-],
-desemp_alto:[
-{av:’\uD83D\uDC77’,nm:‘Trabajador fabril’,hd:’@laburant_metal’,tx:‘Cerraron la f\u00e1brica. 15 a\u00f1os de antig\u00FCedad. El ajuste no lo pagamos los que lo decidieron.’,lk:45231},
-{av:’\uD83D\uDCCA’,nm:‘CAME’,hd:’@came_pymes’,tx:‘Los cierres de PyMEs de este trimestre son consecuencia directa de la pol\u00edtica monetaria.’,lk:8921},
-],
-buena:[
-{av:’\uD83D\uDCC8’,nm:‘Analista’,hd:’@bull_arg’,tx:‘Sorprendente: la gesti\u00f3n del BCRA est\u00e1 dando resultados. Inflaci\u00f3n cediendo, reservas acumulando.’,lk:3421},
-{av:’\uD83C\uDF10’,nm:‘Bloomberg’,hd:’@bloomberg_latam’,tx:‘Argentina macro: showing unexpected improvement. BCRA policy credibility gaining traction.’,lk:1203},
-],
+  inf_alta:[
+    {av:'\uD83D\uDE24',nm:'Trabajador',hd:'@sueldo_en_pesos',tx:'El sueldo me subi\u00f3 10% y la inflaci\u00f3n va 25% mensual. Matem\u00e1ticamente me est\u00e1n robando.',lk:34521},
+    {av:'\uD83D\uDCCA',nm:'Economist LATAM',hd:'@latam_macro',tx:'Monthly inflation in Argentina accelerating. Anchoring expectations will require significant policy credibility.',lk:2341},
+  ],
+  res_bajas:[
+    {av:'\uD83D\uDCB8',nm:'Trader',hd:'@fx_trader_arg',tx:'Reservas netas en rojo. El BCRA est\u00e1 vendiendo lo que no tiene.',lk:8901},
+    {av:'\uD83C\uDFDB',nm:'BCRA',hd:'@bcra_oficial',tx:'Las reservas se encuentran en niveles adecuados para respaldar el programa econ\u00f3mico.',lk:145},
+  ],
+  pop_baja:[
+    {av:'\uD83D\uDCE3',nm:'Oposici\u00f3n',hd:'@oposicion_ar',tx:'El BCRA ha demostrado su incapacidad. Pedimos la renuncia inmediata del presidente del organismo.',lk:18902},
+    {av:'\uD83D\uDE24',nm:'Ciudadano',hd:'@ciudadano_harto',tx:'No importa qui\u00e9n est\u00e9 en el BCRA. El resultado siempre es el mismo. La plata no vale nada.',lk:45231},
+  ],
+  desemp_alto:[
+    {av:'\uD83D\uDC77',nm:'Trabajador fabril',hd:'@laburant_metal',tx:'Cerraron la f\u00e1brica. 15 a\u00f1os de antig\u00FCedad. El ajuste no lo pagamos los que lo decidieron.',lk:45231},
+    {av:'\uD83D\uDCCA',nm:'CAME',hd:'@came_pymes',tx:'Los cierres de PyMEs de este trimestre son consecuencia directa de la pol\u00edtica monetaria.',lk:8921},
+  ],
+  buena:[
+    {av:'\uD83D\uDCC8',nm:'Analista',hd:'@bull_arg',tx:'Sorprendente: la gesti\u00f3n del BCRA est\u00e1 dando resultados. Inflaci\u00f3n cediendo, reservas acumulando.',lk:3421},
+    {av:'\uD83C\uDF10',nm:'Bloomberg',hd:'@bloomberg_latam',tx:'Argentina macro: showing unexpected improvement. BCRA policy credibility gaining traction.',lk:1203},
+  ],
 };
 
 // ── STATE ─────────────────────────────────────────────────────────────────────
 var G = {};
 var infHist=[], resHist=[], desHist=[];
-var QTRS = [‘ENE’,‘ABR’,‘JUL’,‘OCT’];
-var esterMode = ‘no’; // ‘letras’, ‘bonos’, ‘no’
+var QTRS = ['ENE','ABR','JUL','OCT'];
+var esterMode = 'no'; // 'letras', 'bonos', 'no'
 var pendingComunicado = null; // { comunicado, turnoEmitido }
 
 function startGame() {
-G = {
-turn:0, year:2024,
-inf:8.5, res:10.0, dolar:1050, brecha:45,
-tasa:70, tasa_anterior:70,
-cepo:7, cepo_anterior:7,
-pop:55, tension:28, desemp:8.5,
-credibilidad:70, // 0-100
-history:[], curEvent:null,
-decisions:{tasa:70,crawl:2,emision:3,cepo:7,interv:0},
-fiscalLast:-99, lost:false,
-};
-infHist=[8.5]; resHist=[10.0]; desHist=[8.5];
-esterMode=‘no’;
-pendingComunicado=null;
-buildSliders();
-document.getElementById(‘sl-interv’).value=0;
-document.getElementById(‘slv-interv’).textContent=‘0B USD’;
-updateEsterUI();
-updateMesaPreview(0);
-loadEvent();
-renderAll();
-showScreen(‘screen-game’);
+  G = {
+    turn:0, year:2024,
+    inf:8.5, res:10.0, dolar:1050, brecha:45,
+    tasa:70, tasa_anterior:70,
+    cepo:7, cepo_anterior:7,
+    pop:55, tension:28, desemp:8.5,
+    credibilidad:70, // 0-100
+    history:[], curEvent:null,
+    decisions:{tasa:70,crawl:2,emision:3,cepo:7,interv:0},
+    fiscalLast:-99, lost:false,
+  };
+  infHist=[8.5]; resHist=[10.0]; desHist=[8.5];
+  esterMode='no';
+  pendingComunicado=null;
+  buildSliders();
+  document.getElementById('sl-interv').value=0;
+  document.getElementById('slv-interv').textContent='0B USD';
+  updateEsterUI();
+  updateMesaPreview(0);
+  loadEvent();
+  renderAll();
+  showScreen('screen-game');
 }
 
 // ── SLIDERS BUILD ─────────────────────────────────────────────────────────────
 function buildSliders() {
-var c = document.getElementById(‘sliders’);
-c.innerHTML = ‘’;
-for (var i=0; i<SLIDERS.length; i++) {
-var d = SLIDERS[i];
-var div = document.createElement(‘div’);
-div.className = ‘sl’;
-div.innerHTML =
-‘<div class="sl-top">’ +
-‘<span class="sl-nm">’ + d.label +
-‘<span class="tt"><span class="tt-i">?</span><span class="tt-b">’ + d.tt + ‘</span></span>’ +
-‘</span>’ +
-‘<span class="sl-vl" id="slv-'+d.id+'">’+d.init+d.unit+’</span>’ +
-‘</div>’ +
-‘<div class="sl-ht">’+d.hint+’</div>’ +
-‘<input type="range" id="sl-'+d.id+'" min="'+d.min+'" max="'+d.max+'" step="'+d.step+'" value="'+d.init+'">’;
-c.appendChild(div);
-(function(sid, sunit){
-document.getElementById(‘sl-’+sid).addEventListener(‘input’, function(){
-document.getElementById(‘slv-’+sid).textContent = this.value + sunit;
-G.decisions[sid] = parseFloat(this.value);
-if (sid === ‘interv’) { updateMesaPreview(parseFloat(this.value)); updateEsterUI(); }
-});
-})(d.id, d.unit);
-}
+  var c = document.getElementById('sliders');
+  c.innerHTML = '';
+  for (var i=0; i<SLIDERS.length; i++) {
+    var d = SLIDERS[i];
+    var div = document.createElement('div');
+    div.className = 'sl';
+    div.innerHTML =
+      '<div class="sl-top">' +
+        '<span class="sl-nm">' + d.label +
+          '<span class="tt"><span class="tt-i">?</span><span class="tt-b">' + d.tt + '</span></span>' +
+        '</span>' +
+        '<span class="sl-vl" id="slv-'+d.id+'">'+d.init+d.unit+'</span>' +
+      '</div>' +
+      '<div class="sl-ht">'+d.hint+'</div>' +
+      '<input type="range" id="sl-'+d.id+'" min="'+d.min+'" max="'+d.max+'" step="'+d.step+'" value="'+d.init+'">';
+    c.appendChild(div);
+    (function(sid, sunit){
+      document.getElementById('sl-'+sid).addEventListener('input', function(){
+        document.getElementById('slv-'+sid).textContent = this.value + sunit;
+        G.decisions[sid] = parseFloat(this.value);
+        if (sid === 'interv') { updateMesaPreview(parseFloat(this.value)); updateEsterUI(); }
+      });
+    })(d.id, d.unit);
+  }
 }
 
 // ── ESTERILIZACION ────────────────────────────────────────────────────────────
 function setEster(mode) {
-esterMode = mode;
-document.getElementById(‘ester-letras’).className = ‘btn-ester’ + (mode===‘letras’?’ active-letras’:’’);
-document.getElementById(‘ester-bonos’).className  = ‘btn-ester’ + (mode===‘bonos’?’ active-bonos’:’’);
-document.getElementById(‘ester-no’).className     = ‘btn-ester’ + (mode===‘no’?’ active-no’:’’);
-updateMesaPreview(G.decisions.interv || 0);
+  esterMode = mode;
+  document.getElementById('ester-letras').className = 'btn-ester' + (mode==='letras'?' active-letras':'');
+  document.getElementById('ester-bonos').className  = 'btn-ester' + (mode==='bonos'?' active-bonos':'');
+  document.getElementById('ester-no').className     = 'btn-ester' + (mode==='no'?' active-no':'');
+  updateMesaPreview(G.decisions.interv || 0);
 }
 
 function updateEsterUI() {
-var interv = G.decisions.interv || 0;
-var hint = document.getElementById(‘ester-hint’);
-if (interv >= 0) {
-hint.textContent = ‘Sin compra activa \u2014 sin esterilizaci\u00f3n necesaria’;
-document.getElementById(‘ester-letras’).disabled = true;
-document.getElementById(‘ester-bonos’).disabled = true;
-} else {
-hint.textContent = ‘Elegir c\u00f3mo esterilizar los pesos emitidos por compra de reservas’;
-document.getElementById(‘ester-letras’).disabled = false;
-document.getElementById(‘ester-bonos’).disabled = false;
-}
+  var interv = G.decisions.interv || 0;
+  var hint = document.getElementById('ester-hint');
+  if (interv >= 0) {
+    hint.textContent = 'Sin compra activa \u2014 sin esterilizaci\u00f3n necesaria';
+    document.getElementById('ester-letras').disabled = true;
+    document.getElementById('ester-bonos').disabled = true;
+  } else {
+    hint.textContent = 'Elegir c\u00f3mo esterilizar los pesos emitidos por compra de reservas';
+    document.getElementById('ester-letras').disabled = false;
+    document.getElementById('ester-bonos').disabled = false;
+  }
 }
 
 // ── MESA DE CAMBIOS ───────────────────────────────────────────────────────────
 function updateMesaPreview(v) {
-var opEl = document.getElementById(‘mesa-op’);
-var hintEl = document.getElementById(‘mesa-hint’);
-var r1 = document.getElementById(‘mef-res’);
-var r2 = document.getElementById(‘mef-brecha’);
-var r3 = document.getElementById(‘mef-inf’);
-var r4 = document.getElementById(‘mef-ester’);
+  var opEl = document.getElementById('mesa-op');
+  var hintEl = document.getElementById('mesa-hint');
+  var r1 = document.getElementById('mef-res');
+  var r2 = document.getElementById('mef-brecha');
+  var r3 = document.getElementById('mef-inf');
+  var r4 = document.getElementById('mef-ester');
 
-function ef(el, txt, cls){ el.textContent=txt; el.className=’mesa-ef ’+cls; }
+  function ef(el, txt, cls){ el.textContent=txt; el.className='mesa-ef '+cls; }
 
-if (v === 0) {
-opEl.textContent=‘Neutral’; opEl.style.color=‘var(–perg)’;
-hintEl.textContent=‘Sin operaci\u00f3n activa este trimestre’;
-ef(r1,’’,‘neu’); ef(r2,’’,‘neu’); ef(r3,’’,‘neu’); ef(r4,’’,‘neu’);
-} else if (v > 0) {
-opEl.textContent=‘VENTA USD ‘+v+‘B’; opEl.style.color=’#eb5757’;
-hintEl.textContent=‘Vend\u00e9s d\u00f3lares para planchar el tipo de cambio y la brecha’;
-ef(r1,‘Reservas \u2193 ‘+v+‘B USD’,‘neg’);
-ef(r2,‘Brecha \u2193 ~‘+Math.round(v*8)+’%’,‘pos’);
-ef(r3,‘Presi\u00f3n inflacionaria \u2193’,‘pos’);
-ef(r4,‘Sin esterilizaci\u00f3n necesaria’,‘neu’);
-} else {
-var abs = Math.abs(v);
-opEl.textContent=‘COMPRA USD ‘+abs+‘B’; opEl.style.color=’#6fcf97’;
-hintEl.textContent=‘Compr\u00e1s d\u00f3lares: acumul\u00e1s reservas a costo de emitir pesos’;
-ef(r1,’Reservas \u2191 ’+abs+‘B USD’,‘pos’);
-ef(r2,’Brecha \u2191 ~’+Math.round(abs*5)+’% (m\u00e1s pesos)’,‘neg’);
-var infExtra = esterMode===‘no’ ? abs*0.4 : esterMode===‘letras’ ? abs*0.15 : abs*0.08;
-ef(r3,‘Inflaci\u00f3n extra +’+infExtra.toFixed(1)+‘pp (emisi\u00f3n)’,‘neg’);
-if (esterMode===‘no’) ef(r4,‘Sin esterilizaci\u00f3n: plena emisi\u00f3n inflacionaria’,‘neg’);
-else if (esterMode===‘letras’) ef(r4,‘Letras corto plazo: absorbe 60% de emisi\u00f3n’,‘pos’);
-else ef(r4,‘Bonos largo plazo: absorbe 80% emisi\u00f3n, costo financiero’,‘pos’);
-}
+  if (v === 0) {
+    opEl.textContent='Neutral'; opEl.style.color='var(--perg)';
+    hintEl.textContent='Sin operaci\u00f3n activa este trimestre';
+    ef(r1,'','neu'); ef(r2,'','neu'); ef(r3,'','neu'); ef(r4,'','neu');
+  } else if (v > 0) {
+    opEl.textContent='VENTA USD '+v+'B'; opEl.style.color='#eb5757';
+    hintEl.textContent='Vend\u00e9s d\u00f3lares para planchar el tipo de cambio y la brecha';
+    ef(r1,'Reservas \u2193 '+v+'B USD','neg');
+    ef(r2,'Brecha \u2193 ~'+Math.round(v*8)+'%','pos');
+    ef(r3,'Presi\u00f3n inflacionaria \u2193','pos');
+    ef(r4,'Sin esterilizaci\u00f3n necesaria','neu');
+  } else {
+    var abs = Math.abs(v);
+    opEl.textContent='COMPRA USD '+abs+'B'; opEl.style.color='#6fcf97';
+    hintEl.textContent='Compr\u00e1s d\u00f3lares: acumul\u00e1s reservas a costo de emitir pesos';
+    ef(r1,'Reservas \u2191 '+abs+'B USD','pos');
+    ef(r2,'Brecha \u2191 ~'+Math.round(abs*5)+'% (m\u00e1s pesos)','neg');
+    var infExtra = esterMode==='no' ? abs*0.4 : esterMode==='letras' ? abs*0.15 : abs*0.08;
+    ef(r3,'Inflaci\u00f3n extra +'+infExtra.toFixed(1)+'pp (emisi\u00f3n)','neg');
+    if (esterMode==='no') ef(r4,'Sin esterilizaci\u00f3n: plena emisi\u00f3n inflacionaria','neg');
+    else if (esterMode==='letras') ef(r4,'Letras corto plazo: absorbe 60% de emisi\u00f3n','pos');
+    else ef(r4,'Bonos largo plazo: absorbe 80% emisi\u00f3n, costo financiero','pos');
+  }
 }
 
 function updateMesaKPIs() {
-document.getElementById(‘mesa-res’).textContent = ‘USD ‘+G.res.toFixed(1)+‘B’;
-var bEl = document.getElementById(‘mesa-brecha’);
-bEl.textContent = Math.round(G.brecha)+’%’;
-bEl.style.color = G.brecha>80?’#eb5757’:G.brecha>40?’#f2994a’:’#6fcf97’;
-var op = G.decisions.interv || 0;
-var opEl = document.getElementById(‘mesa-op’);
-if (op===0){ opEl.textContent=‘Neutral’; opEl.style.color=‘var(–perg)’; }
-else if (op>0){ opEl.textContent=‘VENTA ‘+op+‘B’; opEl.style.color=’#eb5757’; }
-else { opEl.textContent=‘COMPRA ‘+Math.abs(op)+‘B’; opEl.style.color=’#6fcf97’; }
+  document.getElementById('mesa-res').textContent = 'USD '+G.res.toFixed(1)+'B';
+  var bEl = document.getElementById('mesa-brecha');
+  bEl.textContent = Math.round(G.brecha)+'%';
+  bEl.style.color = G.brecha>80?'#eb5757':G.brecha>40?'#f2994a':'#6fcf97';
+  var op = G.decisions.interv || 0;
+  var opEl = document.getElementById('mesa-op');
+  if (op===0){ opEl.textContent='Neutral'; opEl.style.color='var(--perg)'; }
+  else if (op>0){ opEl.textContent='VENTA '+op+'B'; opEl.style.color='#eb5757'; }
+  else { opEl.textContent='COMPRA '+Math.abs(op)+'B'; opEl.style.color='#6fcf97'; }
 }
 
 // ── COMUNICADO ────────────────────────────────────────────────────────────────
 var selectedComunicado = null;
+var comunicadoOpts = [];
 
 function showComunicadoModal() {
-// Pick 3 random options
-var pool = COMUNICADOS.slice();
-pool.sort(function(){ return Math.random()-0.5; });
-var opts = pool.slice(0,3);
-selectedComunicado = null;
+  var pool = COMUNICADOS.slice();
+  pool.sort(function(){ return Math.random()-0.5; });
+  comunicadoOpts = pool.slice(0,3);
+  selectedComunicado = null;
 
-var html = ‘’;
-for (var i=0; i<opts.length; i++) {
-html += ‘<button class="btn-com" data-idx="'+i+'" onclick="selectComunicado(this,'+i+')">’+
-opts[i].texto +
-‘<small>Si cumple: mejora credibilidad. Si no cumple: p\u00e9rdida de confianza severa.</small>’ +
-‘</button>’;
-}
-document.getElementById(‘com-opts’).innerHTML = html;
-document.getElementById(‘com-opts’)._opts = opts;
-document.getElementById(‘com-overlay’).classList.add(‘open’);
-}
+  var container = document.getElementById('com-opts');
+  container.innerHTML = '';
 
-function selectComunicado(btn, idx) {
-var btns = document.querySelectorAll(’.btn-com’);
-for (var i=0; i<btns.length; i++) btns[i].classList.remove(‘selected’);
-btn.classList.add(‘selected’);
-selectedComunicado = document.getElementById(‘com-opts’)._opts[idx];
+  for (var i=0; i<comunicadoOpts.length; i++) {
+    var btn = document.createElement('button');
+    btn.className = 'btn-com';
+    btn.setAttribute('data-idx', i);
+    btn.innerHTML = comunicadoOpts[i].texto +
+      '<small>Si cumple: mejora credibilidad. Si no cumple: p\u00e9rdida de confianza severa.</small>';
+    container.appendChild(btn);
+    (function(b, idx) {
+      b.addEventListener('click', function(e) {
+        var all = document.querySelectorAll('.btn-com');
+        for (var j=0; j<all.length; j++) all[j].classList.remove('selected');
+        b.classList.add('selected');
+        selectedComunicado = comunicadoOpts[idx];
+      });
+    })(btn, i);
+  }
+  document.getElementById('com-overlay').classList.add('open');
 }
 
 function emitirComunicado() {
-if (!selectedComunicado) { showAlert(‘Seleccione una opci\u00f3n primero’, ‘#D4841A’); return; }
-pendingComunicado = { com: selectedComunicado, turno: G.turn };
-// Show tweet about the comunicado
-var twEl = document.createElement(‘div’);
-twEl.className = ‘tw comunicado’;
-twEl.innerHTML = ‘<div class="tw-hdr"><div class="tw-av">\uD83C\uDFDB</div><div><div class="tw-nm">BCRA Oficial</div><div class="tw-hd">@bcra_oficial \u00b7 COMUNICADO</div></div></div>’ +
-‘<div class="tw-bd">’ + selectedComunicado.texto + ‘</div>’ +
-‘<div class="tw-lk">\u2665 12.043   \uD83D\uDD01 4.521</div>’;
-var tweetsEl = document.getElementById(‘tweets’);
-tweetsEl.insertBefore(twEl, tweetsEl.firstChild);
-document.getElementById(‘com-overlay’).classList.remove(‘open’);
-showAlert(‘Comunicado emitido. El mercado est\u00e1 observando.’, ‘#C8A040’);
+  if (!selectedComunicado) { showAlert('Seleccione una opci\u00f3n primero', '#D4841A'); return; }
+  pendingComunicado = { com: selectedComunicado, turno: G.turn };
+  var twEl = document.createElement('div');
+  twEl.className = 'tw comunicado';
+  twEl.innerHTML = '<div class="tw-hdr"><div class="tw-av">\uD83C\uDFDB</div><div><div class="tw-nm">BCRA Oficial</div><div class="tw-hd">@bcra_oficial \u00b7 COMUNICADO</div></div></div>' +
+    '<div class="tw-bd">' + selectedComunicado.texto + '</div>' +
+    '<div class="tw-lk">\u2665 12.043</div>';
+  var tweetsEl = document.getElementById('tweets');
+  tweetsEl.insertBefore(twEl, tweetsEl.firstChild);
+  document.getElementById('com-overlay').classList.remove('open');
+  selectedComunicado = null;
+  showAlert('Comunicado emitido. El mercado est\u00e1 observando.', '#C8A040');
 }
 
 function skipComunicado() {
-document.getElementById(‘com-overlay’).classList.remove(‘open’);
+  document.getElementById('com-overlay').classList.remove('open');
+  selectedComunicado = null;
 }
 
 function checkComunicado() {
-if (!pendingComunicado) return;
-var com = pendingComunicado.com;
-var cumple = com.condicion(G);
-var ef = cumple ? com.efecto_ok : com.efecto_fail;
-var tweet = cumple ? com.tweet_ok : com.tweet_fail;
+  if (!pendingComunicado) return;
+  var com = pendingComunicado.com;
+  var cumple = com.condicion(G);
+  var ef = cumple ? com.efecto_ok : com.efecto_fail;
+  var tweet = cumple ? com.tweet_ok : com.tweet_fail;
 
-if (ef.inf)     G.inf     = Math.max(1.2, G.inf + ef.inf);
-if (ef.pop)     G.pop     = Math.max(0, Math.min(100, G.pop + ef.pop));
-if (ef.tension) G.tension = Math.max(0, Math.min(100, G.tension + ef.tension));
-if (ef.brecha)  G.brecha  = Math.max(3, Math.min(200, G.brecha + ef.brecha));
-if (ef.res)     G.res     = Math.max(-10, G.res + ef.res);
+  if (ef.inf)     G.inf     = Math.max(1.2, G.inf + ef.inf);
+  if (ef.pop)     G.pop     = Math.max(0, Math.min(100, G.pop + ef.pop));
+  if (ef.tension) G.tension = Math.max(0, Math.min(100, G.tension + ef.tension));
+  if (ef.brecha)  G.brecha  = Math.max(3, Math.min(200, G.brecha + ef.brecha));
+  if (ef.res)     G.res     = Math.max(-10, G.res + ef.res);
 
-if (cumple) G.credibilidad = Math.min(100, G.credibilidad + 8);
-else        G.credibilidad = Math.max(0, G.credibilidad - 20);
+  if (cumple) G.credibilidad = Math.min(100, G.credibilidad + 8);
+  else        G.credibilidad = Math.max(0, G.credibilidad - 20);
 
-var twEl = document.createElement(‘div’);
-twEl.className = ‘tw comunicado’;
-twEl.innerHTML = ‘<div class="tw-hdr"><div class="tw-av">’+(cumple?’\uD83D\uDCC8’:’\uD83D\uDD25’)+’</div><div><div class="tw-nm">Mercado Reacciona</div><div class="tw-hd">@mercado_arg</div></div></div>’ +
-‘<div class="tw-bd">’+tweet+’</div>’ +
-‘<div class="tw-lk">\u2665 ‘+(cumple?‘24.031’:‘89.234’)+’</div>’;
-var tweetsEl = document.getElementById(‘tweets’);
-tweetsEl.insertBefore(twEl, tweetsEl.firstChild);
+  var twEl = document.createElement('div');
+  twEl.className = 'tw comunicado';
+  twEl.innerHTML = '<div class="tw-hdr"><div class="tw-av">'+(cumple?'\uD83D\uDCC8':'\uD83D\uDD25')+'</div><div><div class="tw-nm">Mercado Reacciona</div><div class="tw-hd">@mercado_arg</div></div></div>' +
+    '<div class="tw-bd">'+tweet+'</div>' +
+    '<div class="tw-lk">\u2665 '+(cumple?'24.031':'89.234')+'</div>';
+  var tweetsEl = document.getElementById('tweets');
+  tweetsEl.insertBefore(twEl, tweetsEl.firstChild);
 
-if (!cumple) showAlert(‘Incumplimiento del comunicado: credibilidad -20pts’, ‘#C0392B’);
-pendingComunicado = null;
+  if (!cumple) showAlert('Incumplimiento del comunicado: credibilidad -20pts', '#C0392B');
+  pendingComunicado = null;
 }
 
 // ── EVENTS ────────────────────────────────────────────────────────────────────
 function loadEvent() {
-var pool = EVENTS.filter(function(e){ return e!==G.curEvent; });
-G.curEvent = pool[Math.floor(Math.random()*pool.length)];
-var ev = G.curEvent;
-var q = QTRS[G.turn%4];
-var yr = G.year + Math.floor(G.turn/4);
-document.getElementById(‘np-tag’).textContent = ev.tag;
-document.getElementById(‘np-hl’).textContent = ev.hl;
-document.getElementById(‘np-lede’).textContent = ev.lede;
-document.getElementById(‘np-edu’).innerHTML = ev.edu;
-document.getElementById(‘np-date’).innerHTML = ‘BUENOS AIRES<br>’+q+’ ’+yr;
-renderTweets(ev.tweets);
+  var pool = EVENTS.filter(function(e){ return e!==G.curEvent; });
+  G.curEvent = pool[Math.floor(Math.random()*pool.length)];
+  var ev = G.curEvent;
+  var q = QTRS[G.turn%4];
+  var yr = G.year + Math.floor(G.turn/4);
+  document.getElementById('np-tag').textContent = ev.tag;
+  document.getElementById('np-hl').textContent = ev.hl;
+  document.getElementById('np-lede').textContent = ev.lede;
+  document.getElementById('np-edu').innerHTML = ev.edu;
+  document.getElementById('np-date').innerHTML = 'BUENOS AIRES<br>'+q+' '+yr;
+  renderTweets(ev.tweets);
 }
 
 // ── FISCAL ────────────────────────────────────────────────────────────────────
 function pedirReforma(tipo) {
-if (G.turn - G.fiscalLast < 2) {
-showAlert(‘Disponible en ‘+(2-(G.turn-G.fiscalLast))+’ trimestre(s)’, ‘#D4841A’); return;
-}
-var opts = FISCAL[tipo];
-var pop_ok = G.pop >= opts[0].pop_min;
-var res = (Math.random() < opts[0].prob && pop_ok) ? opts[0] : opts[1];
-var dt = res.delta;
-if (dt.tension) G.tension = Math.max(0,Math.min(100,G.tension+dt.tension));
-if (dt.pop)     G.pop     = Math.max(0,Math.min(100,G.pop+dt.pop));
-if (dt.desemp)  G.desemp  = Math.max(0,Math.min(40,G.desemp+dt.desemp));
-if (dt.emision) {
-var ne = Math.max(0,Math.min(20,G.decisions.emision+dt.emision));
-G.decisions.emision=ne;
-document.getElementById(‘sl-emision’).value=ne;
-document.getElementById(‘slv-emision’).textContent=ne+’%/mes’;
-}
-G.fiscalLast=G.turn;
-document.getElementById(‘btn-aj’).disabled=true;
-document.getElementById(‘btn-ex’).disabled=true;
-document.getElementById(‘m-icon’).textContent=res.icon;
-document.getElementById(‘m-title’).textContent=res.title;
-document.getElementById(‘m-body’).textContent=res.body;
-document.getElementById(‘m-eff’).textContent=res.eff;
-document.getElementById(‘modal’).classList.add(‘open’);
+  if (G.turn - G.fiscalLast < 2) {
+    showAlert('Disponible en '+(2-(G.turn-G.fiscalLast))+' trimestre(s)', '#D4841A'); return;
+  }
+  var opts = FISCAL[tipo];
+  var pop_ok = G.pop >= opts[0].pop_min;
+  var res = (Math.random() < opts[0].prob && pop_ok) ? opts[0] : opts[1];
+  var dt = res.delta;
+  if (dt.tension) G.tension = Math.max(0,Math.min(100,G.tension+dt.tension));
+  if (dt.pop)     G.pop     = Math.max(0,Math.min(100,G.pop+dt.pop));
+  if (dt.desemp)  G.desemp  = Math.max(0,Math.min(40,G.desemp+dt.desemp));
+  if (dt.emision) {
+    var ne = Math.max(0,Math.min(20,G.decisions.emision+dt.emision));
+    G.decisions.emision=ne;
+    document.getElementById('sl-emision').value=ne;
+    document.getElementById('slv-emision').textContent=ne+'%/mes';
+  }
+  G.fiscalLast=G.turn;
+  document.getElementById('btn-aj').disabled=true;
+  document.getElementById('btn-ex').disabled=true;
+  document.getElementById('m-icon').textContent=res.icon;
+  document.getElementById('m-title').textContent=res.title;
+  document.getElementById('m-body').textContent=res.body;
+  document.getElementById('m-eff').textContent=res.eff;
+  document.getElementById('modal').classList.add('open');
 }
 
 // ── PROCESS TURN ──────────────────────────────────────────────────────────────
-document.getElementById(‘btn-confirm’).addEventListener(‘click’, function(){
-this.disabled=true;
-var d = G.decisions;
-var ev = G.curEvent;
-var prev = { inf:G.inf, res:G.res, pop:G.pop, tension:G.tension, brecha:G.brecha, desemp:G.desemp };
-var ef = ev.efecto;
+document.getElementById('btn-confirm').addEventListener('click', function(){
+  this.disabled=true;
+  var d = G.decisions;
+  var ev = G.curEvent;
+  var prev = { inf:G.inf, res:G.res, pop:G.pop, tension:G.tension, brecha:G.brecha, desemp:G.desemp };
+  var ef = ev.efecto;
 
-G.tasa_anterior = G.tasa;
-G.cepo_anterior = G.cepo;
+  G.tasa_anterior = G.tasa;
+  G.cepo_anterior = G.cepo;
 
-// Verificar comunicado pendiente ANTES de aplicar la nueva decision
-checkComunicado();
+  // Verificar comunicado pendiente ANTES de aplicar la nueva decision
+  checkComunicado();
 
-var interv = d.interv || 0;
-// Esterilizacion: reduce el efecto inflacionario de compra de reservas
-var ester_factor = interv<0 ? (esterMode===‘bonos’?0.2 : esterMode===‘letras’?0.4 : 1.0) : 0;
-var compra_inf = interv<0 ? Math.abs(interv)*0.4*ester_factor : 0;
-// Esterilizacion con letras/bonos aumenta tension (mercado exige rendimientos)
-var ester_tension = interv<0 && esterMode!==‘no’ ? Math.abs(interv)*1.5 : 0;
+  var interv = d.interv || 0;
+  // Esterilizacion: reduce el efecto inflacionario de compra de reservas
+  var ester_factor = interv<0 ? (esterMode==='bonos'?0.2 : esterMode==='letras'?0.4 : 1.0) : 0;
+  var compra_inf = interv<0 ? Math.abs(interv)*0.4*ester_factor : 0;
+  // Esterilizacion con letras/bonos aumenta tension (mercado exige rendimientos)
+  var ester_tension = interv<0 && esterMode!=='no' ? Math.abs(interv)*1.5 : 0;
 
-// INFLACION
-var dInf = (d.emision-3)*0.45
-- Math.min((d.tasa-50)*0.012, 3.5)
-+ (d.crawl-2)*0.22
-+ (G.brecha>90?1.8:G.brecha>60?0.8:0)
-+ compra_inf;
-// Credibilidad baja = expectativas desancladas = mas inflacion
-dInf += (100-G.credibilidad)*0.01;
-if (ef.inf) dInf+=ef.inf;
-dInf += (Math.random()-0.5)*1.0;
-G.inf = Math.max(1.2, G.inf+dInf);
+  // INFLACION
+  var dInf = (d.emision-3)*0.45
+           - Math.min((d.tasa-50)*0.012, 3.5)
+           + (d.crawl-2)*0.22
+           + (G.brecha>90?1.8:G.brecha>60?0.8:0)
+           + compra_inf;
+  // Credibilidad baja = expectativas desancladas = mas inflacion
+  dInf += (100-G.credibilidad)*0.01;
+  if (ef.inf) dInf+=ef.inf;
+  dInf += (Math.random()-0.5)*1.0;
+  G.inf = Math.max(1.2, G.inf+dInf);
 
-// RESERVAS
-var dRes = -(d.crawl<1?1.8:d.crawl<2?0.6:0) - (10-d.cepo)*0.22 - (d.cepo>=9?0.5:0) - interv;
-if (ef.res) dRes+=ef.res;
-dRes += (Math.random()-0.5)*0.7;
-G.res = Math.max(-10, G.res+dRes);
+  // RESERVAS
+  var dRes = -(d.crawl<1?1.8:d.crawl<2?0.6:0) - (10-d.cepo)*0.22 - (d.cepo>=9?0.5:0) - interv;
+  if (ef.res) dRes+=ef.res;
+  dRes += (Math.random()-0.5)*0.7;
+  G.res = Math.max(-10, G.res+dRes);
 
-// DOLAR
-G.dolar = G.dolar * Math.pow(1+d.crawl/100,3);
+  // DOLAR
+  G.dolar = G.dolar * Math.pow(1+d.crawl/100,3);
 
-// BRECHA
-var dBrecha = (d.emision-3)*1.8 + (d.cepo>=8?4:-5) - interv*4;
-if (d.cepo<=3) dBrecha-=15;
-// Letras/bonos de esterilizacion pueden atraer capitales y bajar brecha levemente
-if (interv<0 && esterMode!==‘no’) dBrecha -= Math.abs(interv)*1.5;
-if (ef.brecha) dBrecha+=ef.brecha;
-dBrecha += (Math.random()-0.5)*8;
-G.brecha = Math.max(3,Math.min(200,G.brecha+dBrecha));
+  // BRECHA
+  var dBrecha = (d.emision-3)*1.8 + (d.cepo>=8?4:-5) - interv*4;
+  if (d.cepo<=3) dBrecha-=15;
+  // Letras/bonos de esterilizacion pueden atraer capitales y bajar brecha levemente
+  if (interv<0 && esterMode!=='no') dBrecha -= Math.abs(interv)*1.5;
+  if (ef.brecha) dBrecha+=ef.brecha;
+  dBrecha += (Math.random()-0.5)*8;
+  G.brecha = Math.max(3,Math.min(200,G.brecha+dBrecha));
 
-// POPULARIDAD
-var dPop = -(G.inf-5)*0.5 - (d.tasa>130?6:d.tasa>90?2:0)
-+ (G.res>14?3:G.res<4?-6:0) + (G.brecha>100?-5:G.brecha<30?3:0)
-- (G.desemp>12?5:G.desemp>9?2:0);
-if (ef.pop) dPop+=ef.pop;
-dPop += (Math.random()-0.5)*4;
-G.pop = Math.max(0,Math.min(100,G.pop+dPop));
+  // POPULARIDAD
+  var dPop = -(G.inf-5)*0.5 - (d.tasa>130?6:d.tasa>90?2:0)
+           + (G.res>14?3:G.res<4?-6:0) + (G.brecha>100?-5:G.brecha<30?3:0)
+           - (G.desemp>12?5:G.desemp>9?2:0);
+  if (ef.pop) dPop+=ef.pop;
+  dPop += (Math.random()-0.5)*4;
+  G.pop = Math.max(0,Math.min(100,G.pop+dPop));
 
-// TENSION
-var dTen = (G.inf>12?7:G.inf>8?2:-4) + (G.res<4?10:G.res<7?3:-3)
-+ (G.brecha>100?6:G.brecha>70?2:-3) + (G.pop<20?8:G.pop<35?3:-2)
-+ ester_tension;
-if (ef.tension) dTen+=ef.tension;
-dTen += (Math.random()-0.5)*4;
-G.tension = Math.max(0,Math.min(100,G.tension+dTen));
+  // TENSION
+  var dTen = (G.inf>12?7:G.inf>8?2:-4) + (G.res<4?10:G.res<7?3:-3)
+           + (G.brecha>100?6:G.brecha>70?2:-3) + (G.pop<20?8:G.pop<35?3:-2)
+           + ester_tension;
+  if (ef.tension) dTen+=ef.tension;
+  dTen += (Math.random()-0.5)*4;
+  G.tension = Math.max(0,Math.min(100,G.tension+dTen));
 
-// DESEMPLEO
-// Tasa alta = recesion = mas desempleo; inflacion alta = incertidumbre = mas desempleo
-// Emision alta y reservas acumulando = mas actividad = menos desempleo
-var dDes = (d.tasa>100?(d.tasa-100)*0.008:0)
-- (d.emision>5?0.3:0)
-+ (G.inf>15?0.3:0)
-- (G.res>12?0.2:0);
-if (ef.desemp) dDes+=ef.desemp;
-dDes += (Math.random()-0.5)*0.4;
-G.desemp = Math.max(3,Math.min(40,G.desemp+dDes));
+  // DESEMPLEO
+  // Tasa alta = recesion = mas desempleo; inflacion alta = incertidumbre = mas desempleo
+  // Emision alta y reservas acumulando = mas actividad = menos desempleo
+  var dDes = (d.tasa>100?(d.tasa-100)*0.008:0)
+           - (d.emision>5?0.3:0)
+           + (G.inf>15?0.3:0)
+           - (G.res>12?0.2:0);
+  if (ef.desemp) dDes+=ef.desemp;
+  dDes += (Math.random()-0.5)*0.4;
+  G.desemp = Math.max(3,Math.min(40,G.desemp+dDes));
 
-G.tasa=d.tasa; G.cepo=d.cepo;
-infHist.push(G.inf); if(infHist.length>16) infHist.shift();
-resHist.push(G.res); if(resHist.length>16) resHist.shift();
-desHist.push(G.desemp); if(desHist.length>16) desHist.shift();
+  G.tasa=d.tasa; G.cepo=d.cepo;
+  infHist.push(G.inf); if(infHist.length>16) infHist.shift();
+  resHist.push(G.res); if(resHist.length>16) resHist.shift();
+  desHist.push(G.desemp); if(desHist.length>16) desHist.shift();
 
-var changes = buildChanges(prev);
-var ql = ‘T’+((G.turn%4)+1)+’ ’+(G.year+Math.floor(G.turn/4));
-G.history.unshift({label:ql,hl:ev.hl,changes:changes});
-G.turn++;
-if (G.turn%4===0) G.year++;
+  var changes = buildChanges(prev);
+  var ql = 'T'+((G.turn%4)+1)+' '+(G.year+Math.floor(G.turn/4));
+  G.history.unshift({label:ql,hl:ev.hl,changes:changes});
+  G.turn++;
+  if (G.turn%4===0) G.year++;
 
-// Reset mesa
-G.decisions.interv=0;
-document.getElementById(‘sl-interv’).value=0;
-document.getElementById(‘slv-interv’).textContent=‘0B USD’;
-esterMode=‘no’; setEster(‘no’);
-updateMesaPreview(0); updateEsterUI();
+  // Reset mesa
+  G.decisions.interv=0;
+  document.getElementById('sl-interv').value=0;
+  document.getElementById('slv-interv').textContent='0B USD';
+  esterMode='no'; setEster('no');
+  updateMesaPreview(0); updateEsterUI();
 
-document.getElementById(‘btn-aj’).disabled=false;
-document.getElementById(‘btn-ex’).disabled=false;
+  document.getElementById('btn-aj').disabled=false;
+  document.getElementById('btn-ex').disabled=false;
 
-var worse = G.inf>prev.inf+2||G.res<prev.res-1.5||G.tension>prev.tension+12;
-var better = G.res>prev.res+1||G.pop>prev.pop+6;
-doFlash(worse?‘r’:better?‘g’:null);
+  var worse = G.inf>prev.inf+2||G.res<prev.res-1.5||G.tension>prev.tension+12;
+  var better = G.res>prev.res+1||G.pop>prev.pop+6;
+  doFlash(worse?'r':better?'g':null);
 
-if      (G.inf>22)     showAlert(‘La inflaci\u00f3n exhibe una “correcci\u00f3n t\u00e9cnica acelerada”’,’#C0392B’);
-else if (G.res<3)      showAlert(‘Las reservas en niveles “t\u00e9cnicamente ajustados”’,’#C0392B’);
-else if (G.desemp>15)  showAlert(‘Desempleo en niveles cr\u00edticos: presi\u00f3n social creciente’,’#D4841A’);
-else if (G.tension>85) showAlert(‘Tensi\u00f3n sist\u00e9mica al l\u00edmite’,’#D4841A’);
+  if      (G.inf>22)     showAlert('La inflaci\u00f3n exhibe una "correcci\u00f3n t\u00e9cnica acelerada"','#C0392B');
+  else if (G.res<3)      showAlert('Las reservas en niveles "t\u00e9cnicamente ajustados"','#C0392B');
+  else if (G.desemp>15)  showAlert('Desempleo en niveles cr\u00edticos: presi\u00f3n social creciente','#D4841A');
+  else if (G.tension>85) showAlert('Tensi\u00f3n sist\u00e9mica al l\u00edmite','#D4841A');
 
-var ms = {4:‘Un a\u00f1o al frente del BCRA. El mercado ajusta sus modelos.’,8:‘Dos a\u00f1os: m\u00e1s que la mayor\u00eda de sus predecesores.’,12:‘Tres a\u00f1os. V.E. se ha convertido en un activo institucional.’,20:‘Cinco a\u00f1os. La historia escribi\u00f3 su primer borrador favorable.’};
-if (ms[G.turn]) showAlert(ms[G.turn],’#C8A040’);
+  var ms = {4:'Un a\u00f1o al frente del BCRA. El mercado ajusta sus modelos.',8:'Dos a\u00f1os: m\u00e1s que la mayor\u00eda de sus predecesores.',12:'Tres a\u00f1os. V.E. se ha convertido en un activo institucional.',20:'Cinco a\u00f1os. La historia escribi\u00f3 su primer borrador favorable.'};
+  if (ms[G.turn]) showAlert(ms[G.turn],'#C8A040');
 
-// Comunicado cada 2 turnos
-if (G.turn>0 && G.turn%2===0 && !pendingComunicado) {
-setTimeout(showComunicadoModal, 400);
-}
+  // Comunicado cada 2 turnos
+  if (G.turn>0 && G.turn%2===0 && !pendingComunicado) {
+    setTimeout(showComunicadoModal, 400);
+  }
 
-for (var i=0;i<ENDINGS.length;i++){
-if (ENDINGS[i].cond(G)&&ENDINGS[i].lose){
-G.lost=true;
-setTimeout((function(end){return function(){showEnding(end);};})(ENDINGS[i]),700);
-return;
-}
-}
+  for (var i=0;i<ENDINGS.length;i++){
+    if (ENDINGS[i].cond(G)&&ENDINGS[i].lose){
+      G.lost=true;
+      setTimeout((function(end){return function(){showEnding(end);};})(ENDINGS[i]),700);
+      return;
+    }
+  }
 
-loadEvent();
-renderAll();
-genContextTweets();
-document.getElementById(‘btn-confirm’).disabled=false;
+  loadEvent();
+  renderAll();
+  genContextTweets();
+  document.getElementById('btn-confirm').disabled=false;
 });
 
 function buildChanges(prev){
-var items=[];
-var di=G.inf-prev.inf,dr=G.res-prev.res,dp=G.pop-prev.pop,db=G.brecha-prev.brecha,dd=G.desemp-prev.desemp;
-if(Math.abs(di)>0.3) items.push({lbl:‘Inf ‘+(di>0?’+’:’’)+di.toFixed(1)+’%’,cls:di>0?‘dn’:‘up’});
-if(Math.abs(dr)>0.2) items.push({lbl:‘Res ‘+(dr>0?’+’:’’)+dr.toFixed(1)+‘B’,cls:dr>0?‘up’:‘dn’});
-if(Math.abs(dp)>2)   items.push({lbl:‘Pop ‘+(dp>0?’+’:’’)+dp.toFixed(0)+’%’,cls:dp>0?‘up’:‘dn’});
-if(Math.abs(db)>5)   items.push({lbl:‘Brecha ‘+(db>0?’+’:’’)+db.toFixed(0)+’%’,cls:db>0?‘dn’:‘up’});
-if(Math.abs(dd)>0.2) items.push({lbl:‘Des ‘+(dd>0?’+’:’’)+dd.toFixed(1)+’%’,cls:dd>0?‘dn’:‘up’});
-return items;
+  var items=[];
+  var di=G.inf-prev.inf,dr=G.res-prev.res,dp=G.pop-prev.pop,db=G.brecha-prev.brecha,dd=G.desemp-prev.desemp;
+  if(Math.abs(di)>0.3) items.push({lbl:'Inf '+(di>0?'+':'')+di.toFixed(1)+'%',cls:di>0?'dn':'up'});
+  if(Math.abs(dr)>0.2) items.push({lbl:'Res '+(dr>0?'+':'')+dr.toFixed(1)+'B',cls:dr>0?'up':'dn'});
+  if(Math.abs(dp)>2)   items.push({lbl:'Pop '+(dp>0?'+':'')+dp.toFixed(0)+'%',cls:dp>0?'up':'dn'});
+  if(Math.abs(db)>5)   items.push({lbl:'Brecha '+(db>0?'+':'')+db.toFixed(0)+'%',cls:db>0?'dn':'up'});
+  if(Math.abs(dd)>0.2) items.push({lbl:'Des '+(dd>0?'+':'')+dd.toFixed(1)+'%',cls:dd>0?'dn':'up'});
+  return items;
 }
 
 // ── RENDER ────────────────────────────────────────────────────────────────────
 function renderAll(){
-var q=G.turn%4, y=G.year+Math.floor(G.turn/4), yrs=(G.turn/4).toFixed(1);
-document.getElementById(‘hdr-date’).textContent=QTRS[q]+’ ‘+y;
-document.getElementById(‘hdr-turn’).textContent=‘T-’+(G.turn+1)+’ \u2014 ‘+yrs+’ a\u00f1os’;
-document.getElementById(‘dec-bdg’).textContent=‘T-’+(G.turn+1);
-document.getElementById(‘soc-turn’).textContent=‘T-’+(G.turn+1);
-var cd=G.turn-G.fiscalLast;
-document.getElementById(‘fiscal-cd’).textContent=cd<2?‘Disponible en ‘+(2-cd)+’ trimestre(s)’:‘Solicitud disponible’;
-renderKPIs(); renderTension(); renderTicker(); renderCharts(); renderLog(); updateMesaKPIs();
+  var q=G.turn%4, y=G.year+Math.floor(G.turn/4), yrs=(G.turn/4).toFixed(1);
+  document.getElementById('hdr-date').textContent=QTRS[q]+' '+y;
+  document.getElementById('hdr-turn').textContent='T-'+(G.turn+1)+' \u2014 '+yrs+' a\u00f1os';
+  document.getElementById('dec-bdg').textContent='T-'+(G.turn+1);
+  document.getElementById('soc-turn').textContent='T-'+(G.turn+1);
+  var cd=G.turn-G.fiscalLast;
+  document.getElementById('fiscal-cd').textContent=cd<2?'Disponible en '+(2-cd)+' trimestre(s)':'Solicitud disponible';
+  renderKPIs(); renderTension(); renderTicker(); renderCharts(); renderLog(); updateMesaKPIs();
 }
 
 function renderKPIs(){
-var inf=isNaN(G.inf)?0:G.inf, res=isNaN(G.res)?0:G.res;
-var dol=isNaN(G.dolar)?0:G.dolar, br=isNaN(G.brecha)?0:G.brecha;
-var tna=isNaN(G.tasa)?0:G.tasa, pop=isNaN(G.pop)?0:G.pop;
-var des=isNaN(G.desemp)?0:G.desemp, cred=isNaN(G.credibilidad)?70:G.credibilidad;
-var data=[
-{nm:‘Inflaci\u00f3n Mensual’,v:inf.toFixed(1)+’%’,s:inf<5?‘Desinflaci\u00f3n activa’:inf<12?‘Din\u00e1mica elevada’:‘Riesgo hiperinflacionario’,c:inf<5?‘ok’:inf<12?‘wn’:‘bd’},
-{nm:‘Reservas Netas’,v:‘USD ‘+res.toFixed(1)+‘B’,s:res>8?‘Posici\u00f3n confortable’:‘Niveles ajustados’,c:res>8?‘ok’:res>3?‘wn’:‘bd’},
-{nm:‘Brecha Cambiaria’,v:Math.round(br)+’%’,s:‘Blue vs. Oficial’,c:br<30?‘ok’:br<80?‘wn’:‘bd’},
-{nm:‘Tasa TNA’,v:tna+’%’,s:tna<20?‘Expansiva extrema’:tna>130?‘Nivel recesivo’:‘Pol\u00edtica monetaria’,c:tna<20?‘bd’:tna>70&&tna<140?‘wn’:‘bd’},
-{nm:‘Desempleo’,v:des.toFixed(1)+’%’,s:des<8?‘Pleno empleo’:des<12?‘Moderado’:‘Cr\u00edtico’,c:des<8?‘ok’:des<12?‘wn’:‘bd’},
-{nm:‘Imagen Inst.’,v:Math.round(pop)+’%’,s:pop>50?‘Gesti\u00f3n con respaldo’:‘Riesgo pol\u00edtico’,c:pop>50?‘ok’:pop>25?‘wn’:‘bd’},
-{nm:‘Credibilidad’,v:Math.round(cred)+’%’,s:cred>70?‘Alta’:‘Expectativas desancladas’,c:cred>70?‘ok’:cred>40?‘wn’:‘bd’},
-];
-var html=’’;
-for(var i=0;i<data.length;i++){
-var k=data[i];
-html+=’<div class="kpi '+k.c+'"><div class="kpi-nm">’+k.nm+’</div><div class="kpi-v '+k.c+'">’+k.v+’</div><div class="kpi-s">’+k.s+’</div></div>’;
-}
-document.getElementById(‘kpi-list’).innerHTML=html;
+  var inf=isNaN(G.inf)?0:G.inf, res=isNaN(G.res)?0:G.res;
+  var dol=isNaN(G.dolar)?0:G.dolar, br=isNaN(G.brecha)?0:G.brecha;
+  var tna=isNaN(G.tasa)?0:G.tasa, pop=isNaN(G.pop)?0:G.pop;
+  var des=isNaN(G.desemp)?0:G.desemp, cred=isNaN(G.credibilidad)?70:G.credibilidad;
+  var data=[
+    {nm:'Inflaci\u00f3n Mensual',v:inf.toFixed(1)+'%',s:inf<5?'Desinflaci\u00f3n activa':inf<12?'Din\u00e1mica elevada':'Riesgo hiperinflacionario',c:inf<5?'ok':inf<12?'wn':'bd'},
+    {nm:'Reservas Netas',v:'USD '+res.toFixed(1)+'B',s:res>8?'Posici\u00f3n confortable':'Niveles ajustados',c:res>8?'ok':res>3?'wn':'bd'},
+    {nm:'Brecha Cambiaria',v:Math.round(br)+'%',s:'Blue vs. Oficial',c:br<30?'ok':br<80?'wn':'bd'},
+    {nm:'Tasa TNA',v:tna+'%',s:tna<20?'Expansiva extrema':tna>130?'Nivel recesivo':'Pol\u00edtica monetaria',c:tna<20?'bd':tna>70&&tna<140?'wn':'bd'},
+    {nm:'Desempleo',v:des.toFixed(1)+'%',s:des<8?'Pleno empleo':des<12?'Moderado':'Cr\u00edtico',c:des<8?'ok':des<12?'wn':'bd'},
+    {nm:'Imagen Inst.',v:Math.round(pop)+'%',s:pop>50?'Gesti\u00f3n con respaldo':'Riesgo pol\u00edtico',c:pop>50?'ok':pop>25?'wn':'bd'},
+    {nm:'Credibilidad',v:Math.round(cred)+'%',s:cred>70?'Alta':'Expectativas desancladas',c:cred>70?'ok':cred>40?'wn':'bd'},
+  ];
+  var html='';
+  for(var i=0;i<data.length;i++){
+    var k=data[i];
+    html+='<div class="kpi '+k.c+'"><div class="kpi-nm">'+k.nm+'</div><div class="kpi-v '+k.c+'">'+k.v+'</div><div class="kpi-s">'+k.s+'</div></div>';
+  }
+  document.getElementById('kpi-list').innerHTML=html;
 }
 
 function renderTension(){
-var t=G.tension;
-var fill=document.getElementById(‘ten-fill’);
-fill.style.width=t+’%’;
-fill.style.background=t<40?’#1E7840’:t<65?’#D4841A’:’#C0392B’;
-var pct=document.getElementById(‘ten-pct’);
-pct.textContent=Math.round(t)+’%’;
-pct.style.color=t<40?’#6fcf97’:t<65?’#f2994a’:’#eb5757’;
+  var t=G.tension;
+  var fill=document.getElementById('ten-fill');
+  fill.style.width=t+'%';
+  fill.style.background=t<40?'#1E7840':t<65?'#D4841A':'#C0392B';
+  var pct=document.getElementById('ten-pct');
+  pct.textContent=Math.round(t)+'%';
+  pct.style.color=t<40?'#6fcf97':t<65?'#f2994a':'#eb5757';
 }
 
 function renderTicker(){
-var items=[
-{l:‘INFLACION’,v:G.inf.toFixed(1)+’%’,c:G.inf>12?‘tr’:G.inf>6?‘tw’:‘tg’},
-{l:‘RESERVAS’,v:‘USD ‘+G.res.toFixed(1)+‘B’,c:G.res<3?‘tr’:G.res>8?‘tg’:‘tw’},
-{l:‘BRECHA’,v:Math.round(G.brecha)+’%’,c:G.brecha>80?‘tr’:‘tw’},
-{l:‘TASA TNA’,v:G.tasa+’%’,c:‘tw’},
-{l:‘DESEMPLEO’,v:G.desemp.toFixed(1)+’%’,c:G.desemp>15?‘tr’:G.desemp>10?‘tw’:‘tg’},
-{l:‘IMAGEN’,v:Math.round(G.pop)+’%’,c:G.pop<25?‘tr’:G.pop>55?‘tg’:‘tw’},
-{l:‘CREDIBILIDAD’,v:Math.round(G.credibilidad)+’%’,c:G.credibilidad<40?‘tr’:G.credibilidad>70?‘tg’:‘tw’},
-{l:‘TENSION’,v:Math.round(G.tension)+’%’,c:G.tension>70?‘tr’:‘tw’},
-];
-var doubled=items.concat(items);
-var html=’’;
-for(var i=0;i<doubled.length;i++){
-html+=’<span class="ti"><span class="tl">’+doubled[i].l+’</span><span class="tv '+doubled[i].c+'">’+doubled[i].v+’</span></span>’;
-}
-document.getElementById(‘ticker-inner’).innerHTML=html;
+  var items=[
+    {l:'INFLACION',v:G.inf.toFixed(1)+'%',c:G.inf>12?'tr':G.inf>6?'tw':'tg'},
+    {l:'RESERVAS',v:'USD '+G.res.toFixed(1)+'B',c:G.res<3?'tr':G.res>8?'tg':'tw'},
+    {l:'BRECHA',v:Math.round(G.brecha)+'%',c:G.brecha>80?'tr':'tw'},
+    {l:'TASA TNA',v:G.tasa+'%',c:'tw'},
+    {l:'DESEMPLEO',v:G.desemp.toFixed(1)+'%',c:G.desemp>15?'tr':G.desemp>10?'tw':'tg'},
+    {l:'IMAGEN',v:Math.round(G.pop)+'%',c:G.pop<25?'tr':G.pop>55?'tg':'tw'},
+    {l:'CREDIBILIDAD',v:Math.round(G.credibilidad)+'%',c:G.credibilidad<40?'tr':G.credibilidad>70?'tg':'tw'},
+    {l:'TENSION',v:Math.round(G.tension)+'%',c:G.tension>70?'tr':'tw'},
+  ];
+  var doubled=items.concat(items);
+  var html='';
+  for(var i=0;i<doubled.length;i++){
+    html+='<span class="ti"><span class="tl">'+doubled[i].l+'</span><span class="tv '+doubled[i].c+'">'+doubled[i].v+'</span></span>';
+  }
+  document.getElementById('ticker-inner').innerHTML=html;
 }
 
 function renderCharts(){
-drawSpark(‘ch-inf’,infHist,’#C0392B’,’#eb5757’);
-drawSpark(‘ch-res’,resHist,’#1E7840’,’#6fcf97’);
-drawSpark(‘ch-des’,desHist,’#D4841A’,’#f2994a’);
+  drawSpark('ch-inf',infHist,'#C0392B','#eb5757');
+  drawSpark('ch-res',resHist,'#1E7840','#6fcf97');
+  drawSpark('ch-des',desHist,'#D4841A','#f2994a');
 }
 
 function drawSpark(id,data,cl,cd){
-var canvas=document.getElementById(id);
-if(!canvas||data.length<2) return;
-var ctx=canvas.getContext(‘2d’);
-var W=canvas.offsetWidth||180, H=44;
-canvas.width=W; canvas.height=H;
-ctx.clearRect(0,0,W,H);
-var mn=Math.min.apply(null,data)*0.9, mx=Math.max.apply(null,data)*1.1;
-var rng=mx-mn||1;
-var pts=[];
-for(var i=0;i<data.length;i++) pts.push({x:(i/(data.length-1))*(W-4)+2,y:H-4-((data[i]-mn)/rng)*(H-8)});
-ctx.beginPath(); ctx.strokeStyle=cl; ctx.lineWidth=1.5;
-for(var j=0;j<pts.length;j++){if(j===0)ctx.moveTo(pts[j].x,pts[j].y);else ctx.lineTo(pts[j].x,pts[j].y);}
-ctx.stroke();
-ctx.beginPath(); ctx.fillStyle=cl+‘20’;
-ctx.moveTo(pts[0].x,H);
-for(var k=0;k<pts.length;k++) ctx.lineTo(pts[k].x,pts[k].y);
-ctx.lineTo(pts[pts.length-1].x,H); ctx.closePath(); ctx.fill();
-var lp=pts[pts.length-1];
-ctx.beginPath(); ctx.arc(lp.x,lp.y,3,0,Math.PI*2); ctx.fillStyle=cd; ctx.fill();
+  var canvas=document.getElementById(id);
+  if(!canvas||data.length<2) return;
+  var ctx=canvas.getContext('2d');
+  var W=canvas.offsetWidth||180, H=44;
+  canvas.width=W; canvas.height=H;
+  ctx.clearRect(0,0,W,H);
+  var mn=Math.min.apply(null,data)*0.9, mx=Math.max.apply(null,data)*1.1;
+  var rng=mx-mn||1;
+  var pts=[];
+  for(var i=0;i<data.length;i++) pts.push({x:(i/(data.length-1))*(W-4)+2,y:H-4-((data[i]-mn)/rng)*(H-8)});
+  ctx.beginPath(); ctx.strokeStyle=cl; ctx.lineWidth=1.5;
+  for(var j=0;j<pts.length;j++){if(j===0)ctx.moveTo(pts[j].x,pts[j].y);else ctx.lineTo(pts[j].x,pts[j].y);}
+  ctx.stroke();
+  ctx.beginPath(); ctx.fillStyle=cl+'20';
+  ctx.moveTo(pts[0].x,H);
+  for(var k=0;k<pts.length;k++) ctx.lineTo(pts[k].x,pts[k].y);
+  ctx.lineTo(pts[pts.length-1].x,H); ctx.closePath(); ctx.fill();
+  var lp=pts[pts.length-1];
+  ctx.beginPath(); ctx.arc(lp.x,lp.y,3,0,Math.PI*2); ctx.fillStyle=cd; ctx.fill();
 }
 
 function renderTweets(list){
-var html=’’;
-for(var i=0;i<list.length;i++){
-var t=list[i];
-html+=’<div class="tw"><div class="tw-hdr"><div class="tw-av">’+t.av+’</div><div><div class="tw-nm">’+t.nm+’</div><div class="tw-hd">’+t.hd+’</div></div></div><div class="tw-bd">’+t.tx+’</div><div class="tw-lk">\u2665 ‘+t.lk.toLocaleString(‘es-AR’)+’</div></div>’;
-}
-document.getElementById(‘tweets’).innerHTML=html;
+  var html='';
+  for(var i=0;i<list.length;i++){
+    var t=list[i];
+    html+='<div class="tw"><div class="tw-hdr"><div class="tw-av">'+t.av+'</div><div><div class="tw-nm">'+t.nm+'</div><div class="tw-hd">'+t.hd+'</div></div></div><div class="tw-bd">'+t.tx+'</div><div class="tw-lk">\u2665 '+t.lk.toLocaleString('es-AR')+'</div></div>';
+  }
+  document.getElementById('tweets').innerHTML=html;
 }
 
 function genContextTweets(){
-var pool=[];
-if(G.inf>15) pool=pool.concat(CTXT_TWEETS.inf_alta);
-if(G.res<4)  pool=pool.concat(CTXT_TWEETS.res_bajas);
-if(G.pop<25) pool=pool.concat(CTXT_TWEETS.pop_baja);
-if(G.desemp>13) pool=pool.concat(CTXT_TWEETS.desemp_alto);
-if(G.inf<6&&G.res>8) pool=pool.concat(CTXT_TWEETS.buena);
-if(pool.length>0) renderTweets(pool.slice(0,2));
+  var pool=[];
+  if(G.inf>15) pool=pool.concat(CTXT_TWEETS.inf_alta);
+  if(G.res<4)  pool=pool.concat(CTXT_TWEETS.res_bajas);
+  if(G.pop<25) pool=pool.concat(CTXT_TWEETS.pop_baja);
+  if(G.desemp>13) pool=pool.concat(CTXT_TWEETS.desemp_alto);
+  if(G.inf<6&&G.res>8) pool=pool.concat(CTXT_TWEETS.buena);
+  if(pool.length>0) renderTweets(pool.slice(0,2));
 }
 
 function renderLog(){
-var html=’’;
-var entries=G.history.slice(0,6);
-for(var i=0;i<entries.length;i++){
-var h=entries[i];
-var tags=’’;
-for(var j=0;j<h.changes.length;j++) tags+=’<span class="ltag '+h.changes[j].cls+'">’+h.changes[j].lbl+’</span>’;
-html+=’<div class="le"><div class="le-q">’+h.label+’</div><div class="le-ev">’+h.hl+’</div><div class="le-tags">’+tags+’</div></div>’;
-}
-document.getElementById(‘log’).innerHTML=html;
+  var html='';
+  var entries=G.history.slice(0,6);
+  for(var i=0;i<entries.length;i++){
+    var h=entries[i];
+    var tags='';
+    for(var j=0;j<h.changes.length;j++) tags+='<span class="ltag '+h.changes[j].cls+'">'+h.changes[j].lbl+'</span>';
+    html+='<div class="le"><div class="le-q">'+h.label+'</div><div class="le-ev">'+h.hl+'</div><div class="le-tags">'+tags+'</div></div>';
+  }
+  document.getElementById('log').innerHTML=html;
 }
 
 // ── ENDING ────────────────────────────────────────────────────────────────────
 function showEnding(e){
-document.getElementById(‘e-icon’).textContent=e.icon;
-document.getElementById(‘e-type’).textContent=e.type;
-document.getElementById(‘e-title’).textContent=e.title;
-document.getElementById(‘e-title’).style.color=e.color;
-var nar = e.nar;
-if (e.title===‘HIPERINFLACI\u00d3N’) nar += G.desemp.toFixed(1)+’%.</strong>’;
-document.getElementById(‘e-nar’).innerHTML=nar;
-var ic=G.inf<6?‘vg’:G.inf<15?‘vw’:‘vr’;
-var rc=G.res>8?‘vg’:G.res>2?‘vw’:‘vr’;
-var pc=G.pop>50?‘vg’:G.pop>25?‘vw’:‘vr’;
-var dc=G.desemp<8?‘vg’:G.desemp<14?‘vw’:‘vr’;
-document.getElementById(‘e-stats’).innerHTML=
-‘<div class="e-stat"><div class="e-slbl">Inflaci\u00f3n</div><div class="e-sval '+ic+'">’+G.inf.toFixed(1)+’%</div></div>’+
-‘<div class="e-stat"><div class="e-slbl">Reservas</div><div class="e-sval '+rc+'">USD ‘+G.res.toFixed(1)+‘B</div></div>’+
-‘<div class="e-stat"><div class="e-slbl">Desempleo</div><div class="e-sval '+dc+'">’+G.desemp.toFixed(1)+’%</div></div>’+
-‘<div class="e-stat"><div class="e-slbl">Tiempo</div><div class="e-sval vn">’+(G.turn/4).toFixed(1)+’ a\u00f1os</div></div>’;
-showScreen(‘screen-end’);
+  document.getElementById('e-icon').textContent=e.icon;
+  document.getElementById('e-type').textContent=e.type;
+  document.getElementById('e-title').textContent=e.title;
+  document.getElementById('e-title').style.color=e.color;
+  var nar = e.nar;
+  if (e.title==='HIPERINFLACI\u00d3N') nar += G.desemp.toFixed(1)+'%.</strong>';
+  document.getElementById('e-nar').innerHTML=nar;
+  var ic=G.inf<6?'vg':G.inf<15?'vw':'vr';
+  var rc=G.res>8?'vg':G.res>2?'vw':'vr';
+  var pc=G.pop>50?'vg':G.pop>25?'vw':'vr';
+  var dc=G.desemp<8?'vg':G.desemp<14?'vw':'vr';
+  document.getElementById('e-stats').innerHTML=
+    '<div class="e-stat"><div class="e-slbl">Inflaci\u00f3n</div><div class="e-sval '+ic+'">'+G.inf.toFixed(1)+'%</div></div>'+
+    '<div class="e-stat"><div class="e-slbl">Reservas</div><div class="e-sval '+rc+'">USD '+G.res.toFixed(1)+'B</div></div>'+
+    '<div class="e-stat"><div class="e-slbl">Desempleo</div><div class="e-sval '+dc+'">'+G.desemp.toFixed(1)+'%</div></div>'+
+    '<div class="e-stat"><div class="e-slbl">Tiempo</div><div class="e-sval vn">'+(G.turn/4).toFixed(1)+' a\u00f1os</div></div>';
+  showScreen('screen-end');
 }
 
 // ── UTILS ─────────────────────────────────────────────────────────────────────
 function showScreen(id){
-var ss=document.querySelectorAll(’.screen’);
-for(var i=0;i<ss.length;i++) ss[i].classList.remove(‘active’);
-document.getElementById(id).classList.add(‘active’);
+  var ss=document.querySelectorAll('.screen');
+  for(var i=0;i<ss.length;i++) ss[i].classList.remove('active');
+  document.getElementById(id).classList.add('active');
 }
 function doFlash(type){
-if(!type) return;
-var el=document.createElement(‘div’);
-el.className=‘flash flash-’+type;
-document.body.appendChild(el);
-setTimeout(function(){el.parentNode&&el.parentNode.removeChild(el);},520);
+  if(!type) return;
+  var el=document.createElement('div');
+  el.className='flash flash-'+type;
+  document.body.appendChild(el);
+  setTimeout(function(){el.parentNode&&el.parentNode.removeChild(el);},520);
 }
 function showAlert(msg,color){
-var old=document.querySelector(’.alert’);
-if(old&&old.parentNode) old.parentNode.removeChild(old);
-var el=document.createElement(‘div’);
-el.className=‘alert’;
-el.style.background=color||’#C0392B’;
-el.textContent=msg;
-document.body.appendChild(el);
-setTimeout(function(){el.parentNode&&el.parentNode.removeChild(el);},3500);
+  var old=document.querySelector('.alert');
+  if(old&&old.parentNode) old.parentNode.removeChild(old);
+  var el=document.createElement('div');
+  el.className='alert';
+  el.style.background=color||'#C0392B';
+  el.textContent=msg;
+  document.body.appendChild(el);
+  setTimeout(function(){el.parentNode&&el.parentNode.removeChild(el);},3500);
 }
 
 // ── INIT ──────────────────────────────────────────────────────────────────────
-document.getElementById(‘btn-start’).onclick = function(e){
-e.preventDefault();
-var dbg = document.getElementById(‘dbg’);
-if(dbg) dbg.textContent = ‘JS OK - arrancando…’;
-try {
-startGame();
-if(dbg) dbg.textContent = ‘startGame() ejecutado’;
-} catch(err) {
-if(dbg) dbg.textContent = ‘ERROR: ’ + err.message;
-}
-return false;
-};
-document.getElementById(‘btn-new’).addEventListener(‘click’,startGame);
-document.getElementById(‘btn-mnu’).addEventListener(‘click’,function(){showScreen(‘screen-intro’);});
-document.getElementById(‘btn-aj’).addEventListener(‘click’,function(){pedirReforma(‘ajuste’);});
-document.getElementById(‘btn-ex’).addEventListener(‘click’,function(){pedirReforma(‘expansion’);});
-document.getElementById(‘btn-modal’).addEventListener(‘click’,function(){document.getElementById(‘modal’).classList.remove(‘open’);renderAll();});
-document.getElementById(‘btn-emit-com’).addEventListener(‘click’,emitirComunicado);
-document.getElementById(‘btn-skip-com’).addEventListener(‘click’,skipComunicado);
-document.getElementById(‘ester-letras’).addEventListener(‘click’,function(){setEster(‘letras’);});
-document.getElementById(‘ester-bonos’).addEventListener(‘click’,function(){setEster(‘bonos’);});
-document.getElementById(‘ester-no’).addEventListener(‘click’,function(){setEster(‘no’);});
-document.getElementById(‘sl-interv’).addEventListener(‘input’,function(){
-var v=parseFloat(this.value);
-if(isNaN(v)) v=0;
-G.decisions.interv=v;
-document.getElementById(‘slv-interv’).textContent=(v>0?’+’:’’)+v+‘B USD’;
-updateMesaPreview(v);
-updateEsterUI();
+document.getElementById('btn-start').onclick = function(e){ e.preventDefault(); startGame(); return false; };
+document.getElementById('btn-new').addEventListener('click',startGame);
+document.getElementById('btn-mnu').addEventListener('click',function(){showScreen('screen-intro');});
+document.getElementById('btn-aj').addEventListener('click',function(){pedirReforma('ajuste');});
+document.getElementById('btn-ex').addEventListener('click',function(){pedirReforma('expansion');});
+document.getElementById('btn-modal').addEventListener('click',function(){document.getElementById('modal').classList.remove('open');renderAll();});
+document.getElementById('btn-emit-com').addEventListener('click',emitirComunicado);
+document.getElementById('btn-skip-com').addEventListener('click',skipComunicado);
+document.getElementById('ester-letras').addEventListener('click',function(){setEster('letras');});
+document.getElementById('ester-bonos').addEventListener('click',function(){setEster('bonos');});
+document.getElementById('ester-no').addEventListener('click',function(){setEster('no');});
+document.getElementById('sl-interv').addEventListener('input',function(){
+  var v=parseFloat(this.value);
+  if(isNaN(v)) v=0;
+  G.decisions.interv=v;
+  document.getElementById('slv-interv').textContent=(v>0?'+':'')+v+'B USD';
+  updateMesaPreview(v);
+  updateEsterUI();
 });
 
 })();
-</script>
 
+// Global scope - needed for dynamic HTML event handlers
+function selectComunicado(btn, idx) {
+  var btns = document.querySelectorAll('.btn-com');
+  for (var i=0; i<btns.length; i++) btns[i].classList.remove('selected');
+  btn.classList.add('selected');
+  var opts = document.getElementById('com-opts')._opts;
+  if (opts && opts[idx]) {
+    // Store in a global var that the IIFE can read
+    window._selectedComunicado = opts[idx];
+  }
+}
+</script>
 </body>
 </html>
