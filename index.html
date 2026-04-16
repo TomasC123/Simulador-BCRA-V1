@@ -16,7 +16,7 @@ body{overflow:hidden;-webkit-tap-highlight-color:rgba(0,0,0,0);}
 
 /* ── SCREENS ── */
 .screen{display:none;}
-#screen-intro.active{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;padding:32px 20px;text-align:center;background:linear-gradient(155deg,#08142a 0%,#0D2B5E 60%,#08142a 100%);overflow-y:auto;}
+#screen-intro.active{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;padding:32px 20px;text-align:center;background:linear-gradient(155deg,#08142a 0%,#0D2B5E 60%,#08142a 100%);overflow-y:auto;position:relative;z-index:10;}
 #screen-game.active{display:grid;grid-template-rows:auto auto 1fr;height:100vh;overflow:hidden;}
 #screen-end.active{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;padding:32px 20px;text-align:center;background:linear-gradient(155deg,#060e06 0%,#0D2B5E 100%);overflow-y:auto;}
 
@@ -29,9 +29,9 @@ body{overflow:hidden;-webkit-tap-highlight-color:rgba(0,0,0,0);}
 .i-rule{width:48px;height:1px;background:var(–gold);margin:0 auto 20px;}
 .i-copy{max-width:420px;font-size:13px;line-height:1.8;color:rgba(232,212,154,0.7);margin-bottom:28px;}
 .i-copy strong{color:var(–perg);}
-.btn-main{font-family:Georgia,serif;font-size:13px;letter-spacing:4px;text-transform:uppercase;font-weight:bold;padding:18px 52px;background:var(–gold);color:var(–inst);border:none;cursor:pointer;transition:background .2s;-webkit-appearance:none;touch-action:manipulation;min-height:50px;display:block;width:80%;max-width:320px;}
+.btn-main{font-family:Georgia,serif;font-size:13px;letter-spacing:4px;text-transform:uppercase;font-weight:bold;padding:18px 52px;background:var(–gold);color:var(–inst);border:none;cursor:pointer;transition:background .2s;-webkit-appearance:none;touch-action:manipulation;min-height:50px;display:block;width:80%;max-width:320px;position:relative;z-index:20;pointer-events:auto;}
 .btn-main:hover{background:var(–perg);}
-.i-foot{margin-top:14px;font-family:Consolas,monospace;font-size:9px;color:rgba(232,212,154,0.22);letter-spacing:1px;}
+.i-foot{margin-top:14px;font-family:Consolas,monospace;font-size:9px;color:rgba(232,212,154,0.22);letter-spacing:1px;position:relative;z-index:5;}
 .i-credit{margin-top:8px;font-family:Georgia,serif;font-size:15px;color:rgba(232,212,154,0.55);letter-spacing:1px;}
 .i-credit strong{color:var(–gold);font-size:17px;}
 
