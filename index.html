@@ -1136,8 +1136,7 @@ setTimeout(function(){el.parentNode&&el.parentNode.removeChild(el);},3500);
 }
 
 // ── INIT ──────────────────────────────────────────────────────────────────────
-document.getElementById(‘btn-start’).addEventListener(‘click’,function(e){e.preventDefault();startGame();});
-document.getElementById(‘btn-start’).addEventListener(‘touchend’,function(e){e.preventDefault();e.stopPropagation();startGame();});
+document.getElementById(‘btn-start’).onclick = function(e){ e.preventDefault(); startGame(); return false; };
 document.getElementById(‘btn-new’).addEventListener(‘click’,startGame);
 document.getElementById(‘btn-mnu’).addEventListener(‘click’,function(){showScreen(‘screen-intro’);});
 document.getElementById(‘btn-aj’).addEventListener(‘click’,function(){pedirReforma(‘ajuste’);});
