@@ -37,9 +37,11 @@ button { -webkit-appearance:none; touch-action:manipulation; cursor:pointer; }
   min-height:100vh; padding:32px 20px; text-align:center; overflow-y:auto;
   background:linear-gradient(155deg,#060e06 0%,#0D2B5E 100%);
 }
+#s-end.win { background:linear-gradient(155deg,#0D2B5E 0%,#1a4b8c 50%,#0D2B5E 100%); }
 
 /* ── INTRO ── */
-.i-seal { width:90px; height:90px; border-radius:50%; border:2px solid var(--gold); display:flex; align-items:center; justify-content:center; font-size:40px; margin-bottom:18px; background:rgba(26,75,140,0.4); }
+.i-seal { width:104px; height:104px; border-radius:50%; border:2px solid var(--gold); display:flex; align-items:center; justify-content:center; margin-bottom:18px; background:radial-gradient(circle at 30% 30%, rgba(26,75,140,0.6), rgba(13,43,94,0.9)); box-shadow:0 0 0 6px rgba(200,160,64,0.08), inset 0 0 20px rgba(0,0,0,0.3); }
+.i-seal svg { display:block; }
 .i-eye  { font-family:Consolas,monospace; font-size:9px; letter-spacing:5px; color:rgba(200,160,64,0.6); text-transform:uppercase; margin-bottom:10px; }
 .i-title { font-family:Georgia,serif; font-size:clamp(48px,11vw,100px); font-weight:bold; letter-spacing:8px; color:var(--perg); line-height:0.9; margin-bottom:5px; }
 .i-sub  { font-family:Consolas,monospace; font-size:11px; letter-spacing:6px; color:var(--gold); text-transform:uppercase; margin-bottom:4px; }
@@ -129,6 +131,22 @@ canvas   { width:100%!important; height:44px!important; display:block; }
 .btn-d:disabled { opacity:0.3; cursor:not-allowed; }
 .deuda-info { font-family:Consolas,monospace; font-size:8px; color:rgba(232,212,154,0.4); letter-spacing:1px; }
 .deuda-info.alert { color:#eb5757; font-weight:bold; }
+
+/* ── ORGANISMOS ── */
+.org-pnl  { background:rgba(8,20,42,0.8); border-top:1px solid var(--bdr); padding:8px 10px; flex-shrink:0; }
+.org-ttl  { font-family:Consolas,monospace; font-size:7px; letter-spacing:3px; text-transform:uppercase; color:rgba(200,160,64,0.5); margin-bottom:7px; }
+.org-item { background:rgba(26,75,140,0.25); border:1px solid var(--bdr); padding:6px 8px; margin-bottom:4px; }
+.org-item.activo { border-color:var(--sup); background:rgba(30,120,64,0.15); }
+.org-hdr  { display:flex; justify-content:space-between; align-items:center; margin-bottom:3px; }
+.org-nm   { font-family:Georgia,serif; font-size:11px; font-weight:bold; color:var(--perg); }
+.org-st   { font-family:Consolas,monospace; font-size:7px; letter-spacing:1px; padding:1px 4px; border:1px solid; }
+.org-st.dispo  { color:var(--gold); border-color:rgba(200,160,64,0.4); }
+.org-st.activo { color:#6fcf97; border-color:rgba(111,207,151,0.5); }
+.org-st.cd     { color:rgba(232,212,154,0.3); border-color:rgba(232,212,154,0.2); }
+.org-desc { font-size:9px; color:rgba(232,212,154,0.55); line-height:1.4; margin-bottom:3px; }
+.btn-org  { font-family:Consolas,monospace; font-size:8px; letter-spacing:1px; text-transform:uppercase; padding:4px 8px; border:1px solid rgba(200,160,64,0.4); color:var(--gold); background:transparent; width:100%; margin-top:3px; }
+.btn-org:hover { background:rgba(200,160,64,0.1); }
+.btn-org:disabled { opacity:0.3; cursor:not-allowed; }
 
 /* ── NEWSPAPER ── */
 #col-news { background:#f4f0e8; color:#1a1a1a; }
@@ -332,7 +350,37 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance:none; width:11px; h
 
 <!-- ═══ INTRO ═══ -->
 <div id="s-intro" class="screen active">
-  <div class="i-seal">&#127983;</div>
+  <div class="i-seal">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="70" height="70">
+      <!-- Edificio BCRA estilizado -->
+      <!-- Base -->
+      <rect x="8" y="78" width="84" height="5" fill="#C8A040"/>
+      <rect x="12" y="73" width="76" height="5" fill="#C8A040" opacity="0.85"/>
+      <!-- 6 columnas -->
+      <rect x="18" y="38" width="6" height="35" fill="#C8A040"/>
+      <rect x="30" y="38" width="6" height="35" fill="#C8A040"/>
+      <rect x="42" y="38" width="6" height="35" fill="#C8A040"/>
+      <rect x="52" y="38" width="6" height="35" fill="#C8A040"/>
+      <rect x="64" y="38" width="6" height="35" fill="#C8A040"/>
+      <rect x="76" y="38" width="6" height="35" fill="#C8A040"/>
+      <!-- Arquitrabe -->
+      <rect x="10" y="32" width="80" height="6" fill="#C8A040"/>
+      <!-- Fronton triangular -->
+      <polygon points="50,14 12,32 88,32" fill="#C8A040"/>
+      <!-- Sol de mayo estilizado dentro del frontón -->
+      <circle cx="50" cy="26" r="3.5" fill="#0D2B5E"/>
+      <g stroke="#0D2B5E" stroke-width="0.8">
+        <line x1="50" y1="20" x2="50" y2="17"/>
+        <line x1="50" y1="32" x2="50" y2="29"/>
+        <line x1="44" y1="26" x2="47" y2="26"/>
+        <line x1="53" y1="26" x2="56" y2="26"/>
+        <line x1="46" y1="22" x2="44" y2="20"/>
+        <line x1="54" y1="22" x2="56" y2="20"/>
+        <line x1="46" y1="30" x2="44" y2="32"/>
+        <line x1="54" y1="30" x2="56" y2="32"/>
+      </g>
+    </svg>
+  </div>
   <div class="i-eye">Rep. Argentina &middot; Uso Interno &middot; Doc. Reservado</div>
   <div class="i-title">BCRA</div>
   <div class="i-sub">Argentina &middot; Simulador del Banco Central</div>
@@ -411,6 +459,11 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance:none; width:11px; h
           <button type="button" class="btn-d pagar" id="btn-d-pagar" disabled>Pagar cuota</button>
         </div>
         <div class="deuda-info" id="dk-info">Sin deuda activa. Pod&eacute;s tomar a 8 trimestres.</div>
+      </div>
+
+      <div class="org-pnl">
+        <div class="org-ttl">Organismos Multilaterales</div>
+        <div id="org-list"></div>
       </div>
     </div>
 
@@ -643,6 +696,46 @@ var PARTIDOS = [
     pres: { txt:'Shock soberanista: renegociaci\u00f3n de deuda + desdolarizaci\u00f3n forzada. Riesgo pa\u00eds explota.', ef:{res:-2,brecha:30,tension:25,pop:6,inf:2} } },
 ];
 
+// ── ORGANISMOS MULTILATERALES ────────────────────────────────────────────────
+var ORGANISMOS = {
+  fmi: {
+    id:'fmi', nombre:'FMI', desc:'Fondo Monetario Internacional',
+    desembolso: 5, // USD B
+    condiciones: 'Exige ajuste fiscal: tasa m\u00ednima 80%, emisi\u00f3n m\u00e1xima 3%/mes',
+    flavor: 'El organismo con mayor peso pero m\u00e1s condicionalidades. Alta visibilidad pol\u00edtica.',
+    efecto_aprobacion: { res:5, cred:10, riesgo:-300, pop:-8, tension:8 },
+    condicion_check: function(G){ return G.decisions.tasa >= 80 && G.decisions.emision <= 3; },
+    efecto_cumple: { res:2, cred:5, riesgo:-100 }, // cada turno cumpliendo
+    efecto_incumple: { cred:-15, riesgo:400, res:-1, tension:12 },
+    costo_rechazo: { pop:3, cred:-5 },
+    cooldown: 12,
+  },
+  china: {
+    id:'china', nombre:'Swap China', desc:'Acuerdo de intercambio de monedas con Beijing',
+    desembolso: 3,
+    condiciones: 'Sin condicionalidad fiscal. Uso restringido a comercio bilateral',
+    flavor: 'R\u00e1pido y sin ajuste, pero aumenta dependencia con Asia. Engrosa reservas brutas.',
+    efecto_aprobacion: { res:3, pop:4, tension:-3, brecha:-5 },
+    condicion_check: function(G){ return true; },
+    efecto_cumple: {},
+    efecto_incumple: {},
+    costo_rechazo: {},
+    cooldown: 8,
+  },
+  bid: {
+    id:'bid', nombre:'BID', desc:'Banco Interamericano de Desarrollo',
+    desembolso: 2,
+    condiciones: 'Fondos atados a proyectos de infraestructura y desarrollo social',
+    flavor: 'Menor monto pero condiciones manejables. Buen complemento.',
+    efecto_aprobacion: { res:2, pop:5, cred:3, desemp:-0.4 },
+    condicion_check: function(G){ return G.pop >= 35; }, // necesita respaldo político
+    efecto_cumple: { pop:1, desemp:-0.2 },
+    efecto_incumple: { pop:-5, cred:-3 },
+    costo_rechazo: {},
+    cooldown: 8,
+  },
+};
+
 var FISCAL = {
   ajuste: [
     { p:0.6, pop_min:40, icon:'\uD83D\uDC4D', title:'El Ejecutivo acepta el ajuste', body:'El Ministerio de Econom\u00eda acord\u00f3 reducir el d\u00e9ficit primario en 0.5 puntos del PBI.', eff:'Emisi\u00f3n -2pp \u00b7 Tensi\u00f3n -8 \u00b7 Pop -5 \u00b7 Desempleo +0.3%', dt:{emision:-2,tension:-8,pop:-5,desemp:0.3} },
@@ -693,6 +786,10 @@ function startGame() {
     pop:55, tension:28, desemp:8.5,
     cred:70, riesgo:850,
     deuda:[], deuda_default:false,
+    // Organismos bilaterales
+    organismos: { fmi:{activo:false,ultimo:-99,turnos_cumpliendo:0}, china:{activo:false,ultimo:-99}, bid:{activo:false,ultimo:-99,turnos_cumpliendo:0} },
+    // Victoria tracking
+    victoria_turns_ok: 0, default_ocurrido:false,
     history:[], curEvent:null,
     decisions:{ tasa:t.tasa, crawl:t.crawl, emision:t.emision, cepo:t.cepo, interv:0 },
     fiscalLast:-99,
@@ -707,6 +804,7 @@ function startGame() {
   setEster('no');
   updateMesa(0);
   renderDeuda();
+  renderOrganismos();
   loadInauguration();
   renderAll();
   showScreen('s-game');
@@ -925,7 +1023,7 @@ function checkDeuda() {
 
 function triggerDefault() {
   if(G.deuda_default) return;
-  G.deuda_default=true; G.riesgo=4500; G.cred=Math.max(0,G.cred-40); G.tension=Math.min(100,G.tension+30); G.brecha=Math.min(200,G.brecha+50);
+  G.deuda_default=true; G.default_ocurrido=true; G.riesgo=4500; G.cred=Math.max(0,G.cred-40); G.tension=Math.min(100,G.tension+30); G.brecha=Math.min(200,G.brecha+50);
   showAlert('\u00a1DEFAULT SOBERANO! Riesgo pa\u00eds 4500bps. Crisis total.','#C0392B');
 }
 
@@ -950,6 +1048,142 @@ function renderDeuda() {
     var pb2=document.getElementById('btn-d-pagar'); if(pb2) pb2.disabled=true;
   }
   var tb=document.getElementById('btn-d-tomar'); if(tb) tb.disabled=act.length>=2;
+}
+
+// ═══ ORGANISMOS MULTILATERALES ══════════════════════════════════════════════
+
+function renderOrganismos() {
+  if(!G.organismos) return;
+  var container = document.getElementById('org-list');
+  if(!container) return;
+  var html = '';
+  Object.keys(ORGANISMOS).forEach(function(id){
+    var o = ORGANISMOS[id];
+    var st = G.organismos[id];
+    var turnosCooldown = st.ultimo === -99 ? 0 : (o.cooldown - (G.turn - st.ultimo));
+    var disponible = turnosCooldown <= 0;
+    var statusTxt, statusCls;
+    if (st.activo) { statusTxt='ACTIVO'; statusCls='activo'; }
+    else if (disponible) { statusTxt='DISPONIBLE'; statusCls='dispo'; }
+    else { statusTxt='CD '+turnosCooldown+'T'; statusCls='cd'; }
+    html += '<div class="org-item'+(st.activo?' activo':'')+'">'+
+      '<div class="org-hdr"><span class="org-nm">'+o.nombre+'</span><span class="org-st '+statusCls+'">'+statusTxt+'</span></div>'+
+      '<div class="org-desc">'+o.flavor+'</div>'+
+      (st.activo && o.condiciones ? '<div class="org-desc" style="color:var(--gold);font-style:italic">Condiciones: '+o.condiciones+'</div>' : '')+
+      (!st.activo ? '<button type="button" class="btn-org" data-org="'+id+'" '+(!disponible?'disabled':'')+'>Negociar +USD '+o.desembolso+'B</button>' : '')+
+    '</div>';
+  });
+  container.innerHTML = html;
+  // Wire up buttons
+  container.querySelectorAll('.btn-org').forEach(function(btn){
+    btn.addEventListener('click', function(){ negociarOrganismo(btn.getAttribute('data-org')); });
+  });
+}
+
+function negociarOrganismo(id) {
+  var o = ORGANISMOS[id];
+  var st = G.organismos[id];
+  if (st.activo) return;
+  if (G.turn - st.ultimo < o.cooldown && st.ultimo !== -99) return;
+
+  // Aplicar efectos de aprobación
+  applyEf(o.efecto_aprobacion);
+  G.res = Math.max(-10, G.res + o.desembolso);
+  st.activo = true;
+  st.ultimo = G.turn;
+  st.turnos_cumpliendo = 0;
+
+  var nombres = { fmi:'FMI', china:'Swap con China', bid:'BID' };
+  addTweet('\uD83C\uDFE6', nombres[id], '@'+id+'_oficial',
+    'Acuerdo con '+nombres[id]+' firmado. Desembolso: USD '+o.desembolso+'B. Condiciones activas.',
+    '18.234', true);
+  showAlert('Acuerdo con '+nombres[id]+' aprobado. +USD '+o.desembolso+'B en reservas.', '#C8A040');
+  renderOrganismos(); renderAll();
+}
+
+function checkOrganismos() {
+  if(!G.organismos) return;
+  Object.keys(ORGANISMOS).forEach(function(id){
+    var o = ORGANISMOS[id];
+    var st = G.organismos[id];
+    if (!st.activo) return;
+    // China swap no requiere check
+    if (id === 'china') {
+      // Expira después de 4 turnos
+      if (G.turn - st.ultimo >= 4) { st.activo = false; }
+      return;
+    }
+    // FMI y BID: chequear condiciones
+    var cumple = o.condicion_check(G);
+    if (cumple) {
+      st.turnos_cumpliendo = (st.turnos_cumpliendo||0) + 1;
+      applyEf(o.efecto_cumple);
+      if (st.turnos_cumpliendo % 3 === 0) {
+        addTweet('\u2705', ORGANISMOS[id].nombre, '@'+id+'_oficial',
+          'Revisión técnica aprobada. Desembolso adicional USD 1B acreditado.',
+          '5.420', true);
+        G.res = Math.max(-10, G.res + 1);
+      }
+    } else {
+      applyEf(o.efecto_incumple);
+      addTweet('\u26A0', ORGANISMOS[id].nombre, '@'+id+'_oficial',
+        'Incumplimiento de metas. Suspensi\u00f3n preventiva del programa. Riesgo pa\u00eds en alza.',
+        '23.890', true);
+      showAlert('Acuerdo con '+o.nombre+' suspendido por incumplimiento', '#C0392B');
+      st.activo = false;
+    }
+    // Programa expira después de 8 turnos
+    if (G.turn - st.ultimo >= 8 && st.activo) {
+      st.activo = false;
+      addTweet('\uD83D\uDCCB', o.nombre, '@'+id+'_oficial',
+        'Programa finalizado exitosamente. Cr\u00e9dito por buen comportamiento: credibilidad +10.',
+        '3.420', true);
+      G.cred = Math.min(100, G.cred + 10);
+    }
+  });
+}
+
+// ═══ CHECK VICTORIA ═════════════════════════════════════════════════════════
+
+function checkVictoria() {
+  // Condiciones progresivas: sin default + indicadores decentes sostenidos
+  var condicionesOK = !G.deuda_default
+    && G.inf < 10
+    && G.res > 6
+    && G.desemp < 14
+    && G.cred > 50
+    && G.tension < 75;
+
+  if (condicionesOK) {
+    G.victoria_turns_ok = (G.victoria_turns_ok || 0) + 1;
+  } else {
+    G.victoria_turns_ok = 0;
+  }
+
+  // Victoria: T20 (5 años) sin default + mejoras netas vs inicio
+  if (G.turn >= 20 && !G.deuda_default) {
+    var mejorasNetas = G.inf < 8 && G.res >= 10 && G.desemp < 10;
+    if (mejorasNetas) {
+      return {
+        win: true,
+        icon: '\uD83C\uDFC6',
+        type: 'Mandato Completado',
+        title: 'EL MILAGRO ARGENTINO',
+        color: '#C8A040',
+        nar: '<strong>'+playerName+'</strong> complet\u00f3 un mandato de 5 a\u00f1os al frente del BCRA sin default, con inflaci\u00f3n contenida, reservas saludables y empleo estable. La historia econ\u00f3mica argentina registrar\u00e1 esta gesti\u00f3n como <strong>un caso raro de estabilizaci\u00f3n exitosa</strong>. El peso recupera credibilidad. Los manuales universitarios tendr\u00e1n un nuevo ejemplo.'
+      };
+    } else {
+      return {
+        win: true,
+        icon: '\uD83C\uDFAF',
+        type: 'Mandato Completado',
+        title: 'GESTI\u00d3N CONCLUIDA',
+        color: '#6fcf97',
+        nar: '<strong>'+playerName+'</strong> complet\u00f3 los 5 a\u00f1os de mandato sin caer en crisis terminal. Los indicadores no mejoraron dr\u00e1sticamente pero el pa\u00eds evit\u00f3 el colapso. En Argentina, <strong>sobrevivir ya es un logro</strong>.'
+      };
+    }
+  }
+  return null;
 }
 
 // ═══ EVENTS ══════════════════════════════════════════════════════════════════
@@ -1120,6 +1354,7 @@ document.getElementById('btn-confirm').addEventListener('click', function(){
     desHist.push(G.desemp); if(desHist.length>16) desHist.shift();
 
     checkDeuda();
+    checkOrganismos();
 
     var changes=buildChanges(prev);
     var ql='T'+((G.turn%4)+1)+' '+(G.year+Math.floor(G.turn/4));
@@ -1167,6 +1402,10 @@ document.getElementById('btn-confirm').addEventListener('click', function(){
       if(ends[i].c){ setTimeout((function(e){return function(){showEnding(e);};})(ends[i]),700); return; }
     }
 
+    // Check victoria (final positivo)
+    var vic = checkVictoria();
+    if (vic) { setTimeout((function(v){return function(){showEnding(v);};})(vic), 700); return; }
+
     loadEvent();
     renderResumen(prev);
     renderAll();
@@ -1199,7 +1438,7 @@ function renderAll(){
   document.getElementById('soc-turn').textContent='T-'+(G.turn+1);
   var cd=G.turn-G.fiscalLast;
   document.getElementById('fiscal-cd').textContent=cd<2?'Disponible en '+(2-cd)+' trimestre(s)':'Solicitud disponible';
-  renderKPIs(); renderTension(); renderTicker(); renderCharts(); renderLog(); updateMesaKPIs(); renderDeuda();
+  renderKPIs(); renderTension(); renderTicker(); renderCharts(); renderLog(); updateMesaKPIs(); renderDeuda(); renderOrganismos();
 }
 
 function renderKPIs(){
@@ -1301,6 +1540,8 @@ function showEnding(e){
   document.getElementById('e-title').textContent=e.title;
   document.getElementById('e-title').style.color=e.color;
   document.getElementById('e-nar').innerHTML=e.nar;
+  var endScreen = document.getElementById('s-end');
+  if (e.win) endScreen.classList.add('win'); else endScreen.classList.remove('win');
   var ic=G.inf<6?'vg':G.inf<15?'vw':'vr', rc=G.res>8?'vg':G.res>2?'vw':'vr', dc=G.desemp<8?'vg':G.desemp<14?'vw':'vr';
   document.getElementById('e-stats').innerHTML=
     '<div class="e-stat"><div class="e-slbl">Inflaci\u00f3n</div><div class="e-sval '+ic+'">'+G.inf.toFixed(1)+'%</div></div>'+
