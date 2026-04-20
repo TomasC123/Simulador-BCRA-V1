@@ -59,6 +59,13 @@ button { -webkit-appearance:none; touch-action:manipulation; cursor:pointer; }
 .ob-input::placeholder { color:rgba(232,212,154,0.3); }
 .ob-input:focus { border-color:var(--gold); }
 .ob-tipos { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+.ob-features { display:grid; grid-template-columns:1fr 1fr; gap:6px; }
+.ft-chk { display:flex; align-items:flex-start; gap:6px; padding:7px 8px; background:rgba(26,75,140,0.3); border:1px solid var(--bdr); cursor:pointer; text-align:left; }
+.ft-chk:hover { background:rgba(26,75,140,0.5); }
+.ft-in { margin-top:2px; accent-color:var(--gold); flex-shrink:0; }
+.ft-tx { font-family:Cambria,serif; line-height:1.3; }
+.ft-tx b { font-size:10px; color:var(--perg); display:block; }
+.ft-tx small { font-size:8px; color:rgba(232,212,154,0.45); display:block; margin-top:1px; }
 .btn-tipo { background:rgba(26,75,140,0.3); border:1px solid var(--bdr); padding:10px 12px; text-align:left; transition:all .15s; }
 .btn-tipo.sel { background:rgba(200,160,64,0.2); border-color:var(--gold); }
 .tipo-nm  { font-family:Georgia,serif; font-size:13px; font-weight:bold; color:var(--perg); display:block; margin-bottom:3px; }
@@ -147,6 +154,44 @@ canvas   { width:100%!important; height:44px!important; display:block; }
 .btn-org  { font-family:Consolas,monospace; font-size:8px; letter-spacing:1px; text-transform:uppercase; padding:4px 8px; border:1px solid rgba(200,160,64,0.4); color:var(--gold); background:transparent; width:100%; margin-top:3px; }
 .btn-org:hover { background:rgba(200,160,64,0.1); }
 .btn-org:disabled { opacity:0.3; cursor:not-allowed; }
+
+/* ── GABINETE ── */
+.gab-pnl  { background:rgba(13,43,94,0.4); border-top:1px solid var(--bdr); padding:9px 11px; flex-shrink:0; }
+.gab-ttl  { font-family:Consolas,monospace; font-size:7px; letter-spacing:3px; text-transform:uppercase; color:rgba(200,160,64,0.5); margin-bottom:6px; }
+.gab-item { display:flex; gap:8px; align-items:flex-start; }
+.gab-av   { width:34px; height:34px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:18px; flex-shrink:0; border:2px solid; background:rgba(0,0,0,0.3); }
+.gab-body { flex:1; }
+.gab-nm   { font-family:Georgia,serif; font-size:10px; font-weight:bold; margin-bottom:2px; }
+.gab-frase { font-family:Cambria,serif; font-size:10px; line-height:1.5; color:rgba(232,212,154,0.85); font-style:italic; }
+.gab-frase::before { content:'\201C'; color:var(--gold); font-size:16px; line-height:0; vertical-align:-4px; margin-right:2px; }
+.gab-frase::after  { content:'\201D'; color:var(--gold); font-size:16px; line-height:0; vertical-align:-6px; margin-left:2px; }
+
+/* ── CISNE NEGRO BANNER ── */
+.cisne-banner { background:linear-gradient(90deg,#1a0a0a 0%,#3a1a1a 100%); border:2px solid var(--red); padding:10px 14px; margin:0; display:none; flex-shrink:0; }
+.cisne-banner.show { display:block; }
+.cisne-tag { font-family:Consolas,monospace; font-size:8px; letter-spacing:4px; text-transform:uppercase; color:#eb5757; margin-bottom:4px; font-weight:bold; }
+.cisne-hl { font-family:Georgia,serif; font-size:13px; font-weight:bold; color:#fff; line-height:1.3; }
+
+/* ── LOGROS ── */
+.logros-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; max-width:480px; width:100%; margin:0 auto 24px; }
+.logro-item { background:rgba(26,75,140,0.3); border:1px solid var(--bdr); padding:10px; display:flex; gap:8px; align-items:center; }
+.logro-item.got { border-color:var(--gold); background:rgba(200,160,64,0.1); }
+.logro-item.locked { opacity:0.35; }
+.logro-ic { font-size:22px; flex-shrink:0; }
+.logro-txt { flex:1; text-align:left; }
+.logro-nm { font-family:Georgia,serif; font-size:11px; font-weight:bold; color:var(--perg); margin-bottom:2px; }
+.logro-ds { font-size:9px; color:rgba(232,212,154,0.55); line-height:1.3; }
+
+/* ── BENCHMARK ── */
+.bench-wrap { max-width:480px; width:100%; margin-bottom:24px; }
+.bench-ttl { font-family:Consolas,monospace; font-size:9px; letter-spacing:3px; text-transform:uppercase; color:rgba(200,160,64,0.6); margin-bottom:10px; }
+.bench-item { background:rgba(26,75,140,0.25); border:1px solid var(--bdr); padding:8px 10px; margin-bottom:5px; text-align:left; }
+.bench-item.you { border-color:var(--gold); background:rgba(200,160,64,0.12); }
+.bench-hdr { display:flex; justify-content:space-between; align-items:center; }
+.bench-nm { font-family:Georgia,serif; font-size:11px; font-weight:bold; color:var(--perg); }
+.bench-per { font-family:Consolas,monospace; font-size:9px; color:rgba(232,212,154,0.4); }
+.bench-stats { font-family:Consolas,monospace; font-size:9px; color:rgba(232,212,154,0.55); margin-top:3px; }
+.bench-ctx { font-size:9px; color:rgba(232,212,154,0.35); font-style:italic; margin-top:2px; }
 
 /* ── NEWSPAPER ── */
 #col-news { background:#f4f0e8; color:#1a1a1a; }
@@ -279,7 +324,7 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance:none; width:11px; h
 .m-eff   { font-family:Consolas,monospace; font-size:9px; color:var(--gold); margin-bottom:14px; letter-spacing:1px; }
 .btn-modal { font-family:Georgia,serif; font-size:10px; letter-spacing:3px; text-transform:uppercase; font-weight:bold; padding:9px 26px; background:var(--gold); color:var(--inst); border:none; }
 
-/* ── COMUNICADO ── */
+/* ── MODAL COMUNICADO ── */
 .com-ov  { position:fixed; inset:0; background:rgba(0,0,0,.75); display:none; align-items:center; justify-content:center; z-index:500; }
 .com-ov.open { display:flex; }
 .com-box { background:var(--inst); border:2px solid var(--gold); padding:24px; max-width:420px; width:90%; max-height:90vh; overflow-y:auto; }
@@ -314,6 +359,54 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance:none; width:11px; h
 .elec-res-body { font-size:11px; color:rgba(232,212,154,0.75); line-height:1.6; }
 .elec-res-eff  { font-family:Consolas,monospace; font-size:10px; color:var(--gold); margin-top:6px; }
 .btn-elec { font-family:Georgia,serif; font-size:12px; letter-spacing:3px; text-transform:uppercase; font-weight:bold; padding:12px 28px; background:var(--gold); color:var(--inst); border:none; width:100%; }
+
+/* ── CONFERENCIA DE PRENSA ── */
+.conf-ov { position:fixed; inset:0; background:rgba(0,0,0,.85); display:none; align-items:center; justify-content:center; z-index:560; }
+.conf-ov.open { display:flex; }
+.conf-box { background:var(--inst); border:2px solid var(--gold); padding:22px; max-width:500px; width:92%; max-height:90vh; overflow-y:auto; }
+.conf-tp { font-family:Consolas,monospace; font-size:9px; letter-spacing:4px; text-transform:uppercase; color:rgba(200,160,64,0.5); margin-bottom:6px; }
+.conf-ttl { font-family:Georgia,serif; font-size:18px; font-weight:bold; color:var(--perg); margin-bottom:12px; }
+.conf-q { background:rgba(26,75,140,0.3); border-left:3px solid var(--gold); padding:10px 12px; margin-bottom:10px; }
+.conf-q-from { font-family:Consolas,monospace; font-size:9px; letter-spacing:2px; text-transform:uppercase; color:var(--gold); margin-bottom:4px; }
+.conf-q-tx { font-family:Georgia,serif; font-size:12px; color:var(--perg); line-height:1.4; margin-bottom:8px; font-style:italic; }
+.conf-opts { display:flex; flex-direction:column; gap:4px; }
+.btn-conf-o { font-family:Cambria,serif; font-size:10px; padding:7px 10px; border:1px solid var(--bdr); background:rgba(13,43,94,0.5); color:rgba(232,212,154,0.85); text-align:left; line-height:1.3; }
+.btn-conf-o:hover { background:rgba(200,160,64,0.1); border-color:var(--gold); }
+.btn-conf-o.sel { background:rgba(200,160,64,0.2); border-color:var(--gold); color:var(--perg); }
+
+/* ── CORRIDA BANCARIA ── */
+.run-ov { position:fixed; inset:0; background:rgba(60,0,0,.9); display:none; align-items:center; justify-content:center; z-index:570; }
+.run-ov.open { display:flex; }
+.run-box { background:#1a0a0a; border:3px solid var(--red); padding:24px; max-width:440px; width:92%; text-align:center; animation:shake .4s ease; }
+@keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)} }
+.run-icon { font-size:42px; margin-bottom:10px; }
+.run-tp { font-family:Consolas,monospace; font-size:10px; letter-spacing:4px; text-transform:uppercase; color:#eb5757; margin-bottom:4px; font-weight:bold; }
+.run-ttl { font-family:Georgia,serif; font-size:20px; font-weight:bold; color:#fff; margin-bottom:8px; }
+.run-body { font-size:12px; color:rgba(255,255,255,0.75); line-height:1.5; margin-bottom:12px; }
+.run-timer { font-family:Consolas,monospace; font-size:28px; font-weight:bold; color:#eb5757; margin-bottom:12px; }
+.run-opts { display:flex; flex-direction:column; gap:6px; }
+.btn-run { font-family:Georgia,serif; font-size:11px; padding:10px 14px; background:rgba(192,57,43,0.3); color:#fff; border:1px solid var(--red); text-align:left; letter-spacing:1px; }
+.btn-run:hover { background:rgba(192,57,43,0.5); }
+.btn-run small { display:block; font-family:Consolas,monospace; font-size:8px; color:rgba(255,255,255,0.5); margin-top:2px; }
+
+/* ── VIAJES ── */
+.viaje-ov { position:fixed; inset:0; background:rgba(0,0,0,.8); display:none; align-items:center; justify-content:center; z-index:540; }
+.viaje-ov.open { display:flex; }
+.viaje-box { background:var(--inst); border:2px solid var(--gold); padding:22px; max-width:460px; width:92%; }
+.viaje-ttl { font-family:Georgia,serif; font-size:18px; font-weight:bold; color:var(--perg); margin-bottom:6px; }
+.viaje-sub { font-size:11px; color:rgba(232,212,154,0.5); margin-bottom:14px; font-style:italic; }
+.viaje-opts { display:grid; grid-template-columns:1fr 1fr; gap:7px; }
+.viaje-c { background:rgba(26,75,140,0.3); border:1px solid var(--bdr); padding:10px; cursor:pointer; }
+.viaje-c:hover { border-color:var(--gold); background:rgba(200,160,64,0.1); }
+.viaje-flag { font-size:22px; margin-bottom:4px; }
+.viaje-nm { font-family:Georgia,serif; font-size:12px; font-weight:bold; color:var(--perg); }
+.viaje-ef { font-family:Consolas,monospace; font-size:8px; color:rgba(232,212,154,0.5); margin-top:3px; line-height:1.4; }
+.viaje-skip { font-family:Consolas,monospace; font-size:9px; padding:8px; margin-top:10px; width:100%; background:transparent; color:rgba(232,212,154,0.5); border:1px solid var(--bdr); text-transform:uppercase; letter-spacing:2px; }
+
+/* ── KPI EXTRA (salario real, dos dolares) ── */
+.kpi-extra { background:rgba(26,75,140,0.25); border:1px dashed rgba(200,160,64,0.3); padding:6px 8px; margin-top:4px; }
+.kpi-extra .kpi-nm { color:rgba(200,160,64,0.5); }
+
 
 /* ── FLASH / ALERT ── */
 .flash   { position:fixed; inset:0; pointer-events:none; z-index:999; animation:flo .5s ease forwards; }
@@ -412,6 +505,19 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance:none; width:11px; h
         </button>
       </div>
     </div>
+    <div class="ob-field">
+      <label class="ob-label">M&oacute;dulos opcionales (experiencia ampliada)</label>
+      <div class="ob-features">
+        <label class="ft-chk"><input type="checkbox" class="ft-in" data-ft="conf" checked><span class="ft-tx"><b>Conferencia de Prensa</b><small>Periodistas te interrogan cada 4 trimestres</small></span></label>
+        <label class="ft-chk"><input type="checkbox" class="ft-in" data-ft="corrida" checked><span class="ft-tx"><b>Corrida Bancaria</b><small>Crisis con decisi&oacute;n r&aacute;pida si tensi&oacute;n &gt; 85</small></span></label>
+        <label class="ft-chk"><input type="checkbox" class="ft-in" data-ft="dolares" checked><span class="ft-tx"><b>Dos D&oacute;lares Visibles</b><small>Oficial y Blue por separado en el ticker</small></span></label>
+        <label class="ft-chk"><input type="checkbox" class="ft-in" data-ft="salario"><span class="ft-tx"><b>Salario Real</b><small>KPI cr&iacute;tico. Si cae mucho, paros autom&aacute;ticos</small></span></label>
+        <label class="ft-chk"><input type="checkbox" class="ft-in" data-ft="tapas"><span class="ft-tx"><b>Tapas de Diarios</b><small>Tres medios con sesgos distintos</small></span></label>
+        <label class="ft-chk"><input type="checkbox" class="ft-in" data-ft="viajes"><span class="ft-tx"><b>Viajes Internacionales</b><small>Davos, Washington, Beijing \u2014 una vez al a&ntilde;o</small></span></label>
+        <label class="ft-chk"><input type="checkbox" class="ft-in" data-ft="lobbies"><span class="ft-tx"><b>Lobbies Empresariales</b><small>UIA, Rural y AEA piden cosas con costo pol&iacute;tico</small></span></label>
+        <label class="ft-chk"><input type="checkbox" class="ft-in" data-ft="escand"><span class="ft-tx"><b>Esc&aacute;ndalos Pol&iacute;ticos</b><small>Audios filtrados, fotos comprometedoras</small></span></label>
+      </div>
+    </div>
   </div>
   <button type="button" class="btn-main" id="btn-start">Asumir el Cargo</button>
   <div class="i-foot">MDB-2024-00000001 &mdash; Sujeto a modificaciones sin previo aviso</div>
@@ -474,6 +580,10 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance:none; width:11px; h
         <div class="np-meta" id="np-date">BUENOS AIRES<br>ENERO 2024</div>
       </div>
       <div class="np-rule"></div>
+      <div class="cisne-banner" id="cisne-banner">
+        <div class="cisne-tag" id="cisne-tag">CISNE NEGRO</div>
+        <div class="cisne-hl" id="cisne-hl"></div>
+      </div>
       <div class="np-body">
         <div class="np-tag" id="np-tag">ECONOM&Iacute;A</div>
         <div class="np-hl" id="np-hl">El BCRA inicia nueva gesti&oacute;n bajo la expectativa de los mercados</div>
@@ -544,6 +654,16 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance:none; width:11px; h
         <span class="soc-icon">&#120143;</span>
         <span class="soc-ttl">Reacciones del Mercado</span>
         <span class="soc-turn" id="soc-turn">T-1</span>
+      </div>
+      <div class="gab-pnl" id="gab-pnl" style="display:none">
+        <div class="gab-ttl">Consejero del Gabinete</div>
+        <div class="gab-item">
+          <div class="gab-av" id="gab-av" style="color:var(--gold);border-color:var(--gold)">&#128274;</div>
+          <div class="gab-body">
+            <div class="gab-nm" id="gab-nm">Consejero</div>
+            <div class="gab-frase" id="gab-frase">Esperando sus decisiones, Presidente.</div>
+          </div>
+        </div>
       </div>
       <div class="tweets" id="tweets"></div>
       <div class="log-wrap">
@@ -617,6 +737,42 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance:none; width:11px; h
       <div class="elec-res-eff" id="elec-res-eff"></div>
     </div>
     <button type="button" class="btn-elec" id="btn-elec">Tomar Nota y Continuar</button>
+  </div>
+</div>
+
+<!-- MODAL CONFERENCIA DE PRENSA -->
+<div class="conf-ov" id="conf-ov">
+  <div class="conf-box">
+    <div class="conf-tp">CONFERENCIA DE PRENSA</div>
+    <div class="conf-ttl" id="conf-ttl">Sala Bartolom&eacute; Mitre \u2014 BCRA</div>
+    <div id="conf-questions"></div>
+    <button type="button" class="btn-elec" id="btn-conf-done" style="margin-top:12px">Finalizar Conferencia</button>
+  </div>
+</div>
+
+<!-- MODAL CORRIDA BANCARIA -->
+<div class="run-ov" id="run-ov">
+  <div class="run-box">
+    <div class="run-icon">&#128680;</div>
+    <div class="run-tp">CORRIDA BANCARIA EN CURSO</div>
+    <div class="run-ttl">Los ahorristas retiran dep&oacute;sitos</div>
+    <div class="run-body">Las colas en los bancos se extienden por cuadras. Si no toma una decisi&oacute;n r&aacute;pida, el sistema financiero puede colapsar.</div>
+    <div class="run-timer" id="run-timer">10</div>
+    <div class="run-opts">
+      <button type="button" class="btn-run" data-run="encajes">Subir encajes bancarios<small>Frena la corrida pero da&ntilde;a el cr&eacute;dito</small></button>
+      <button type="button" class="btn-run" data-run="feriado">Decretar feriado bancario 24hs<small>Gana tiempo pero p&aacute;nico en redes</small></button>
+      <button type="button" class="btn-run" data-run="comunicado">Comunicado de calma del BCRA<small>Bajo costo si funciona, alto si no</small></button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL VIAJES -->
+<div class="viaje-ov" id="viaje-ov">
+  <div class="viaje-box">
+    <div class="viaje-ttl">Agenda Internacional</div>
+    <div class="viaje-sub">Los presidentes de bancos centrales del G20 lo invitan. Puede asistir a un solo evento este a&ntilde;o.</div>
+    <div class="viaje-opts" id="viaje-opts"></div>
+    <button type="button" class="viaje-skip" id="viaje-skip">No viajar este a&ntilde;o</button>
   </div>
 </div>
 
@@ -747,6 +903,207 @@ var FISCAL = {
   ],
 };
 
+// ── GABINETE ECONOMICO ───────────────────────────────────────────────────────
+var GABINETE = [
+  { id:'ministro', nombre:'Ministro de Econom\u00eda', color:'#4fc3f7', icon:'\uD83D\uDC54',
+    frases: {
+      inf_alta:    'Presidente, la inflaci\u00f3n va a matar al gobierno. Necesitamos se\u00f1ales m\u00e1s duras en la tasa.',
+      inf_baja:    'Est\u00e1n diciendo que estabilizamos la econom\u00eda. No lo arruine en el pr\u00f3ximo trimestre.',
+      res_bajas:   'Si seguimos sangrando reservas llegamos al punto de quiebre. Hay que pensar en el FMI.',
+      res_altas:   'Tenemos colch\u00f3n. Es el momento de usarlo estrat\u00e9gicamente, no atesorarlo.',
+      brecha_alta: 'La brecha descontrolada destruye toda la planificaci\u00f3n fiscal. Tenemos que actuar.',
+      default_riesgo:'Si defaulteamos no nos presta nadie por una d\u00e9cada. Piense en lo que eso significa.',
+      crisis:      'El panorama es cr\u00edtico. Voy a necesitar que trabajemos alineados o renuncio.',
+      neutral:     'Mantengamos el curso. El mercado valora la previsibilidad por encima de todo.',
+    }
+  },
+  { id:'asesor_fmi', nombre:'Asesor del FMI', color:'#ffcc02', icon:'\uD83C\uDDFA\uD83C\uDDF8',
+    frases: {
+      inf_alta:    'The inflation trajectory is worrying. Without credible fiscal signals, monetary policy alone won\'t do it.',
+      inf_baja:    'Solid progress. Keep fiscal tightening on track and disinflation will consolidate.',
+      res_bajas:   'Net reserves accumulation should be the absolute priority. All tools available.',
+      res_altas:   'Reserve buffer is adequate. Now focus on structural reforms.',
+      brecha_alta: 'The FX spread is a symptom. Address root causes: fiscal dominance and expectations.',
+      default_riesgo:'We strongly advise against any action that compromises debt sustainability.',
+      crisis:      'In times of stress, stick to the program. Deviation now would be catastrophic.',
+      neutral:     'We continue to monitor the program. Quarterly reviews will assess compliance.',
+    }
+  },
+  { id:'operador', nombre:'Operador Pol\u00edtico', color:'#eb5757', icon:'\uD83C\uDFAD',
+    frases: {
+      inf_alta:    'La calle est\u00e1 picante. Si no baja la inflaci\u00f3n en 60 d\u00edas, te vas vos primero.',
+      inf_baja:    'Che, con esto que bajaste sube 3 puntos en las encuestas. Habla claro.',
+      res_bajas:   'Los mercados son el menor de tus problemas. El problema es 2025 y las listas.',
+      res_altas:   'Mir\u00e1 las encuestas, no los excel. La gente no come reservas.',
+      brecha_alta: 'El blue est\u00e1 volando. Eso se lee en el s\u00FAper antes que en ning\u00FAn medio.',
+      default_riesgo:'Default? Me importa tres carajos lo que diga Wall Street. Dec\u00ed que no pagamos.',
+      crisis:      'Es ahora. Hay que hacer una jugada fuerte o nos van a pasar por arriba.',
+      neutral:     'Todo bien con la pol\u00edtica monetaria, pero \u00bfcu\u00e1ndo hacemos algo que se vea?',
+    }
+  },
+];
+
+// ── CISNES NEGROS ────────────────────────────────────────────────────────────
+var CISNES = [
+  { id:'pandemia',  tag:'SANIDAD',      hl:'Brote global: OMS declara emergencia sanitaria',
+    lede:'Las econom\u00edas se paralizan preventivamente. Argentina sigue la tendencia internacional.',
+    edu:'Los <b>shocks exógenos</b> como pandemias obligan a expandir el gasto y aceptar deterioros fiscales temporales.',
+    ef:{emision:2,pop:5,tension:12,desemp:1.2,res:-1},
+    tw:[{av:'\uD83E\uDDA0',nm:'OMS Argentina',hd:'@oms_arg',tx:'Emergencia sanitaria declarada. Medidas preventivas.',lk:54032},{av:'\uD83D\uDE37',nm:'M\u00e9dico',hd:'@medico_interior',tx:'Estamos desbordados. No hay margen.',lk:23412}] },
+  { id:'banco_eu',  tag:'GLOBAL',       hl:'Colapso de banco europeo contagia mercados emergentes',
+    lede:'La quiebra de un banco sist\u00e9mico europeo genera sell-off global.',
+    edu:'Las <b>crisis bancarias sist\u00e9micas</b> desatan corridas hacia calidad (USD, oro). Argentina pierde acceso a financiamiento.',
+    ef:{res:-1.5,brecha:18,tension:15,riesgo:500},
+    tw:[{av:'\uD83D\uDCC9',nm:'Bloomberg',hd:'@bloomberg',tx:'Global contagion spreads. Emerging markets under severe stress.',lk:12034}] },
+  { id:'litio',     tag:'RECURSOS',     hl:'Descubrimiento de mega-yacimiento de litio en el NOA',
+    lede:'Argentina pasa a ser segundo productor mundial de litio en reservas estimadas.',
+    edu:'Los <b>descubrimientos de recursos estrat\u00e9gicos</b> pueden transformar estructuralmente las expectativas cambiarias.',
+    ef:{res:2,pop:8,tension:-8,cred:8},
+    tw:[{av:'\u26A1',nm:'Noticiero',hd:'@noticias_arg',tx:'Litio: Argentina en el top mundial. Inversores hacen fila.',lk:45302}] },
+  { id:'brasil',    tag:'REGIONAL',     hl:'Brasil declara default selectivo y devalua el real 40%',
+    lede:'La crisis del socio comercial principal se traslada al peso argentino.',
+    edu:'Cuando <b>Brasil sufre shocks grandes</b>, Argentina pierde competitividad y sufre contagio financiero simult\u00e1neo.',
+    ef:{res:-2,brecha:25,desemp:0.8,pop:-6},
+    tw:[{av:'\uD83C\uDDE7\uD83C\uDDF7',nm:'Folha',hd:'@folha_sp',tx:'Brasil anuncia renegociaci\u00f3n. Real se hunde 40%.',lk:23412}] },
+  { id:'oil_shock', tag:'ENERG\u00cdA', hl:'Acuerdo OPEP+: petr\u00f3leo se dispara a USD 140',
+    lede:'La suba del crudo internacional presiona balanza comercial y combustibles locales.',
+    edu:'Los <b>shocks petroleros</b> para Argentina son negativos en neto: costo de importar energ\u00eda supera beneficio de exportar.',
+    ef:{inf:1.5,res:-1,pop:-4,tension:6},
+    tw:[{av:'\u26FD',nm:'Industria',hd:'@industria_arg',tx:'Inviable sostener los costos. Esperamos medidas.',lk:5632}] },
+  { id:'cybercrisis',tag:'TECH',        hl:'Ciberataque masivo paraliza sistema bancario nacional',
+    lede:'Entidades bancarias suspenden operaciones por 72hs. P\u00e1nico entre ahorristas.',
+    edu:'Los <b>shocks de confianza</b> al sistema financiero generan corridas incluso sin problemas fundamentales.',
+    ef:{res:-1.5,pop:-5,tension:14,cred:-8},
+    tw:[{av:'\uD83D\uDD12',nm:'CiberSec',hd:'@cyber_arg',tx:'Ataque sofisticado. Se investigan actores estatales.',lk:34521}] },
+  { id:'cosecha',   tag:'CAMPO',        hl:'Sequ\u00eda hist\u00f3rica arruina la cosecha de soja',
+    lede:'Las p\u00e9rdidas agropecuarias se estiman en USD 10.000 M. Menores exportaciones.',
+    edu:'Las <b>sequ\u00edas severas</b> golpean doble: menos divisas de exportaci\u00f3n y m\u00e1s importaciones alimenticias.',
+    ef:{res:-3,inf:1.2,desemp:0.6},
+    tw:[{av:'\uD83D\uDD25',nm:'CREA',hd:'@crea_arg',tx:'Peor cosecha en 20 a\u00f1os. Necesitamos ayuda urgente.',lk:12043}] },
+];
+
+// ── LOGROS ───────────────────────────────────────────────────────────────────
+var LOGROS = [
+  { id:'first_win',     nombre:'Milagro Argentino',          desc:'Complet\u00e1 5 a\u00f1os sin default y con indicadores saludables',    icon:'\uD83C\uDFC6' },
+  { id:'no_cepo',       nombre:'Libre Mercado',              desc:'Un a\u00f1o completo con cepo \u2264 3',                                 icon:'\uD83D\uDD13' },
+  { id:'reservas_20',   nombre:'Banquero Central',           desc:'Llegaste a USD 20B en reservas netas',                                  icon:'\uD83D\uDCB0' },
+  { id:'inf_single',    nombre:'Anclaje',                    desc:'4 trimestres seguidos con inflaci\u00f3n mensual < 5%',                 icon:'\u2693' },
+  { id:'cero_default',  nombre:'Cumplidor',                  desc:'Pag\u00e1 toda la deuda externa que tomaste',                           icon:'\u2705' },
+  { id:'cred_100',      nombre:'Credibilidad M\u00e1xima',   desc:'Credibilidad 100%',                                                     icon:'\uD83C\uDF1F' },
+  { id:'fmi_complete',  nombre:'Ortodoxo',                   desc:'Complet\u00e1 un programa del FMI sin incumplir',                       icon:'\uD83C\uDDFA\uD83C\uDDF8' },
+  { id:'cumple_com',    nombre:'Palabra de Honor',           desc:'Cumpl\u00ed 3 comunicados de expectativas seguidos',                    icon:'\uD83D\uDC8D' },
+  { id:'survivor',      nombre:'Sobreviviente',              desc:'Super\u00e1 una elecci\u00f3n sin entrar en crisis',                     icon:'\uD83D\uDEE1' },
+  { id:'swan_survivor', nombre:'Cisne Negro',                desc:'Super\u00e1 un evento cisne negro sin colapsar',                        icon:'\uD83E\uDD8A' },
+];
+
+// ── BENCHMARKS HISTORICOS ────────────────────────────────────────────────────
+// Datos objetivos de inflacion mensual promedio durante su gestion, sin juicios de valor
+var BENCHMARKS = [
+  { nombre:'Alejandro Vanoli',       periodo:'2014-2015', inf_mens:3.2, res_final:'-4.0', contexto:'Cepo intensificado, brecha creciente' },
+  { nombre:'Federico Sturzenegger',  periodo:'2015-2018', inf_mens:2.5, res_final:'+18.0',contexto:'Metas de inflaci\u00f3n, apertura de cepo' },
+  { nombre:'Luis Caputo (BCRA)',     periodo:'2018',      inf_mens:4.0, res_final:'+48.0',contexto:'Acuerdo FMI, crisis cambiaria' },
+  { nombre:'Guido Sandleris',        periodo:'2018-2019', inf_mens:4.3, res_final:'+66.0',contexto:'Crecimiento cero de base monetaria' },
+  { nombre:'Miguel \u00c1ngel Pesce',periodo:'2019-2023', inf_mens:4.9, res_final:'-7.0', contexto:'Pandemia, emisi\u00f3n, cepo duro' },
+  { nombre:'Santiago Bausili',       periodo:'2023-',     inf_mens:6.2, res_final:'+25.0',contexto:'Devaluaci\u00f3n inicial, desinflaci\u00f3n' },
+  { nombre:'Mercedes March\u00f3 del Pont',periodo:'2010-2013',inf_mens:2.1,res_final:'-5.0',contexto:'Reformas a la Carta Org\u00e1nica' },
+];
+
+// ── CONFERENCIA DE PRENSA ────────────────────────────────────────────────────
+var PERIODISTAS = [
+  { tag:'LA NACI\u00d3N', preg:'\u00bfC\u00f3mo explica que la inflaci\u00f3n siga en estos niveles a pesar de sus anuncios?',
+    opts: [
+      { tx:'"Estamos en un proceso de convergencia que toma tiempo."', ef:{cred:-2,pop:1} },
+      { tx:'"La inflaci\u00f3n est\u00e1 donde tiene que estar, dada la herencia recibida."', ef:{cred:-5,pop:-3} },
+      { tx:'"Reconozco que los resultados no son los esperados y ajustaremos."', ef:{cred:5,pop:-4} },
+    ] },
+  { tag:'P\u00c1GINA 12', preg:'Los sectores populares se est\u00e1n empobreciendo. \u00bfQu\u00e9 les dice a los jubilados?',
+    opts: [
+      { tx:'"Estamos haciendo lo necesario para evitar una crisis mayor."', ef:{cred:3,pop:-4} },
+      { tx:'"La estabilizaci\u00f3n eventualmente beneficiar\u00e1 a todos."', ef:{cred:0,pop:-6} },
+      { tx:'"Son sacrificios que en unos meses dar\u00e1n frutos."', ef:{cred:-3,pop:-8,tension:4} },
+    ] },
+  { tag:'CLAR\u00cdN', preg:'\u00bfHay un plan B si el acuerdo con el FMI no avanza como est\u00e1 previsto?',
+    opts: [
+      { tx:'"Hay m\u00faltiples escenarios contemplados en el programa."', ef:{cred:4,pop:0} },
+      { tx:'"Confiamos plenamente en el acuerdo. No hay plan B."', ef:{cred:-8,pop:-2,tension:6} },
+      { tx:'"Sin comentarios sobre cuestiones en negociaci\u00f3n."', ef:{cred:-1,pop:0} },
+    ] },
+  { tag:'FT LONDRES', preg:'Argentina ha defaulteado 9 veces. \u00bfQu\u00e9 garantiza que esta vez ser\u00e1 distinto?',
+    opts: [
+      { tx:'"La consolidaci\u00f3n fiscal es genuina y sostenible esta vez."', ef:{cred:6,pop:-3} },
+      { tx:'"Argentina siempre pag\u00f3 sus compromisos."', ef:{cred:-10,pop:2} },
+      { tx:'"La historia no se repite pero rima. Aprendimos."', ef:{cred:2,pop:1} },
+    ] },
+  { tag:'BLOOMBERG', preg:'\u00bfDescarta una devaluaci\u00f3n fuerte en los pr\u00f3ximos 3 meses?',
+    opts: [
+      { tx:'"Descarto cualquier salto discreto del tipo de cambio."', ef:{cred:-12,pop:3,brecha:10} },
+      { tx:'"La pol\u00edtica cambiaria responde a fundamentos."', ef:{cred:2,pop:0} },
+      { tx:'"No opino sobre el d\u00f3lar en conferencias de prensa."', ef:{cred:5,pop:-2} },
+    ] },
+  { tag:'\u00c1MBITO', preg:'La gente no llega a fin de mes. \u00bfCu\u00e1ndo mejora el bolsillo?',
+    opts: [
+      { tx:'"La desinflaci\u00f3n ya se est\u00e1 notando en los precios relativos."', ef:{cred:0,pop:-3} },
+      { tx:'"En 6 meses se va a ver la recuperaci\u00f3n del salario real."', ef:{cred:-4,pop:4} },
+      { tx:'"No puedo darle fecha. Lo importante es no retroceder."', ef:{cred:5,pop:-5} },
+    ] },
+];
+
+// ── VIAJES INTERNACIONALES ───────────────────────────────────────────────────
+var VIAJES = [
+  { id:'davos', flag:'\uD83C\uDDE8\uD83C\uDDED', nm:'Davos',       desc:'Foro Econ\u00f3mico Mundial', ef:{cred:8,pop:-4,res:0}, tw:'Foto con CEOs mundiales. "Argentina est\u00e1 de vuelta", declar\u00f3.' },
+  { id:'washington', flag:'\uD83C\uDDFA\uD83C\uDDF8', nm:'Washington', desc:'Reuni\u00f3n con Tesoro de EE.UU.', ef:{cred:5,fmi_bonus:true,pop:-2}, tw:'Reuni\u00f3n bilateral con Secretario del Tesoro. Acercamiento con FMI.' },
+  { id:'beijing', flag:'\uD83C\uDDE8\uD83C\uDDF3', nm:'Beijing',    desc:'Ampliaci\u00f3n de swap con PBoC', ef:{res:2,pop:2,china_bonus:true}, tw:'Acuerdo con el Banco Popular de China. Swap ampliado.' },
+  { id:'brasilia', flag:'\uD83C\uDDE7\uD83C\uDDF7', nm:'Brasilia',  desc:'Cumbre del Mercosur', ef:{pop:5,brecha:-5,tension:-3}, tw:'Acuerdo con Lula: Argentina y Brasil retoman integraci\u00f3n comercial.' },
+];
+
+// ── LOBBIES EMPRESARIALES ────────────────────────────────────────────────────
+var LOBBIES = [
+  { nombre:'UIA (Uni\u00f3n Industrial)', pide:'Baja de tasa y devaluaci\u00f3n para mejorar competitividad', icon:'\uD83C\uDFED',
+    acept: { tasa_delta:-15, crawl_delta:1, pop:5, res:-1, tension:3 }, rechaz:{ pop:-4, tension:4 } },
+  { nombre:'Sociedad Rural', pide:'Reducci\u00f3n de retenciones y tipo de cambio preferencial', icon:'\uD83D\uDC04',
+    acept: { res:2, inf:0.5, pop:-2, brecha:5 }, rechaz:{ res:-0.5, pop:-3 } },
+  { nombre:'AEA (Ejecutivos)', pide:'Apertura gradual del cepo para inversiones', icon:'\uD83D\uDCBC',
+    acept: { cepo_delta:-1, brecha:-10, cred:5, pop:-3 }, rechaz:{ cred:-3, tension:2 } },
+  { nombre:'CGT', pide:'Aumento de jubilaciones y freno al ajuste', icon:'\u270A',
+    acept: { emision_delta:2, pop:6, desemp:-0.5, cred:-6 }, rechaz:{ pop:-5, tension:8 } },
+];
+
+// ── ESCANDALOS POLITICOS ─────────────────────────────────────────────────────
+var ESCANDALOS = [
+  { tit:'Audio filtrado de un director del BCRA', desc:'"Se viene la devaluaci\u00f3n", dice la voz atribuida a un miembro del directorio.',
+    opts:[
+      { tx:'Negar rotundamente', ef:{cred:-8,pop:2} },
+      { tx:'Pedir la renuncia del director', ef:{cred:5,pop:-3,tension:3} },
+      { tx:'Minimizar: "son conversaciones privadas"', ef:{cred:-3,pop:-2} },
+    ] },
+  { tit:'Foto de un funcionario comprando d\u00f3lares', desc:'Paparazzi capt\u00f3 al vocero del BCRA en una cueva financiera.',
+    opts:[
+      { tx:'Despido inmediato', ef:{cred:3,pop:4} },
+      { tx:'Defender al funcionario', ef:{cred:-5,pop:-4} },
+      { tx:'"No corresponde comentar vida privada"', ef:{cred:-2,pop:-1} },
+    ] },
+  { tit:'Denuncia por uso de informaci\u00f3n privilegiada', desc:'Un ex asesor compr\u00f3 d\u00f3lares 48hs antes del \u00faltimo anuncio.',
+    opts:[
+      { tx:'Colaborar con la justicia', ef:{cred:4,pop:-2} },
+      { tx:'"Es una operaci\u00f3n pol\u00edtica"', ef:{cred:-10,pop:-5,tension:5} },
+      { tx:'Sin comentarios oficiales', ef:{cred:-3,pop:0} },
+    ] },
+];
+
+// ── TAPAS DE DIARIOS ─────────────────────────────────────────────────────────
+var TAPAS_SESGO = {
+  ok: {
+    clarin:  { nm:'CLAR\u00cdN', color:'#e63946', tit:['Avances graduales del BCRA en la estabilizaci\u00f3n','El programa comienza a dar resultados parciales'] },
+    lanacion:{ nm:'LA NACI\u00d3N', color:'#1d3557', tit:['El BCRA consolida su sendero de normalizaci\u00f3n','La ortodoxia rinde frutos en el frente cambiario'] },
+    pagina12:{ nm:'P\u00c1GINA 12', color:'#2a9d8f', tit:['Estabilidad a costa del bolsillo popular','Los n\u00fameros mejoran pero el ajuste sigue'] },
+  },
+  mal: {
+    clarin:  { nm:'CLAR\u00cdN', color:'#e63946', tit:['Crece la incertidumbre cambiaria','Nuevo revol\u00f3n en los mercados: d\u00f3lar en alza'] },
+    lanacion:{ nm:'LA NACI\u00d3N', color:'#1d3557', tit:['Mercados castigan la falta de se\u00f1ales del BCRA','Analistas piden m\u00e1s ortodoxia'] },
+    pagina12:{ nm:'P\u00c1GINA 12', color:'#2a9d8f', tit:['Fracasa el rumbo econ\u00f3mico del BCRA','La pol\u00edtica monetaria golpea a los que menos tienen'] },
+  },
+};
+
 var CTX_TWEETS = {
   inf_alta: [{av:'\uD83D\uDE24',nm:'Trabajador',hd:'@sueldo_pesos',tx:'El sueldo me subi\u00f3 10% y la inflaci\u00f3n va 25%. Matem\u00e1ticamente me est\u00e1n robando.',lk:34521}],
   res_bajas: [{av:'\uD83D\uDCB8',nm:'Trader',hd:'@fx_trader',tx:'Reservas netas en rojo. El BCRA est\u00e1 vendiendo lo que no tiene.',lk:8901}],
@@ -768,6 +1125,11 @@ var selectedCom = null;
 var playerName = '';
 var playerTipo = null;
 var selectedTipo = null;
+// FEATURES OPCIONALES
+var FEATURES = { conf:true, corrida:true, dolares:true, salario:false, tapas:false, viajes:false, lobbies:false, escand:false };
+var corridaActiva = false;
+var corridaTimer = null;
+var viajeYear = 0;
 
 // ═══ START ═══════════════════════════════════════════════════════════════════
 
@@ -776,6 +1138,13 @@ function startGame() {
   playerName = nameEl ? (nameEl.value.trim() || 'Presidente') : 'Presidente';
   playerTipo = selectedTipo || TIPOS.moderado;
   var t = playerTipo;
+
+  // Leer features opcionales
+  document.querySelectorAll('.ft-in').forEach(function(cb){
+    FEATURES[cb.getAttribute('data-ft')] = cb.checked;
+  });
+  viajeYear = 0;
+  corridaActiva = false;
 
   G = {
     turn:0, year:2024,
@@ -790,6 +1159,16 @@ function startGame() {
     organismos: { fmi:{activo:false,ultimo:-99,turnos_cumpliendo:0}, china:{activo:false,ultimo:-99}, bid:{activo:false,ultimo:-99,turnos_cumpliendo:0} },
     // Victoria tracking
     victoria_turns_ok: 0, default_ocurrido:false,
+    // Logros
+    logros:[], cepo_bajo_turns:0, inf_baja_turns:0, com_cumplidos:0, cisnes_superados:0,
+    // Gabinete
+    gabinete_turn:0,
+    // Cisnes negros pendientes para el proximo turno
+    cisne_activo: null,
+    // Features opcionales
+    salario_real: 100, // base 100 al inicio
+    dolar_blue: 1500,  // blue inicia más alto
+    fmi_bonus: false, china_bonus: false,
     history:[], curEvent:null,
     decisions:{ tasa:t.tasa, crawl:t.crawl, emision:t.emision, cepo:t.cepo, interv:0 },
     fiscalLast:-99,
@@ -805,6 +1184,7 @@ function startGame() {
   updateMesa(0);
   renderDeuda();
   renderOrganismos();
+  renderGabinete();
   loadInauguration();
   renderAll();
   showScreen('s-game');
@@ -970,8 +1350,8 @@ function checkCom() {
   var cumple = com.cond(G);
   var ef = cumple ? com.ok : com.fail;
   applyEf(ef);
-  if (cumple) G.cred = Math.min(100, G.cred+8);
-  else        G.cred = Math.max(0, G.cred-20);
+  if (cumple) { G.cred = Math.min(100, G.cred+8); G.com_cumplidos = (G.com_cumplidos||0) + 1; if (G.com_cumplidos >= 3) unlockLogro('cumple_com'); }
+  else        { G.cred = Math.max(0, G.cred-20); G.com_cumplidos = 0; }
   addTweet(cumple?'\uD83D\uDCC8':'\uD83D\uDD25','Mercado Reacciona','@mercado_arg', cumple?com.tw_ok:com.tw_fail, cumple?'24.031':'89.234',true);
   if (!cumple) showAlert('Incumplimiento: credibilidad -20pts','#C0392B');
   pendingCom=null;
@@ -1355,6 +1735,12 @@ document.getElementById('btn-confirm').addEventListener('click', function(){
 
     checkDeuda();
     checkOrganismos();
+    checkLogros();
+    advanceGabinete();
+
+    // Actualizar derivados opcionales
+    updateDolarBlue();
+    updateSalarioReal();
 
     var changes=buildChanges(prev);
     var ql='T'+((G.turn%4)+1)+' '+(G.year+Math.floor(G.turn/4));
@@ -1408,7 +1794,45 @@ document.getElementById('btn-confirm').addEventListener('click', function(){
 
     loadEvent();
     renderResumen(prev);
+
+    // Tapas de diarios opcional
+    renderTapas(prev);
+
+    // Corrida bancaria: si tensión > 85 y feature activa, 50% chance
+    if (FEATURES.corrida && G.tension > 85 && Math.random() < 0.5 && !corridaActiva) {
+      setTimeout(triggerCorrida, 800);
+    }
+
+    // Conferencia de prensa cada 4 turnos
+    if (FEATURES.conf && G.turn > 0 && G.turn % 4 === 0) {
+      setTimeout(triggerConferencia, 600);
+    }
+
+    // Viaje internacional: una vez al año, al completar año
+    if (FEATURES.viajes && G.turn % 4 === 0 && G.turn > 0) {
+      var currentYear = Math.floor(G.turn / 4);
+      if (currentYear !== viajeYear) setTimeout(triggerViaje, 1500);
+    }
+
+    // Lobbies: 20% por turno
+    if (FEATURES.lobbies && G.turn > 1) setTimeout(triggerLobby, 900);
+
+    // Escándalos: 12% por turno
+    if (FEATURES.escand && G.turn > 2) setTimeout(triggerEscandalo, 1100);
+
+    // Cisne negro roll (después del resumen para que no pise el titular)
+    var cisne = rollCisne();
+    if (cisne) {
+      setTimeout(function(){
+        aplicarCisne(cisne);
+        G.cisnes_superados = (G.cisnes_superados||0) + 1;
+        if (G.tension < 90 && !G.deuda_default) unlockLogro('swan_survivor');
+        renderAll();
+      }, 1200);
+    }
+
     renderAll();
+    renderGabinete();
     genCtxTweets();
 
     // Mobile: switch to Noticias tab after confirming
@@ -1428,7 +1852,335 @@ function buildChanges(prev){
   return items;
 }
 
-// ═══ RENDER ══════════════════════════════════════════════════════════════════
+// ═══ GABINETE ════════════════════════════════════════════════════════════════
+
+function renderGabinete() {
+  if (!G || G.turn === undefined) return;
+  var consejero = GABINETE[G.gabinete_turn % GABINETE.length];
+  // Determinar qué frase según contexto
+  var key = 'neutral';
+  if (G.deuda_default || G.riesgo > 2500) key = 'default_riesgo';
+  else if (G.tension > 80) key = 'crisis';
+  else if (G.inf > 15) key = 'inf_alta';
+  else if (G.inf < 5 && G.turn > 2) key = 'inf_baja';
+  else if (G.res < 4) key = 'res_bajas';
+  else if (G.res > 14) key = 'res_altas';
+  else if (G.brecha > 100) key = 'brecha_alta';
+  var frase = consejero.frases[key] || consejero.frases.neutral;
+  var panel = document.getElementById('gab-pnl');
+  if (!panel) return;
+  panel.style.display = 'block';
+  document.getElementById('gab-av').textContent = consejero.icon;
+  document.getElementById('gab-av').style.borderColor = consejero.color;
+  document.getElementById('gab-nm').textContent = consejero.nombre;
+  document.getElementById('gab-nm').style.color = consejero.color;
+  document.getElementById('gab-frase').textContent = frase;
+}
+
+function advanceGabinete() { G.gabinete_turn = (G.gabinete_turn||0) + 1; }
+
+// ═══ CISNES NEGROS ═══════════════════════════════════════════════════════════
+
+function rollCisne() {
+  // 17% de probabilidad por turno después de T2
+  if (G.turn < 2) return null;
+  if (Math.random() > 0.17) return null;
+  var cisne = CISNES[Math.floor(Math.random()*CISNES.length)];
+  return cisne;
+}
+
+function aplicarCisne(cisne) {
+  if (!cisne) return;
+  applyEf(cisne.ef);
+  if (cisne.ef.riesgo) G.riesgo = Math.max(200, Math.min(4500, G.riesgo + cisne.ef.riesgo));
+  if (cisne.ef.cred)   G.cred = Math.max(0, Math.min(100, G.cred + cisne.ef.cred));
+  // Mostrar banner
+  var banner = document.getElementById('cisne-banner');
+  if (banner) {
+    document.getElementById('cisne-tag').textContent = 'CISNE NEGRO \u00b7 ' + cisne.tag;
+    document.getElementById('cisne-hl').textContent = cisne.hl;
+    banner.classList.add('show');
+    setTimeout(function(){ banner.classList.remove('show'); }, 10000);
+  }
+  // Tweets del cisne
+  if (cisne.tw) cisne.tw.forEach(function(t){ addTweet(t.av, t.nm, t.hd, t.tx, t.lk.toLocaleString('es-AR'), true); });
+  // Alert grande
+  showAlert('\uD83E\uDD8A CISNE NEGRO: '+cisne.hl, '#C0392B');
+  G.cisne_activo = cisne;
+}
+
+// ═══ LOGROS ══════════════════════════════════════════════════════════════════
+
+function unlockLogro(id) {
+  if (!G.logros) G.logros = [];
+  if (G.logros.indexOf(id) !== -1) return;
+  G.logros.push(id);
+  var l = LOGROS.filter(function(x){return x.id===id;})[0];
+  if (l) showAlert('\uD83C\uDFC5 Logro: '+l.nombre, '#C8A040');
+}
+
+function checkLogros() {
+  // cepo bajo
+  if (G.decisions.cepo <= 3) G.cepo_bajo_turns = (G.cepo_bajo_turns||0) + 1;
+  else G.cepo_bajo_turns = 0;
+  if (G.cepo_bajo_turns >= 4) unlockLogro('no_cepo');
+  // reservas 20
+  if (G.res >= 20) unlockLogro('reservas_20');
+  // inf single digit
+  if (G.inf < 5) G.inf_baja_turns = (G.inf_baja_turns||0) + 1;
+  else G.inf_baja_turns = 0;
+  if (G.inf_baja_turns >= 4) unlockLogro('inf_single');
+  // cumplidor: toda la deuda pagada
+  if (G.deuda && G.deuda.length > 0 && G.deuda.every(function(d){return d.pagado >= d.monto * 0.95;})) unlockLogro('cero_default');
+  // cred maxima
+  if (G.cred >= 100) unlockLogro('cred_100');
+  // superviviente eleccion
+  if ((G.turn === 9 || G.turn === 17) && G.tension < 75 && !G.deuda_default) unlockLogro('survivor');
+  // fmi completo
+  if (G.organismos && G.organismos.fmi.turnos_cumpliendo >= 6) unlockLogro('fmi_complete');
+}
+
+// ═══ RANKING / BENCHMARK ═════════════════════════════════════════════════════
+
+function buildBenchmarkHTML() {
+  // Calcular inflación promedio del jugador
+  var avgInf = infHist.length > 0 ? infHist.reduce(function(a,b){return a+b;},0)/infHist.length : G.inf;
+  var resChange = G.res - 10; // reservas iniciales eran 10
+  var playerRow = {
+    nombre: playerName || 'Su gesti\u00f3n',
+    periodo: 'Actual',
+    inf_mens: avgInf,
+    res_final: (resChange >= 0 ? '+' : '') + resChange.toFixed(1),
+    contexto: 'Perfil ' + (playerTipo||TIPOS.moderado).label,
+    you: true,
+  };
+  // Sort by inflation (menor es mejor)
+  var all = BENCHMARKS.concat([playerRow]).slice();
+  all.sort(function(a,b){ return a.inf_mens - b.inf_mens; });
+  var html = '<div class="bench-ttl">Benchmark hist\u00f3rico \u2014 Inflaci\u00f3n mensual promedio</div>';
+  all.forEach(function(b){
+    html += '<div class="bench-item'+(b.you?' you':'')+'">'+
+      '<div class="bench-hdr">'+
+        '<span class="bench-nm">'+b.nombre+(b.you?' \uD83C\uDFAF':'')+'</span>'+
+        '<span class="bench-per">'+b.periodo+'</span>'+
+      '</div>'+
+      '<div class="bench-stats">Inflaci\u00f3n mens. prom: '+b.inf_mens.toFixed(1)+'% \u00b7 \u0394Reservas: '+b.res_final+'B</div>'+
+      '<div class="bench-ctx">'+b.contexto+'</div>'+
+    '</div>';
+  });
+  return html;
+}
+
+function buildLogrosHTML() {
+  var html = '<div class="bench-ttl" style="margin-bottom:12px">Logros Desbloqueados ('+(G.logros||[]).length+'/'+LOGROS.length+')</div><div class="logros-grid">';
+  LOGROS.forEach(function(l){
+    var got = (G.logros||[]).indexOf(l.id) !== -1;
+    html += '<div class="logro-item '+(got?'got':'locked')+'">'+
+      '<div class="logro-ic">'+l.icon+'</div>'+
+      '<div class="logro-txt">'+
+        '<div class="logro-nm">'+l.nombre+'</div>'+
+        '<div class="logro-ds">'+l.desc+'</div>'+
+      '</div>'+
+    '</div>';
+  });
+  html += '</div>';
+  return html;
+}
+
+// ═══ FEATURES OPCIONALES ════════════════════════════════════════════════════
+
+// ── CONFERENCIA DE PRENSA (cada 4 turnos) ──
+function triggerConferencia() {
+  if (!FEATURES.conf) return;
+  var pool = PERIODISTAS.slice().sort(function(){return Math.random()-0.5;}).slice(0,3);
+  var html = '';
+  pool.forEach(function(p,i){
+    html += '<div class="conf-q">'+
+      '<div class="conf-q-from">'+p.tag+'</div>'+
+      '<div class="conf-q-tx">'+p.preg+'</div>'+
+      '<div class="conf-opts">';
+    p.opts.forEach(function(o,j){
+      html += '<button type="button" class="btn-conf-o" data-q="'+i+'" data-o="'+j+'">'+o.tx+'</button>';
+    });
+    html += '</div></div>';
+  });
+  document.getElementById('conf-questions').innerHTML = html;
+  window._confPool = pool;
+  window._confAnswered = {};
+  document.getElementById('conf-ov').classList.add('open');
+  document.querySelectorAll('.btn-conf-o').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var qi = parseInt(btn.getAttribute('data-q')), oi = parseInt(btn.getAttribute('data-o'));
+      document.querySelectorAll('.btn-conf-o[data-q="'+qi+'"]').forEach(function(b){b.classList.remove('sel');});
+      btn.classList.add('sel');
+      window._confAnswered[qi] = oi;
+    });
+  });
+}
+
+function cerrarConferencia() {
+  var pool = window._confPool || [];
+  var answered = window._confAnswered || {};
+  pool.forEach(function(p,i){
+    var oi = answered[i];
+    if (oi !== undefined) applyEf(p.opts[oi].ef);
+    else applyEf({cred:-3,pop:-2}); // no responder es malo
+  });
+  document.getElementById('conf-ov').classList.remove('open');
+  renderAll();
+}
+
+// ── CORRIDA BANCARIA ──
+function triggerCorrida() {
+  if (!FEATURES.corrida || corridaActiva) return;
+  corridaActiva = true;
+  var secs = 10;
+  document.getElementById('run-timer').textContent = secs;
+  document.getElementById('run-ov').classList.add('open');
+  corridaTimer = setInterval(function(){
+    secs--;
+    var t = document.getElementById('run-timer');
+    if (t) t.textContent = secs;
+    if (secs <= 0) {
+      clearInterval(corridaTimer);
+      // Sin decisión = peor efecto
+      resolverCorrida('timeout');
+    }
+  }, 1000);
+}
+
+function resolverCorrida(decision) {
+  clearInterval(corridaTimer);
+  corridaActiva = false;
+  document.getElementById('run-ov').classList.remove('open');
+  var ef, tw;
+  if (decision === 'encajes') {
+    ef = { tension:-15, desemp:1.5, pop:-4, cred:2 };
+    tw = 'BCRA sube encajes: la corrida se frena pero el cr\u00e9dito se seca.';
+  } else if (decision === 'feriado') {
+    ef = { tension:-20, cred:-10, pop:-8, brecha:15 };
+    tw = 'Decretan feriado bancario. P\u00e1nico viral en redes. #Corralito trending.';
+  } else if (decision === 'comunicado') {
+    var exito = G.cred > 55 && Math.random() < (G.cred/100);
+    if (exito) {
+      ef = { tension:-12, cred:3, pop:2 };
+      tw = 'El comunicado del BCRA calm\u00f3 los \u00e1nimos. Credibilidad funciona.';
+    } else {
+      ef = { tension:8, res:-2, cred:-15, pop:-6, brecha:20 };
+      tw = 'El comunicado no convenci\u00f3 a nadie. La corrida se intensifica.';
+    }
+  } else {
+    ef = { tension:15, res:-3, cred:-20, pop:-10, brecha:25 };
+    tw = 'La inacci\u00f3n del BCRA permiti\u00f3 que la corrida escale. Costo altísimo.';
+  }
+  applyEf(ef);
+  addTweet('\uD83C\uDFE6','BCRA Oficial','@bcra_oficial',tw,'45.320',true);
+  renderAll();
+}
+
+// ── VIAJES ──
+function triggerViaje() {
+  if (!FEATURES.viajes) return;
+  var currentYear = Math.floor(G.turn / 4);
+  if (currentYear === viajeYear) return; // ya viajo este año
+  var html = '';
+  VIAJES.forEach(function(v){
+    var efTxt = [];
+    if (v.ef.cred) efTxt.push('Cred '+(v.ef.cred>0?'+':'')+v.ef.cred);
+    if (v.ef.pop) efTxt.push('Pop '+(v.ef.pop>0?'+':'')+v.ef.pop);
+    if (v.ef.res) efTxt.push('Res '+(v.ef.res>0?'+':'')+v.ef.res+'B');
+    if (v.ef.brecha) efTxt.push('Brecha '+(v.ef.brecha>0?'+':'')+v.ef.brecha);
+    html += '<div class="viaje-c" data-viaje="'+v.id+'">'+
+      '<div class="viaje-flag">'+v.flag+'</div>'+
+      '<div class="viaje-nm">'+v.nm+'</div>'+
+      '<div class="viaje-ef">'+v.desc+'<br>'+efTxt.join(' \u00b7 ')+'</div>'+
+    '</div>';
+  });
+  document.getElementById('viaje-opts').innerHTML = html;
+  document.getElementById('viaje-ov').classList.add('open');
+  document.querySelectorAll('.viaje-c').forEach(function(c){
+    c.addEventListener('click', function(){
+      var v = VIAJES.filter(function(x){return x.id===c.getAttribute('data-viaje');})[0];
+      if (!v) return;
+      applyEf(v.ef);
+      if (v.ef.fmi_bonus) G.fmi_bonus = true;
+      if (v.ef.china_bonus) G.china_bonus = true;
+      viajeYear = currentYear;
+      addTweet('\u2708','Axios','@axios_arg','\uD83D\uDEEB '+playerName+' viaj\u00f3 a '+v.nm+'. '+v.tw,'18.234',true);
+      document.getElementById('viaje-ov').classList.remove('open');
+      renderAll();
+    });
+  });
+}
+
+// ── LOBBIES ──
+function triggerLobby() {
+  if (!FEATURES.lobbies) return;
+  if (Math.random() > 0.20) return; // 20% por turno
+  var lob = LOBBIES[Math.floor(Math.random()*LOBBIES.length)];
+  var confirmar = confirm(lob.icon + ' ' + lob.nombre + '\n\nPide: ' + lob.pide + '\n\n¿Acepta esta demanda?\n\nACEPTAR → pueden venir efectos económicos fuertes.\nCANCELAR → costo político menor.');
+  if (confirmar) {
+    var ef = Object.assign({}, lob.acept);
+    // aplicar deltas especiales
+    if (ef.tasa_delta) { G.decisions.tasa = Math.max(0, G.decisions.tasa + ef.tasa_delta); G.tasa = G.decisions.tasa; delete ef.tasa_delta; }
+    if (ef.crawl_delta) { G.decisions.crawl = Math.max(0, G.decisions.crawl + ef.crawl_delta); delete ef.crawl_delta; }
+    if (ef.cepo_delta) { G.decisions.cepo = Math.max(0, G.decisions.cepo + ef.cepo_delta); G.cepo = G.decisions.cepo; delete ef.cepo_delta; }
+    if (ef.emision_delta) { G.decisions.emision = Math.max(0, G.decisions.emision + ef.emision_delta); delete ef.emision_delta; }
+    applyEf(ef);
+    addTweet('\uD83E\uDD1D', lob.nombre, '@lobby_arg', 'Acuerdo con el BCRA. Reconocen el di\u00e1logo con el sector.', '12.301', true);
+    buildSliders(); // refresh sliders si cambiaron
+  } else {
+    applyEf(lob.rechaz);
+    addTweet('\u274C', lob.nombre, '@lobby_arg', 'El BCRA rechaz\u00f3 nuestras demandas. Evaluamos medidas.', '8.432', true);
+  }
+  renderAll();
+}
+
+// ── ESCANDALOS ──
+function triggerEscandalo() {
+  if (!FEATURES.escand) return;
+  if (Math.random() > 0.12) return; // 12% por turno
+  var e = ESCANDALOS[Math.floor(Math.random()*ESCANDALOS.length)];
+  var opts = e.opts.map(function(o,i){return (i+1)+'. '+o.tx;}).join('\n');
+  var choice = prompt('\uD83D\uDEA8 ESC\u00c1NDALO: '+e.tit+'\n\n'+e.desc+'\n\n'+opts+'\n\nIngrese n\u00famero (1-3):');
+  var idx = parseInt(choice) - 1;
+  if (isNaN(idx) || idx < 0 || idx >= e.opts.length) idx = 2; // default: sin comentarios
+  applyEf(e.opts[idx].ef);
+  addTweet('\uD83D\uDCF0', 'Infobae', '@infobae', '\uD83D\uDEA8 '+e.tit+' - '+e.opts[idx].tx, '54.320', true);
+  renderAll();
+}
+
+// ── TAPAS DE DIARIOS ──
+function renderTapas(prev) {
+  if (!FEATURES.tapas) return;
+  var estado = (G.inf < prev.inf && G.res >= prev.res) ? 'ok' : 'mal';
+  var tapas = TAPAS_SESGO[estado];
+  Object.keys(tapas).forEach(function(key){
+    var d = tapas[key];
+    var tit = d.tit[Math.floor(Math.random()*d.tit.length)];
+    addTweet('\uD83D\uDCF0', d.nm, '@'+key, tit, (Math.floor(Math.random()*20)+5)+'.'+Math.floor(Math.random()*900+100), false);
+  });
+}
+
+// ── SALARIO REAL ──
+function updateSalarioReal() {
+  if (!FEATURES.salario) return;
+  // Salario real cae con inflación, sube con empleo
+  var delta = -(G.inf - 3) * 0.8 + (10 - G.desemp) * 0.15;
+  G.salario_real = Math.max(40, Math.min(130, G.salario_real + delta));
+  // Si cae mucho, paros automáticos
+  if (G.salario_real < 70 && Math.random() < 0.25) {
+    applyEf({pop:-8, tension:10, desemp:0.4});
+    addTweet('\u270A', 'CGT', '@cgt_prensa', 'Paro general autom\u00e1tico: el salario real cay\u00f3 a niveles hist\u00f3ricos.', '45.320', true);
+  }
+}
+
+// ── DOS DOLARES ──
+function updateDolarBlue() {
+  if (!FEATURES.dolares) return;
+  // Blue = oficial * (1 + brecha/100)
+  G.dolar_blue = Math.round(G.dolar * (1 + G.brecha/100));
+}
 
 function renderAll(){
   var q=G.turn%4,y=G.year+Math.floor(G.turn/4),yrs=(G.turn/4).toFixed(1);
@@ -1467,14 +2219,21 @@ function renderTicker(){
   var items=[
     {l:'INFLACION',v:G.inf.toFixed(1)+'%',c:G.inf>12?'tr':G.inf>6?'tw':'tg'},
     {l:'RESERVAS',v:'USD '+G.res.toFixed(1)+'B',c:G.res<3?'tr':G.res>8?'tg':'tw'},
-    {l:'BRECHA',v:Math.round(G.brecha)+'%',c:G.brecha>80?'tr':'tw'},
-    {l:'TASA TNA',v:G.tasa+'%',c:'tw'},
-    {l:'DESEMPLEO',v:G.desemp.toFixed(1)+'%',c:G.desemp>15?'tr':G.desemp>10?'tw':'tg'},
-    {l:'IMAGEN',v:Math.round(G.pop)+'%',c:G.pop<25?'tr':G.pop>55?'tg':'tw'},
-    {l:'CREDIBILIDAD',v:Math.round(G.cred)+'%',c:G.cred<40?'tr':G.cred>70?'tg':'tw'},
-    {l:'EMBI+',v:Math.round(G.riesgo)+'bps',c:G.riesgo>1500?'tr':G.riesgo<600?'tg':'tw'},
-    {l:'TENSION',v:Math.round(G.tension)+'%',c:G.tension>70?'tr':'tw'},
   ];
+  if (FEATURES.dolares) {
+    items.push({l:'OFICIAL',v:'$'+Math.round(G.dolar||1050),c:'tw'});
+    items.push({l:'BLUE',v:'$'+Math.round(G.dolar_blue||1500),c:G.brecha>80?'tr':'tw'});
+  }
+  items.push({l:'BRECHA',v:Math.round(G.brecha)+'%',c:G.brecha>80?'tr':'tw'});
+  items.push({l:'TASA TNA',v:G.tasa+'%',c:'tw'});
+  items.push({l:'DESEMPLEO',v:G.desemp.toFixed(1)+'%',c:G.desemp>15?'tr':G.desemp>10?'tw':'tg'});
+  if (FEATURES.salario) {
+    items.push({l:'SALARIO REAL',v:Math.round(G.salario_real||100)+' (b100)',c:(G.salario_real||100)<70?'tr':(G.salario_real||100)>95?'tg':'tw'});
+  }
+  items.push({l:'IMAGEN',v:Math.round(G.pop)+'%',c:G.pop<25?'tr':G.pop>55?'tg':'tw'});
+  items.push({l:'CREDIBILIDAD',v:Math.round(G.cred)+'%',c:G.cred<40?'tr':G.cred>70?'tg':'tw'});
+  items.push({l:'EMBI+',v:Math.round(G.riesgo)+'bps',c:G.riesgo>1500?'tr':G.riesgo<600?'tg':'tw'});
+  items.push({l:'TENSION',v:Math.round(G.tension)+'%',c:G.tension>70?'tr':'tw'});
   var d=items.concat(items), html='';
   d.forEach(function(i){ html+='<span class="ti"><span class="tl">'+i.l+'</span><span class="tv '+i.c+'">'+i.v+'</span></span>'; });
   document.getElementById('ticker-inner').innerHTML=html;
@@ -1535,6 +2294,9 @@ function renderLog(){
 // ═══ ENDING ══════════════════════════════════════════════════════════════════
 
 function showEnding(e){
+  // Unlock first_win logro if victory
+  if (e.win) unlockLogro('first_win');
+
   document.getElementById('e-icon').textContent=e.icon;
   document.getElementById('e-type').textContent=e.type;
   document.getElementById('e-title').textContent=e.title;
@@ -1548,6 +2310,20 @@ function showEnding(e){
     '<div class="e-stat"><div class="e-slbl">Reservas</div><div class="e-sval '+rc+'">USD '+G.res.toFixed(1)+'B</div></div>'+
     '<div class="e-stat"><div class="e-slbl">Desempleo</div><div class="e-sval '+dc+'">'+G.desemp.toFixed(1)+'%</div></div>'+
     '<div class="e-stat"><div class="e-slbl">Tiempo</div><div class="e-sval vn">'+(G.turn/4).toFixed(1)+' a\u00f1os</div></div>';
+
+  // Add benchmark and logros sections
+  var extraEl = document.getElementById('e-extra');
+  if (!extraEl) {
+    extraEl = document.createElement('div');
+    extraEl.id = 'e-extra';
+    extraEl.style.cssText = 'display:flex;flex-direction:column;align-items:center;width:100%;max-width:520px;';
+    var statsEl = document.getElementById('e-stats');
+    statsEl.parentNode.insertBefore(extraEl, statsEl.nextSibling);
+  }
+  extraEl.innerHTML =
+    '<div class="bench-wrap">' + buildBenchmarkHTML() + '</div>' +
+    buildLogrosHTML();
+
   showScreen('s-end');
 }
 
@@ -1601,6 +2377,23 @@ document.getElementById('btn-skip').addEventListener('click', skipCom);
 document.getElementById('btn-elec').addEventListener('click', function(){ document.getElementById('elec-ov').classList.remove('open'); renderAll(); });
 document.getElementById('btn-d-tomar').addEventListener('click', tomarDeuda);
 document.getElementById('btn-d-pagar').addEventListener('click', pagarCuota);
+
+// Conferencia de prensa
+var btnConfDone = document.getElementById('btn-conf-done');
+if (btnConfDone) btnConfDone.addEventListener('click', cerrarConferencia);
+
+// Corrida bancaria
+document.querySelectorAll('.btn-run').forEach(function(btn){
+  btn.addEventListener('click', function(){ resolverCorrida(btn.getAttribute('data-run')); });
+});
+
+// Viajes skip
+var viajeSkip = document.getElementById('viaje-skip');
+if (viajeSkip) viajeSkip.addEventListener('click', function(){
+  var currentYear = Math.floor(G.turn/4);
+  viajeYear = currentYear;
+  document.getElementById('viaje-ov').classList.remove('open');
+});
 
 // Esterilizacion
 document.getElementById('btn-esl').addEventListener('click', function(){ setEster('letras'); });
